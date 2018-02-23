@@ -1,0 +1,8 @@
+{
+  "name": "mevur",
+  "app_id": "2aa23b5d",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
