@@ -1,14 +1,30 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar [hideBackButton]="true" text-center color="primary">
     <ion-title>
-      Ionic Blank
+      智慧医院
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content scroll="false" id="login-container" padding>
+  <div id="login-bg">
+    <ion-list id="login-ion-list">
+      <ion-item>
+        <ion-label floating>身份证号码或者手机号码</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>密码</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>记住登录状态</ion-label>
+        <ion-checkbox color="secondary" checked="true"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+    <button ion-button class="md" [full]="true" (click)="routeLogin()">登录</button>
+    <p text-center>
+      <a (click)="routeRegister()">没有帐号？点我注册</a>
+    </p>
+  </div>
 </ion-content>

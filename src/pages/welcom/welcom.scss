@@ -1,0 +1,61 @@
+page-welcom {
+ ion-slide {
+   background-size: cover;
+   background-repeat: no-repeat;
+   color: white;
+ }
+  #slide1 {
+    background-image: url("../../assets/imgs/slide1.png");
+  }
+  #slide2 {
+    background-image: url("../../assets/imgs/slide2.png");
+  }
+  #slide3 {
+    background-image: url("../../assets/imgs/slide3.png");
+  }
+  #slide4 {
+    background-image: url("../../assets/imgs/slide4.png");
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 30%;
+  }
+  .function {
+    width: 90%;
+    margin-left: 5%;
+    top: -10%;
+    height: 150px;
+    background-color: rgba(51, 184, 255, 0.5);
+    border-radius: 5px;
+    color: white;
+    h1 {
+      line-height: 150px;
+      font-size: 50px;
+      color: #fff;
+    }
+  }
+
+  p {
+    color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+    top: 10%;
+    text-shadow: dodgerblue 1px 1px 1px;
+  }
+  .skip-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  .start-button {
+    bottom: 10%;
+    position: absolute;
+  }
+
+}
+
+
+

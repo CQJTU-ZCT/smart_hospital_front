@@ -1,3 +1,24 @@
 page-home {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  #login-form {
+    background-color: black;
+    color: white;
+  }
+  #login-container {
+    background-color: #f4f4f4;
+    padding-bottom: 0%;
+  }
+  #login-bg {
 
+    background-size: cover;
+  }
+  .sh-header {
+    background-color: #222222;
+    color: white;
+  }
+  #login-bg {
+    margin-top: 20%;
+  }
 }
+
