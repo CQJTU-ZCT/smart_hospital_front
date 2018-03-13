@@ -1,5 +1,5 @@
 <!--
-  Generated template for the AppoinmentTabPage page.
+  Generated template for the AppointmentTabPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -12,8 +12,8 @@
 <ion-content padding>
   <ion-list>
     <ion-item>
-      <ion-label>选择医院</ion-label>
-      <ion-select [(ngModel)]="os" submitText="确认" cancelText="取消">
+      <ion-label><span style="color: red">*</span>选择医院</ion-label>
+      <ion-select [(ngModel)]="hospital" submitText="确认" cancelText="取消">
         <ion-option value="dos">DOS</ion-option>
         <ion-option value="lunix">Linux</ion-option>
         <ion-option value="mac7">Mac OS 7</ion-option>
@@ -25,15 +25,40 @@
     </ion-item>
 
     <ion-item>
-      <ion-label>选择科室</ion-label>
-      <ion-select [(ngModel)]="notifications" interface="action-sheet" cancelText="取消">
+      <ion-label><span style="color: red">*</span>选择科室</ion-label>
+      <ion-select [(ngModel)]="branch" submitText="确认" cancelText="取消">
         <ion-option value="enable">Enable</ion-option>
         <ion-option value="mute">Mute</ion-option>
         <ion-option value="mute_week">Mute for a week</ion-option>
-        <ion-option value="mute_year" (ionSelect)="notificationSelect($event)">Mute for a year</ion-option>
+        <ion-option value="mute_year">Mute for a year</ion-option>
       </ion-select>
     </ion-item>
+
+    <ion-item>
+      <ion-label>选择医生</ion-label>
+      <ion-select multiple [(ngModel)]="doctor" submitText="确认" cancelText="取消">
+        <ion-option value="enable">Enable</ion-option>
+        <ion-option value="mute">Mute</ion-option>
+        <ion-option value="mute_week">Mute for a week</ion-option>
+        <ion-option value="mute_year">Mute for a year</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>预约时间</ion-label>
+      <ion-datetime displayFormat="YYYY年MM月DD日 HH时后"
+                    pickerFormat="YYYY 年 MM 月 DD 年 HH 时"
+                    [(ngModel)]="time"
+                    min="2018-03-13"
+                    cancelText="取消"
+                    doneText="确认"
+                    placeholder="点击选择预约时间"
+                    color="primary"></ion-datetime>
+    </ion-item>
+
   </ion-list>
+
+  <button ion-button full color="primary" margin-top="20%">预约</button>
 
 
 </ion-content>

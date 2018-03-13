@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
 import { HomeTabPage } from "../home-tab/home-tab";
 import { DoctorTabPage } from "../doctor-tab/doctor-tab";
-import { AppoinmentTabPage } from "../appoinment-tab/appoinment-tab";
+import { AppointmentTabPage } from "../appoinment-tab/appoinment-tab";
 import {MessageTabPage} from "../message-tab/message-tab";
 
 /**
@@ -21,7 +21,7 @@ export class MainTabPage {
 
   homeTabRoot = HomeTabPage;
   doctorTabRoot = DoctorTabPage;
-  appoinmentTabRoot = AppoinmentTabPage;
+  appointmentTabPageRoot = AppointmentTabPage;
   messageTabRoot = MessageTabPage;
 
 

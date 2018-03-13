@@ -10,7 +10,7 @@ import { RegisterPage } from "../pages/register/register"
 import { MainTabPage } from "../pages/main-tab/main-tab";
 import { DoctorTabPage } from "../pages/doctor-tab/doctor-tab";
 import { HomeTabPage } from "../pages/home-tab/home-tab";
-import { AppoinmentTabPage } from "../pages/appoinment-tab/appoinment-tab";
+import { AppointmentTabPage } from "../pages/appoinment-tab/appoinment-tab";
 import {WelcomPage} from "../pages/welcom/welcom";
 import {MessageTabPage} from "../pages/message-tab/message-tab";
 
@@ -22,7 +22,7 @@ import {MessageTabPage} from "../pages/message-tab/message-tab";
     MainTabPage,
     HomeTabPage,
     DoctorTabPage,
-    AppoinmentTabPage,
+    AppointmentTabPage,
     WelcomPage,
     MessageTabPage
   ],
@@ -38,7 +38,7 @@ import {MessageTabPage} from "../pages/message-tab/message-tab";
     MainTabPage,
     HomeTabPage,
     DoctorTabPage,
-    AppoinmentTabPage,
+    AppointmentTabPage,
     WelcomPage,
     MessageTabPage
   ],

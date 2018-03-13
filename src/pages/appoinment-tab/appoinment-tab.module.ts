@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { AppoinmentTabPage } from './appoinment-tab';
+import { AppointmentTabPage } from './appoinment-tab';
 
 @NgModule({
   declarations: [
-    AppoinmentTabPage,
+    AppointmentTabPage,
   ],
   imports: [
-    IonicPageModule.forChild(AppoinmentTabPage),
+    IonicPageModule.forChild(AppointmentTabPage),
   ],
 })
 export class AppoinmentTabPageModule {}
