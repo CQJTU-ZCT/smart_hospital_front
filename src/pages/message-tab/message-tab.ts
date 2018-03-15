@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
 
 /**
  * Generated class for the MessageTabPage page.
@@ -20,6 +20,11 @@ export class MessageTabPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MessageTabPage');
+  }
+
+  showMsg($event) {
+    //获取点击dom对象的参数值
+    console.log($event.target.offsetParent.getAttribute("data-msg"));
   }
 
 }

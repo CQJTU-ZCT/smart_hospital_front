@@ -1,14 +1,14 @@
 webpackJsonp([14],{
 
-/***/ 283:
+/***/ 290:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DoctorTabPageModule", function() { return DoctorTabPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HospitalPageModule", function() { return HospitalPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__doctor_tab__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hospital__ = __webpack_require__(105);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var DoctorTabPageModule = (function () {
-    function DoctorTabPageModule() {
+var HospitalPageModule = (function () {
+    function HospitalPageModule() {
     }
-    DoctorTabPageModule = __decorate([
+    HospitalPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__doctor_tab__["a" /* DoctorTabPage */],
+                __WEBPACK_IMPORTED_MODULE_2__hospital__["a" /* HospitalPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__doctor_tab__["a" /* DoctorTabPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__hospital__["a" /* HospitalPage */]),
             ],
         })
-    ], DoctorTabPageModule);
-    return DoctorTabPageModule;
+    ], HospitalPageModule);
+    return HospitalPageModule;
 }());
 
-//# sourceMappingURL=doctor-tab.module.js.map
+//# sourceMappingURL=hospital.module.js.map
 
 /***/ })
 

@@ -28026,6 +28026,34 @@ ion-navbar.toolbar {
   background-color: #eeeeee;
 }
 
+.car-img-bg {
+  background-image: url("../assets/imgs/card_img_bg.png");
+  background-size: cover;
+}
+
+page-doctor ion-card img {
+  max-width: 100px;
+  max-height: 130px;
+  margin: 0 auto;
+}
+
+page-doctor ion-card .img-bg {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  padding: 5px;
+}
+
+page-doctor ion-card ion-card-title {
+  text-align: center;
+  font-weight: bolder;
+}
+
+page-doctor label {
+  color: #488aff;
+}
+
 page-doctor-tab ion-card {
   width: 100%;
   position: relative;
@@ -28114,6 +28142,33 @@ page-home-tab ion-slides ion-slide h2 {
   width: 100%;
   position: absolute;
   top: 10%;
+}
+
+page-hospital ion-slides {
+  height: 150px;
+  width: 100%;
+}
+
+page-hospital ion-slides ion-slide {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+page-hospital ion-slides ion-slide h2 {
+  color: white;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 10%;
+}
+
+page-img-preview ion-content {
+  padding: 5px;
+}
+
+page-img-preview img {
+  width: 100%;
 }
 
 page-welcom ion-slide {

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {App, IonicPage, NavController, NavParams} from 'ionic-angular';
+import {DoctorPage} from "../doctor/doctor";
 
 /**
  * Generated class for the DoctorTabPage page.
@@ -15,11 +16,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DoctorTabPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public app: App) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DoctorTabPage');
   }
 
+  toDoctor($event) {
+    console.log($event.target.offsetParent.getAttribute('data-doctor-id'));
+    this.app.getRootNav().push(DoctorPage);
+  }
 }
+
+

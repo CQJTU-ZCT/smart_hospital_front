@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {App, IonicPage, NavController, NavParams} from 'ionic-angular';
+import {HospitalPage} from "../hospital/hospital";
 
 /**
  * Generated class for the HomeTabPage page.
@@ -21,7 +22,9 @@ export class HomeTabPage {
 
   hospitals: Array<any>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public app: App) {
     this.name = '程飘';
     this.profile = '../../assets/imgs/person_info.jpg';
     this.describe = 'cheng.bug@gmail.com';
@@ -48,6 +51,10 @@ export class HomeTabPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomeTabPage');
+  }
+
+  toHospital() {
+    this.app.getRootNav().push(HospitalPage);
   }
 
 }

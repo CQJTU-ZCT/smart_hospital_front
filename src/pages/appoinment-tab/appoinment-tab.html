@@ -7,6 +7,11 @@
 <ion-header>
   <ion-navbar color="primary">
     <ion-title text-center>预约挂号</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="toList()">
+        <ion-icon name="list"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 <ion-content padding>
@@ -49,7 +54,7 @@
       <ion-datetime displayFormat="YYYY年MM月DD日 HH时后"
                     pickerFormat="YYYY 年 MM 月 DD 年 HH 时"
                     [(ngModel)]="time"
-                    min="2018-03-13"
+                    min="2018-03-14"
                     cancelText="取消"
                     doneText="确认"
                     placeholder="点击选择预约时间"
@@ -58,7 +63,7 @@
 
   </ion-list>
 
-  <button ion-button full color="primary" margin-top="20%">预约</button>
+  <button ion-button full color="primary" style="margin-top: 80px" (click)="submit()">预约</button>
 
 
 </ion-content>

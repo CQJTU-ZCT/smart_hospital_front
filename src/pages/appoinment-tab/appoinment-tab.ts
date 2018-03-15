@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import {DateTime, IonicPage, NavController, NavParams} from 'ionic-angular';
+import {App, DateTime, IonicPage, NavController, NavParams, ToastController} from 'ionic-angular';
 import {DateFormatter} from "@angular/common/src/pipes/deprecated/intl";
 import DateTimeFormat = Intl.DateTimeFormat;
+import {AppointmentListPage} from "../appointment-list/appointment-list";
 
 /**
  * Generated class for the AppointmentTabPage page.
@@ -16,16 +17,32 @@ import DateTimeFormat = Intl.DateTimeFormat;
   templateUrl: 'appoinment-tab.html',
 })
 export class AppointmentTabPage {
-  date: Date;
+  minDate: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.date = new Date();
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public toastCtrl: ToastController,
+              public app: App) {
+
   }
 
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AppointmentTabPage');
 
+  }
+
+  submit() {
+    const toast = this.toastCtrl.create({
+      message: '您的预约申请提交成功',
+      showCloseButton: true,
+      closeButtonText: '确认'
+    });
+    toast.present();
+  }
+
+  toList() {
+    this.app.getRootNav().push(AppointmentListPage);
   }
 
 }

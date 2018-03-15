@@ -13,6 +13,10 @@ import { HomeTabPage } from "../pages/home-tab/home-tab";
 import { AppointmentTabPage } from "../pages/appoinment-tab/appoinment-tab";
 import {WelcomPage} from "../pages/welcom/welcom";
 import {MessageTabPage} from "../pages/message-tab/message-tab";
+import {HospitalPage} from "../pages/hospital/hospital";
+import {DoctorPage} from "../pages/doctor/doctor";
+import {ImgPreviewPage} from "../pages/img-preview/img-preview";
+import {AppointmentListPage} from "../pages/appointment-list/appointment-list";
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import {MessageTabPage} from "../pages/message-tab/message-tab";
     DoctorTabPage,
     AppointmentTabPage,
     WelcomPage,
-    MessageTabPage
+    MessageTabPage,
+    HospitalPage,
+    DoctorPage,
+    ImgPreviewPage,
+    AppointmentListPage
   ],
   imports: [
     BrowserModule,
@@ -40,7 +48,11 @@ import {MessageTabPage} from "../pages/message-tab/message-tab";
     DoctorTabPage,
     AppointmentTabPage,
     WelcomPage,
-    MessageTabPage
+    MessageTabPage,
+    HospitalPage,
+    DoctorPage,
+    ImgPreviewPage,
+    AppointmentListPage
   ],
   providers: [
     StatusBar,
