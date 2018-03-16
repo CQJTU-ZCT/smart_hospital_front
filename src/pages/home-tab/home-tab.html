@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <button ion-button menuToggle icon-only>
+    <button ion-button (tap)="showMenu()" icon-only>
       <ion-icon name='person'></ion-icon>
     </button>
     <ion-title text-center>智慧医院</ion-title>
@@ -15,7 +15,7 @@
 
 </ion-header>
 
-<ion-menu [content]="content">
+<ion-menu id="my-menu" [content]="content">
   <ion-content class="card-background-page">
     <ion-card>
       <img src="{{profile}}"/>
@@ -48,7 +48,7 @@
 
   <ion-slides pager>
 
-    <ion-slide (click)="toHospital()">
+    <ion-slide (tap)="toHospital()">
       <img src="../../assets/imgs/person_info.jpg">
       <h2>Slide 1</h2>
     </ion-slide>
@@ -79,7 +79,7 @@
         <p>{{hospital.tel}}</p>
       </div>
       <div class="divider"></div>
-      <button ion-button full clear>
+      <button menuToggle ion-button full clear>
         查看详情
       </button>
     </ion-card>

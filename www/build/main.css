@@ -28031,6 +28031,10 @@ ion-navbar.toolbar {
   background-size: cover;
 }
 
+page-appointment-list ion-item {
+  margin-top: 0;
+}
+
 page-doctor ion-card img {
   max-width: 100px;
   max-height: 130px;
@@ -28169,6 +28173,17 @@ page-img-preview ion-content {
 
 page-img-preview img {
   width: 100%;
+}
+
+page-main-tab ion-badge {
+  border-radius: 50px;
+}
+
+page-message-tab .i-badge {
+  border-radius: 20px;
+  height: 10px;
+  width: 10px;
+  padding: 0;
 }
 
 page-welcom ion-slide {

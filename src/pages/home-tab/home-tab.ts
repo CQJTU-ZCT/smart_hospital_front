@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {App, IonicPage, NavController, NavParams} from 'ionic-angular';
+import {App, IonicPage, MenuController, NavController, NavParams} from 'ionic-angular';
 import {HospitalPage} from "../hospital/hospital";
 
 /**
@@ -24,7 +24,9 @@ export class HomeTabPage {
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
-              public app: App) {
+              public app: App,
+              public menu: MenuController) {
+    this.menu.enable(true);
     this.name = '程飘';
     this.profile = '../../assets/imgs/person_info.jpg';
     this.describe = 'cheng.bug@gmail.com';
@@ -55,6 +57,10 @@ export class HomeTabPage {
 
   toHospital() {
     this.app.getRootNav().push(HospitalPage);
+  }
+
+  showMenu() {
+    console.log(this.menu.open());
   }
 
 }

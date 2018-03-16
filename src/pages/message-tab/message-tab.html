@@ -6,7 +6,7 @@
 -->
 <ion-header>
   <ion-navbar color="primary">
-    <ion-title text-center>智慧医院</ion-title>
+    <ion-title text-center>消息中心</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -15,14 +15,16 @@
 
   <ion-list>
     <button ion-item data-msg="4" (click)="showMsg($event)">
+      <ion-badge class="i-badge" color="danger" item-start> </ion-badge>
       <h2>预约提示</h2>
       <p>您以成功预约12：30分李医生会诊</p>
       <ion-note item-end>1:12 pm</ion-note>
     </button>
     <ion-item>
-      <h2>预约提示</h2>
-      <p>您以成功预约12：30分李医生会诊</p>
-      <ion-note item-end>1:12 pm</ion-note>
+      <ion-badge [ngStyle]="{'background-color': msg.status ? 'red' : 'transparent'}" class="i-badge" item-start> </ion-badge>
+      <h2>{{msg.title}}</h2>
+      <p>{{msg.describe}}</p>
+      <ion-note item-end>{{msg.time}}</ion-note>
     </ion-item>
     <ion-item>
       <h2>预约提示</h2>

@@ -14,11 +14,11 @@
 
 
 <ion-content>
- <ion-list *ngFor="let record of records">
-   <ion-item (click)="itemSelected(record)">
+ <ion-list>
+   <button ion-item *ngFor="let record of records" (click)="itemSelected(record)">
      <h2>{{record.title}}</h2>
      <p>{{record.status}}</p>
      <ion-note item-end>{{record.time}}</ion-note>
-   </ion-item>
+   </button>
  </ion-list>
 </ion-content>

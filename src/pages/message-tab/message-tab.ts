@@ -15,7 +15,15 @@ import {IonicPage, NavController, NavParams} from 'ionic-angular';
 })
 export class MessageTabPage {
 
+  msg: any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.msg = {
+      title: '内科预约',
+      describe: '预约成功',
+      status: 0,
+      time: '2018-04-21'
+    }
   }
 
   ionViewDidLoad() {
