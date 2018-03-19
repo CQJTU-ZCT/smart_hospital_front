@@ -17,6 +17,9 @@ import {HospitalPage} from "../pages/hospital/hospital";
 import {DoctorPage} from "../pages/doctor/doctor";
 import {ImgPreviewPage} from "../pages/img-preview/img-preview";
 import {AppointmentListPage} from "../pages/appointment-list/appointment-list";
+import {PersonalInfoPage} from "../pages/personal-info/personal-info";
+import {EditMedicalCardPage} from "../pages/edit-medical-card/edit-medical-card";
+import {PrivateDoctorPage} from "../pages/private-doctor/private-doctor";
 
 @NgModule({
   declarations: [
@@ -32,11 +35,18 @@ import {AppointmentListPage} from "../pages/appointment-list/appointment-list";
     HospitalPage,
     DoctorPage,
     ImgPreviewPage,
-    AppointmentListPage
+    AppointmentListPage,
+    PersonalInfoPage,
+    EditMedicalCardPage,
+    PrivateDoctorPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {
+      // add global configuration here
+      tabsHideOnSubPages: 'true',  //hide tabs bar on subpage
+      backButtonText: ''
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -52,7 +62,10 @@ import {AppointmentListPage} from "../pages/appointment-list/appointment-list";
     HospitalPage,
     DoctorPage,
     ImgPreviewPage,
-    AppointmentListPage
+    AppointmentListPage,
+    PersonalInfoPage,
+    EditMedicalCardPage,
+    PrivateDoctorPage
   ],
   providers: [
     StatusBar,

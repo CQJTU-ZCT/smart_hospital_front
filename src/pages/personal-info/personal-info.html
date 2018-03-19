@@ -6,13 +6,81 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>personal-info</ion-title>
+  <ion-navbar color="primary">
+    <ion-title text-center>个人信息</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="edit()">
+        <ion-icon name="medical"></ion-icon>
+        修改
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="color-content">
+  <div class="head">
+    <ion-item no-lines>
+      <ion-avatar>
+        <img src="../../assets/imgs/person_info.jpg">
+      </ion-avatar>
+    </ion-item>
+  </div>
+
+  <ion-card>
+    <ion-card-content style="margin-top: 15px">
+      <ion-card-title>
+        程飘
+        <ion-icon name="male" color="primary"></ion-icon>
+      </ion-card-title>
+      <p>
+        重庆市南岸区学府大道69号
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title text-center color="danger">
+        <ion-icon name="medical"></ion-icon>
+        医疗急救卡
+      </ion-card-title>
+      <p>医疗急救卡可在您出现注入过敏反应和医疗状况等紧急情况时，提供您的重要医疗信息。</p>
+      <hr>
+      <p>
+        <ion-label>出生日期</ion-label>
+        {{medicalCard.birth_date}}
+      </p>
+      <p>
+        <ion-label>医疗状况</ion-label>
+        {{medicalCard.state}}
+      </p>
+      <p>
+        <ion-label>医疗笔记</ion-label>
+        {{medicalCard.note}}
+      </p>
+      <p>
+        <ion-label>过敏反应</ion-label>
+        {{medicalCard.hypersensitivity}}
+      </p>
+      <p>
+        <ion-label>药物使用</ion-label>
+        {{medicalCard.medicine}}
+      </p>
+      <p>
+        <ion-label>血型</ion-label>
+        {{medicalCard.blood_type}} 型
+      </p>
+      <p>
+        <ion-label>体重</ion-label>
+        {{medicalCard.weight}} KG
+      </p>
+      <p>
+        <ion-label>身高</ion-label>
+        {{medicalCard.height}} CM
+      </p>
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>

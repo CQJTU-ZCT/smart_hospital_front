@@ -1,0 +1,65 @@
+<!--
+  Generated template for the EditMedicalCardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title text-center>修改医疗急救卡</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="submit()">
+        <ion-icon name="checkmark"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked="">医疗状况</ion-label>
+      <ion-input type="text" [(ngModel)]="medicalCard.state"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked="">医疗笔记</ion-label>
+      <ion-input type="text" [(ngModel)]="medicalCard.note"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked="">过敏反应</ion-label>
+      <ion-input type="text" [(ngModel)]="medicalCard.hypersensitivity"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked="">药物使用</ion-label>
+      <ion-input type="text" [(ngModel)]="medicalCard.medicine"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked="">血型</ion-label>
+      <ion-select [(ngModel)]="medicalCard.blood_type" cancelText="取消" okText="确认">
+        <ion-option value="A">A型</ion-option>
+        <ion-option value="B">B型</ion-option>
+        <ion-option value="AB">AB型</ion-option>
+        <ion-option value="O">O型</ion-option>
+        <ion-option value="Rh">Rh阴性型</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked="">体重</ion-label>
+      <ion-select [(ngModel)]="medicalCard.weight" cancelText="取消" okText="确认!">
+        <ion-option *ngFor="let i of weight" value="{{i}}">{{i}} kg</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked="">身高</ion-label>
+      <ion-select [(ngModel)]="medicalCard.height" cancelText="取消" okText="确认!">
+        <ion-option *ngFor="let i of height" value="{{i}}">{{i}} cm</ion-option>
+      </ion-select>
+    </ion-item>
+
+
+
+  </ion-list>
+</ion-content>

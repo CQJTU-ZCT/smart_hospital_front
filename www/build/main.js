@@ -1,4 +1,4 @@
-webpackJsonp([20],{
+webpackJsonp([21],{
 
 /***/ 100:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -298,6 +298,7 @@ var ImgPreviewPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hospital_hospital__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__personal_info_personal_info__ = __webpack_require__(50);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -307,6 +308,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -353,16 +355,28 @@ var HomeTabPage = (function () {
         this.app.getRootNav().push(__WEBPACK_IMPORTED_MODULE_2__hospital_hospital__["a" /* HospitalPage */]);
     };
     HomeTabPage.prototype.showMenu = function () {
-        console.log(this.menu.open());
+        this.menu.toggle();
+        console.log('button toggle menu clicked');
+    };
+    HomeTabPage.prototype.onItemClicked = function (which) {
+        console.log(which);
+        switch (which) {
+            case 0: {
+                this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__personal_info_personal_info__["a" /* PersonalInfoPage */]);
+                break;
+            }
+        }
     };
     HomeTabPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home-tab',template:/*ion-inline-start:"/Users/chengpiao/ionic/mevur/src/pages/home-tab/home-tab.html"*/'<!--\n  Generated template for the HomeTabPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <button ion-button (tap)="showMenu()" icon-only>\n      <ion-icon name=\'person\'></ion-icon>\n    </button>\n    <ion-title text-center>智慧医院</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-menu id="my-menu" [content]="content">\n  <ion-content class="card-background-page">\n    <ion-card>\n      <img src="{{profile}}"/>\n      <div class="card-title">{{name}}</div>\n      <div class="card-subtitle">{{describe}}</div>\n    </ion-card>\n    <ion-list>\n      <button ion-item>\n        个人信息\n      </button>\n      <button ion-item>\n        专属医生\n      </button>\n      <button ion-item>\n        电子病历\n      </button>\n      <button ion-item>\n        身体体征\n      </button>\n      <button ion-item>\n        医疗进度\n      </button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n\n<ion-nav id="nav" #content [root]="rootPage"></ion-nav>\n\n<ion-content class="color-content">\n\n  <ion-slides pager>\n\n    <ion-slide (tap)="toHospital()">\n      <img src="../../assets/imgs/person_info.jpg">\n      <h2>Slide 1</h2>\n    </ion-slide>\n\n    <ion-slide>\n      <img src="../../assets/imgs/person_info.jpg">\n      <h2>Slide 2</h2>\n    </ion-slide>\n\n    <ion-slide>\n      <img src="../../assets/imgs/person_info.jpg">\n      <h2>Slide 3</h2>\n    </ion-slide>\n\n  </ion-slides>\n\n  <ion-list *ngFor="let hospital of hospitals">\n    <ion-card>\n      <img class="hospital-img" src="{{hospital.img}}">\n      <div class="hospital-name">{{hospital.name}}</div>\n      <div class="item">\n        <ion-icon name="navigate" item-start small></ion-icon>\n        <p>{{hospital.add}}</p>\n      </div>\n\n      <div class="item">\n        <ion-icon name="call" item-left small></ion-icon>\n        <p>{{hospital.tel}}</p>\n      </div>\n      <div class="divider"></div>\n      <button menuToggle ion-button full clear>\n        查看详情\n      </button>\n    </ion-card>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/mevur/src/pages/home-tab/home-tab.html"*/,
+            selector: 'page-home-tab',template:/*ion-inline-start:"/Users/chengpiao/ionic/mevur/src/pages/home-tab/home-tab.html"*/'<!--\n  Generated template for the HomeTabPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <button ion-button menuToggle icon-only clear>\n      <ion-icon name=\'person\'></ion-icon>\n    </button>\n    <ion-title text-center>智慧医院</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-menu type="overlay" id="my-menu" [content]="content">\n  <ion-content class="card-background-page">\n    <ion-card>\n      <img src="{{profile}}"/>\n      <div class="card-title">{{name}}</div>\n      <div class="card-subtitle">{{describe}}</div>\n    </ion-card>\n    <ion-list>\n      <button ion-item (tap)="onItemClicked(0)">\n        个人信息\n      </button>\n      <button ion-item (tap)="onItemClicked(1)">\n        专属医生\n      </button>\n      <button ion-item (tap)="onItemClicked(2)">\n        电子病历\n      </button>\n      <button ion-item (tap)="onItemClicked(3)">\n        身体体征\n      </button>\n      <button ion-item (tap)="onItemClicked(4)">\n        医疗进度\n      </button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n\n<ion-nav id="nav" #content [root]="rootPage"></ion-nav>\n\n<ion-content class="color-content">\n\n  <ion-slides pager>\n\n    <ion-slide (tap)="toHospital()">\n      <img src="../../assets/imgs/person_info.jpg">\n      <h2>Slide 1</h2>\n    </ion-slide>\n\n    <ion-slide>\n      <img src="../../assets/imgs/person_info.jpg">\n      <h2>Slide 2</h2>\n    </ion-slide>\n\n    <ion-slide>\n      <img src="../../assets/imgs/person_info.jpg">\n      <h2>Slide 3</h2>\n    </ion-slide>\n\n  </ion-slides>\n\n  <ion-list *ngFor="let hospital of hospitals">\n    <ion-card>\n      <img class="hospital-img" src="{{hospital.img}}">\n      <div class="hospital-name">{{hospital.name}}</div>\n      <div class="item">\n        <ion-icon name="navigate" item-start small></ion-icon>\n        <p>{{hospital.add}}</p>\n      </div>\n\n      <div class="item">\n        <ion-icon name="call" item-left small></ion-icon>\n        <p>{{hospital.tel}}</p>\n      </div>\n      <div class="divider"></div>\n      <button ion-button full clear>\n        查看详情\n      </button>\n    </ion-card>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/mevur/src/pages/home-tab/home-tab.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* App */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* App */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* MenuController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* MenuController */]) === "function" && _d || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* App */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* MenuController */]])
     ], HomeTabPage);
     return HomeTabPage;
-    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=home-tab.js.map
@@ -401,6 +415,7 @@ var HospitalPage = (function () {
     }
     HospitalPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad HospitalPage');
+        // this.navBar.setBackButtonText('');
     };
     HospitalPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
@@ -416,6 +431,59 @@ var HospitalPage = (function () {
 /***/ }),
 
 /***/ 107:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MainTabPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_tab_home_tab__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__doctor_tab_doctor_tab__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__appoinment_tab_appoinment_tab__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__message_tab_message_tab__ = __webpack_require__(108);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+/**
+ * Generated class for the MainTabPage tabs.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var MainTabPage = (function () {
+    function MainTabPage(navCtrl) {
+        this.navCtrl = navCtrl;
+        this.homeTabRoot = __WEBPACK_IMPORTED_MODULE_2__home_tab_home_tab__["a" /* HomeTabPage */];
+        this.doctorTabRoot = __WEBPACK_IMPORTED_MODULE_3__doctor_tab_doctor_tab__["a" /* DoctorTabPage */];
+        this.appointmentTabPageRoot = __WEBPACK_IMPORTED_MODULE_4__appoinment_tab_appoinment_tab__["a" /* AppointmentTabPage */];
+        this.messageTabRoot = __WEBPACK_IMPORTED_MODULE_5__message_tab_message_tab__["a" /* MessageTabPage */];
+    }
+    MainTabPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-main-tab',template:/*ion-inline-start:"/Users/chengpiao/ionic/mevur/src/pages/main-tab/main-tab.html"*/'<ion-tabs>\n    <ion-tab [root]="homeTabRoot" tabTitle="首页" tabIcon="home"></ion-tab>\n    <ion-tab [root]="doctorTabRoot" tabTitle="在线医生" tabIcon="medical"></ion-tab>\n    <ion-tab [root]="appointmentTabPageRoot" tabTitle="预约挂号" tabIcon="pulse"></ion-tab>\n    <ion-tab [root]="messageTabRoot" tabBadge="14" tabBadgeStyle="danger" tabTitle="消息中心" tabIcon="mail"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/Users/chengpiao/ionic/mevur/src/pages/main-tab/main-tab.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]])
+    ], MainTabPage);
+    return MainTabPage;
+}());
+
+//# sourceMappingURL=main-tab.js.map
+
+/***/ }),
+
+/***/ 108:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -470,7 +538,7 @@ var MessageTabPage = (function () {
 
 /***/ }),
 
-/***/ 108:
+/***/ 109:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -528,7 +596,7 @@ var RegisterPage = (function () {
 
 /***/ }),
 
-/***/ 119:
+/***/ 120:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -541,92 +609,96 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 119;
+webpackEmptyAsyncContext.id = 120;
 
 /***/ }),
 
-/***/ 160:
+/***/ 161:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/about/about.module": [
-		282,
+		283,
 		8
 	],
 	"../pages/appoinment-tab/appoinment-tab.module": [
-		283,
-		19
+		284,
+		20
 	],
 	"../pages/appointment-list/appointment-list.module": [
-		284,
-		18
+		285,
+		19
 	],
 	"../pages/body-mass/body-mass.module": [
-		285,
+		286,
 		7
 	],
 	"../pages/case-history/case-history.module": [
-		286,
+		287,
 		6
 	],
 	"../pages/cure-progress/cure-progress.module": [
-		287,
+		288,
 		5
 	],
 	"../pages/doctor-tab/doctor-tab.module": [
-		288,
-		17
+		289,
+		18
 	],
 	"../pages/doctor/doctor.module": [
-		289,
-		16
-	],
-	"../pages/edit-personal-info/edit-personal-info.module": [
 		290,
+		17
+	],
+	"../pages/edit-medical-card/edit-medical-card.module": [
+		291,
 		4
 	],
-	"../pages/home-tab/home-tab.module": [
-		291,
-		15
-	],
-	"../pages/hospital/hospital.module": [
+	"../pages/edit-personal-info/edit-personal-info.module": [
 		292,
-		14
-	],
-	"../pages/img-preview/img-preview.module": [
-		293,
-		13
-	],
-	"../pages/main-tab/main-tab.module": [
-		294,
-		12
-	],
-	"../pages/message-tab/message-tab.module": [
-		295,
-		11
-	],
-	"../pages/pay-platform/pay-platform.module": [
-		296,
 		3
 	],
-	"../pages/personal-info/personal-info.module": [
+	"../pages/home-tab/home-tab.module": [
+		293,
+		16
+	],
+	"../pages/hospital/hospital.module": [
+		294,
+		15
+	],
+	"../pages/img-preview/img-preview.module": [
+		295,
+		14
+	],
+	"../pages/main-tab/main-tab.module": [
+		296,
+		13
+	],
+	"../pages/message-tab/message-tab.module": [
 		297,
+		12
+	],
+	"../pages/pay-platform/pay-platform.module": [
+		298,
 		2
 	],
+	"../pages/personal-info/personal-info.module": [
+		299,
+		11
+	],
 	"../pages/private-doctor/private-doctor.module": [
-		298,
+		300,
 		1
 	],
 	"../pages/register/register.module": [
-		299,
+		301,
 		10
 	],
 	"../pages/sos/sos.module": [
-		300,
+		302,
 		0
 	],
 	"../pages/welcom/welcom.module": [
-		301,
+		303,
 		9
 	]
 };
@@ -641,20 +713,20 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 160;
+webpackAsyncContext.id = 161;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 161:
+/***/ 162:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__register_register__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__main_tab_main_tab__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__register_register__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__main_tab_main_tab__ = __webpack_require__(107);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -691,14 +763,14 @@ var HomePage = (function () {
 
 /***/ }),
 
-/***/ 205:
+/***/ 206:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WelcomPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(161);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(162);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -742,13 +814,13 @@ var WelcomPage = (function () {
 
 /***/ }),
 
-/***/ 206:
+/***/ 207:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(230);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(231);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -756,7 +828,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 230:
+/***/ 231:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -764,27 +836,33 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(281);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(161);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_register_register__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_main_tab_main_tab__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(282);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(162);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_register_register__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_main_tab_main_tab__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_doctor_tab_doctor_tab__ = __webpack_require__(102);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_home_tab_home_tab__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_appoinment_tab_appoinment_tab__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_welcom_welcom__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_message_tab_message_tab__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_welcom_welcom__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_message_tab_message_tab__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_hospital_hospital__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_doctor_doctor__ = __webpack_require__(103);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_img_preview_img_preview__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_appointment_list_appointment_list__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_personal_info_personal_info__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_edit_medical_card_edit_medical_card__ = __webpack_require__(308);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_private_doctor_private_doctor__ = __webpack_require__(311);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -821,11 +899,18 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_14__pages_hospital_hospital__["a" /* HospitalPage */],
                 __WEBPACK_IMPORTED_MODULE_15__pages_doctor_doctor__["a" /* DoctorPage */],
                 __WEBPACK_IMPORTED_MODULE_16__pages_img_preview_img_preview__["a" /* ImgPreviewPage */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_appointment_list_appointment_list__["a" /* AppointmentListPage */]
+                __WEBPACK_IMPORTED_MODULE_17__pages_appointment_list_appointment_list__["a" /* AppointmentListPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_personal_info_personal_info__["a" /* PersonalInfoPage */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_edit_medical_card_edit_medical_card__["a" /* EditMedicalCardPage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_private_doctor_private_doctor__["a" /* PrivateDoctorPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {
+                    // add global configuration here
+                    tabsHideOnSubPages: 'true',
+                    backButtonText: ''
+                }, {
                     links: [
                         { loadChildren: '../pages/about/about.module#AboutPageModule', name: 'AboutPage', segment: 'about', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/appoinment-tab/appoinment-tab.module#AppoinmentTabPageModule', name: 'AppointmentTabPage', segment: 'appoinment-tab', priority: 'low', defaultHistory: [] },
@@ -835,6 +920,7 @@ var AppModule = (function () {
                         { loadChildren: '../pages/cure-progress/cure-progress.module#CureProgressPageModule', name: 'CureProgressPage', segment: 'cure-progress', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/doctor-tab/doctor-tab.module#DoctorTabPageModule', name: 'DoctorTabPage', segment: 'doctor-tab', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/doctor/doctor.module#DoctorPageModule', name: 'DoctorPage', segment: 'doctor', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/edit-medical-card/edit-medical-card.module#EditMedicalCardPageModule', name: 'EditMedicalCardPage', segment: 'edit-medical-card', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/edit-personal-info/edit-personal-info.module#EditPersonalInfoPageModule', name: 'EditPersonalInfoPage', segment: 'edit-personal-info', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/home-tab/home-tab.module#HomeTabPageModule', name: 'HomeTabPage', segment: 'home-tab', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/hospital/hospital.module#HospitalPageModule', name: 'HospitalPage', segment: 'hospital', priority: 'low', defaultHistory: [] },
@@ -864,7 +950,10 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_14__pages_hospital_hospital__["a" /* HospitalPage */],
                 __WEBPACK_IMPORTED_MODULE_15__pages_doctor_doctor__["a" /* DoctorPage */],
                 __WEBPACK_IMPORTED_MODULE_16__pages_img_preview_img_preview__["a" /* ImgPreviewPage */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_appointment_list_appointment_list__["a" /* AppointmentListPage */]
+                __WEBPACK_IMPORTED_MODULE_17__pages_appointment_list_appointment_list__["a" /* AppointmentListPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_personal_info_personal_info__["a" /* PersonalInfoPage */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_edit_medical_card_edit_medical_card__["a" /* EditMedicalCardPage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_private_doctor_private_doctor__["a" /* PrivateDoctorPage */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
@@ -880,16 +969,16 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 281:
+/***/ 282:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_main_tab_main_tab__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_private_doctor_private_doctor__ = __webpack_require__(311);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -906,7 +995,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var MyApp = (function () {
     function MyApp(platform, statusBar, splashScreen) {
-        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_main_tab_main_tab__["a" /* MainTabPage */];
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_private_doctor_private_doctor__["a" /* PrivateDoctorPage */];
         platform.ready().then(function () {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
@@ -917,12 +1006,127 @@ var MyApp = (function () {
     MyApp = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/chengpiao/ionic/mevur/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/chengpiao/ionic/mevur/src/app/app.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _c || Object])
     ], MyApp);
     return MyApp;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ 308:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditMedicalCardPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the EditMedicalCardPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var EditMedicalCardPage = (function () {
+    function EditMedicalCardPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.medicalCard = {
+            state: '慢性胃炎',
+            note: '未列明',
+            hypersensitivity: '未列明',
+            medicine: '未列明',
+            blood_type: 'O',
+            weight: '65',
+            height: '170'
+        };
+        this.weight = [5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 8.5, 9.0, 9.5, 10.0, 10.5, 11.0, 11.5, 12.0, 12.5, 13.0, 13.5, 14.0, 14.5, 15.0, 15.5, 16.0, 16.5, 17.0, 17.5, 18.0, 18.5, 19.0, 19.5, 20.0, 20.5, 21.0, 21.5, 22.0, 22.5, 23.0, 23.5, 24.0, 24.5, 25.0, 25.5, 26.0, 26.5, 27.0, 27.5, 28.0, 28.5, 29.0, 29.5, 30.0, 30.5, 31.0, 31.5, 32.0, 32.5, 33.0, 33.5, 34.0, 34.5, 35.0, 35.5, 36.0, 36.5, 37.0, 37.5, 38.0, 38.5, 39.0, 39.5, 40.0, 40.5, 41.0, 41.5, 42.0, 42.5, 43.0, 43.5, 44.0, 44.5, 45.0, 45.5, 46.0, 46.5, 47.0, 47.5, 48.0, 48.5, 49.0, 49.5, 50.0, 50.5, 51.0, 51.5, 52.0, 52.5, 53.0, 53.5, 54.0, 54.5, 55.0, 55.5, 56.0, 56.5, 57.0, 57.5, 58.0, 58.5, 59.0, 59.5, 60.0, 60.5, 61.0, 61.5, 62.0, 62.5, 63.0, 63.5, 64.0, 64.5, 65.0, 65.5, 66.0, 66.5, 67.0, 67.5, 68.0, 68.5, 69.0, 69.5, 70.0, 70.5, 71.0, 71.5, 72.0, 72.5, 73.0, 73.5, 74.0, 74.5, 75.0, 75.5, 76.0, 76.5, 77.0, 77.5, 78.0, 78.5, 79.0, 79.5, 80.0, 80.5, 81.0, 81.5, 82.0, 82.5, 83.0, 83.5, 84.0, 84.5, 85.0, 85.5, 86.0, 86.5, 87.0, 87.5, 88.0, 88.5, 89.0, 89.5, 90.0, 90.5, 91.0, 91.5, 92.0, 92.5, 93.0, 93.5, 94.0, 94.5, 95.0, 95.5, 96.0, 96.5, 97.0, 97.5, 98.0, 98.5, 99.0, 99.5, 100.0, 100.5, 101.0, 101.5, 102.0, 102.5, 103.0, 103.5, 104.0, 104.5, 105.0, 105.5, 106.0, 106.5, 107.0, 107.5, 108.0, 108.5, 109.0, 109.5, 110.0, 110.5, 111.0, 111.5, 112.0, 112.5, 113.0, 113.5, 114.0, 114.5, 115.0, 115.5, 116.0, 116.5, 117.0, 117.5, 118.0, 118.5, 119.0, 119.5, 120.0, 120.5, 121.0, 121.5, 122.0, 122.5, 123.0, 123.5, 124.0, 124.5, 125.0, 125.5, 126.0, 126.5, 127.0, 127.5, 128.0, 128.5, 129.0, 129.5, 130.0, 130.5, 131.0, 131.5, 132.0, 132.5, 133.0, 133.5, 134.0, 134.5, 135.0, 135.5, 136.0, 136.5, 137.0, 137.5, 138.0, 138.5, 139.0, 139.5, 140.0, 140.5, 141.0, 141.5, 142.0, 142.5, 143.0, 143.5, 144.0, 144.5, 145.0, 145.5, 146.0, 146.5, 147.0, 147.5, 148.0, 148.5, 149.0, 149.5, 150.0, 150.5, 151.0, 151.5, 152.0, 152.5, 153.0, 153.5, 154.0, 154.5, 155.0, 155.5, 156.0, 156.5, 157.0, 157.5, 158.0, 158.5, 159.0, 159.5, 160.0, 160.5, 161.0, 161.5, 162.0, 162.5, 163.0, 163.5, 164.0, 164.5, 165.0, 165.5, 166.0, 166.5, 167.0, 167.5, 168.0, 168.5, 169.0, 169.5, 170.0, 170.5, 171.0, 171.5, 172.0, 172.5, 173.0, 173.5, 174.0, 174.5, 175.0, 175.5, 176.0, 176.5, 177.0, 177.5, 178.0, 178.5, 179.0, 179.5, 180.0, 180.5, 181.0, 181.5, 182.0, 182.5, 183.0, 183.5, 184.0, 184.5, 185.0, 185.5, 186.0, 186.5, 187.0, 187.5, 188.0, 188.5, 189.0, 189.5, 190.0, 190.5, 191.0, 191.5, 192.0, 192.5, 193.0, 193.5, 194.0, 194.5, 195.0, 195.5, 196.0, 196.5, 197.0, 197.5, 198.0, 198.5, 199.0, 199.5, 200.0];
+        this.height = [20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250];
+    }
+    EditMedicalCardPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad EditMedicalCardPage');
+    };
+    EditMedicalCardPage.prototype.submit = function () {
+        console.log(this.medicalCard);
+    };
+    EditMedicalCardPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-edit-medical-card',template:/*ion-inline-start:"/Users/chengpiao/ionic/mevur/src/pages/edit-medical-card/edit-medical-card.html"*/'<!--\n  Generated template for the EditMedicalCardPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title text-center>修改医疗急救卡</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="submit()">\n        <ion-icon name="checkmark"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-item>\n      <ion-label stacked="">医疗状况</ion-label>\n      <ion-input type="text" [(ngModel)]="medicalCard.state"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label stacked="">医疗笔记</ion-label>\n      <ion-input type="text" [(ngModel)]="medicalCard.note"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label stacked="">过敏反应</ion-label>\n      <ion-input type="text" [(ngModel)]="medicalCard.hypersensitivity"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label stacked="">药物使用</ion-label>\n      <ion-input type="text" [(ngModel)]="medicalCard.medicine"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label stacked="">血型</ion-label>\n      <ion-select [(ngModel)]="medicalCard.blood_type" cancelText="取消" okText="确认">\n        <ion-option value="A">A型</ion-option>\n        <ion-option value="B">B型</ion-option>\n        <ion-option value="AB">AB型</ion-option>\n        <ion-option value="O">O型</ion-option>\n        <ion-option value="Rh">Rh阴性型</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <ion-item>\n      <ion-label stacked="">体重</ion-label>\n      <ion-select [(ngModel)]="medicalCard.weight" cancelText="取消" okText="确认!">\n        <ion-option *ngFor="let i of weight" value="{{i}}">{{i}} kg</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <ion-item>\n      <ion-label stacked="">身高</ion-label>\n      <ion-select [(ngModel)]="medicalCard.height" cancelText="取消" okText="确认!">\n        <ion-option *ngFor="let i of height" value="{{i}}">{{i}} cm</ion-option>\n      </ion-select>\n    </ion-item>\n\n\n\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/mevur/src/pages/edit-medical-card/edit-medical-card.html"*/,
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object])
+    ], EditMedicalCardPage);
+    return EditMedicalCardPage;
+    var _a, _b;
+}());
+
+//# sourceMappingURL=edit-medical-card.js.map
+
+/***/ }),
+
+/***/ 311:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PrivateDoctorPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the PrivateDoctorPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var PrivateDoctorPage = (function () {
+    function PrivateDoctorPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        var i = Math.random();
+        console.log(i);
+        if (i % 2 === 0) {
+            this.hasPrivateDoctor = true;
+        }
+        else {
+            this.hasPrivateDoctor = false;
+        }
+    }
+    PrivateDoctorPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad PrivateDoctorPage');
+    };
+    PrivateDoctorPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-private-doctor',template:/*ion-inline-start:"/Users/chengpiao/ionic/mevur/src/pages/private-doctor/private-doctor.html"*/'<!--\n  Generated template for the PrivateDoctorPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title text-center>专属医生</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="color-content">\n\n  <ion-card *ngIf="!hasPrivateDoctor">\n    <div class="bg"></div>\n\n    <ion-card-content>\n      <p>您还没有匹配任何专属医生，请点击下方按钮如私人医生匹配系统</p>\n    </ion-card-content>\n    <button ion-button clear full>匹配</button>\n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/mevur/src/pages/private-doctor/private-doctor.html"*/,
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object])
+    ], PrivateDoctorPage);
+    return PrivateDoctorPage;
+    var _a, _b;
+}());
+
+//# sourceMappingURL=private-doctor.js.map
 
 /***/ }),
 
@@ -930,13 +1134,10 @@ var MyApp = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MainTabPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PersonalInfoPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_tab_home_tab__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__doctor_tab_doctor_tab__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__appoinment_tab_appoinment_tab__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__message_tab_message_tab__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_medical_card_edit_medical_card__ = __webpack_require__(308);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -949,35 +1150,46 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
-
 /**
- * Generated class for the MainTabPage tabs.
+ * Generated class for the PersonalInfoPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var MainTabPage = (function () {
-    function MainTabPage(navCtrl) {
+var PersonalInfoPage = (function () {
+    function PersonalInfoPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
-        this.homeTabRoot = __WEBPACK_IMPORTED_MODULE_2__home_tab_home_tab__["a" /* HomeTabPage */];
-        this.doctorTabRoot = __WEBPACK_IMPORTED_MODULE_3__doctor_tab_doctor_tab__["a" /* DoctorTabPage */];
-        this.appointmentTabPageRoot = __WEBPACK_IMPORTED_MODULE_4__appoinment_tab_appoinment_tab__["a" /* AppointmentTabPage */];
-        this.messageTabRoot = __WEBPACK_IMPORTED_MODULE_5__message_tab_message_tab__["a" /* MessageTabPage */];
+        this.navParams = navParams;
+        this.medicalCard = {
+            birth_date: '2018年03月19日',
+            state: '慢性胃炎',
+            note: '未列明',
+            hypersensitivity: '未列明',
+            medicine: '未列明',
+            blood_type: 'O',
+            weight: '65',
+            height: '170'
+        };
     }
-    MainTabPage = __decorate([
+    PersonalInfoPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad PersonalInfoPage');
+    };
+    PersonalInfoPage.prototype.edit = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__edit_medical_card_edit_medical_card__["a" /* EditMedicalCardPage */]);
+    };
+    PersonalInfoPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-main-tab',template:/*ion-inline-start:"/Users/chengpiao/ionic/mevur/src/pages/main-tab/main-tab.html"*/'<ion-tabs>\n    <ion-tab [root]="homeTabRoot" tabTitle="首页" tabIcon="home"></ion-tab>\n    <ion-tab [root]="doctorTabRoot" tabTitle="在线医生" tabIcon="medical"></ion-tab>\n    <ion-tab [root]="appointmentTabPageRoot" tabTitle="预约挂号" tabIcon="pulse"></ion-tab>\n    <ion-tab [root]="messageTabRoot" tabBadge="14" tabBadgeStyle="danger" tabTitle="消息中心" tabIcon="mail"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/Users/chengpiao/ionic/mevur/src/pages/main-tab/main-tab.html"*/
+            selector: 'page-personal-info',template:/*ion-inline-start:"/Users/chengpiao/ionic/mevur/src/pages/personal-info/personal-info.html"*/'<!--\n  Generated template for the PersonalInfoPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title text-center>个人信息</ion-title>\n    <ion-buttons end>\n      <button ion-button (click)="edit()">\n        <ion-icon name="medical"></ion-icon>\n        修改\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="color-content">\n  <div class="head">\n    <ion-item no-lines>\n      <ion-avatar>\n        <img src="../../assets/imgs/person_info.jpg">\n      </ion-avatar>\n    </ion-item>\n  </div>\n\n  <ion-card>\n    <ion-card-content style="margin-top: 15px">\n      <ion-card-title>\n        程飘\n        <ion-icon name="male" color="primary"></ion-icon>\n      </ion-card-title>\n      <p>\n        重庆市南岸区学府大道69号\n      </p>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-content>\n      <ion-card-title text-center color="danger">\n        <ion-icon name="medical"></ion-icon>\n        医疗急救卡\n      </ion-card-title>\n      <p>医疗急救卡可在您出现注入过敏反应和医疗状况等紧急情况时，提供您的重要医疗信息。</p>\n      <hr>\n      <p>\n        <ion-label>出生日期</ion-label>\n        {{medicalCard.birth_date}}\n      </p>\n      <p>\n        <ion-label>医疗状况</ion-label>\n        {{medicalCard.state}}\n      </p>\n      <p>\n        <ion-label>医疗笔记</ion-label>\n        {{medicalCard.note}}\n      </p>\n      <p>\n        <ion-label>过敏反应</ion-label>\n        {{medicalCard.hypersensitivity}}\n      </p>\n      <p>\n        <ion-label>药物使用</ion-label>\n        {{medicalCard.medicine}}\n      </p>\n      <p>\n        <ion-label>血型</ion-label>\n        {{medicalCard.blood_type}} 型\n      </p>\n      <p>\n        <ion-label>体重</ion-label>\n        {{medicalCard.weight}} KG\n      </p>\n      <p>\n        <ion-label>身高</ion-label>\n        {{medicalCard.height}} CM\n      </p>\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/mevur/src/pages/personal-info/personal-info.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]])
-    ], MainTabPage);
-    return MainTabPage;
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object])
+    ], PersonalInfoPage);
+    return PersonalInfoPage;
+    var _a, _b;
 }());
 
-//# sourceMappingURL=main-tab.js.map
+//# sourceMappingURL=personal-info.js.map
 
 /***/ })
 
-},[206]);
+},[207]);
 //# sourceMappingURL=main.js.map

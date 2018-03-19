@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <button ion-button (tap)="showMenu()" icon-only>
+    <button ion-button menuToggle icon-only clear>
       <ion-icon name='person'></ion-icon>
     </button>
     <ion-title text-center>智慧医院</ion-title>
@@ -15,7 +15,7 @@
 
 </ion-header>
 
-<ion-menu id="my-menu" [content]="content">
+<ion-menu type="overlay" id="my-menu" [content]="content">
   <ion-content class="card-background-page">
     <ion-card>
       <img src="{{profile}}"/>
@@ -23,19 +23,19 @@
       <div class="card-subtitle">{{describe}}</div>
     </ion-card>
     <ion-list>
-      <button ion-item>
+      <button ion-item (tap)="onItemClicked(0)">
         个人信息
       </button>
-      <button ion-item>
+      <button ion-item (tap)="onItemClicked(1)">
         专属医生
       </button>
-      <button ion-item>
+      <button ion-item (tap)="onItemClicked(2)">
         电子病历
       </button>
-      <button ion-item>
+      <button ion-item (tap)="onItemClicked(3)">
         身体体征
       </button>
-      <button ion-item>
+      <button ion-item (tap)="onItemClicked(4)">
         医疗进度
       </button>
     </ion-list>
@@ -79,7 +79,7 @@
         <p>{{hospital.tel}}</p>
       </div>
       <div class="divider"></div>
-      <button menuToggle ion-button full clear>
+      <button ion-button full clear>
         查看详情
       </button>
     </ion-card>

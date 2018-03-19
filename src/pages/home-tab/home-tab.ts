@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {App, IonicPage, MenuController, NavController, NavParams} from 'ionic-angular';
 import {HospitalPage} from "../hospital/hospital";
+import {PersonalInfoPage} from "../personal-info/personal-info";
 
 /**
  * Generated class for the HomeTabPage page.
@@ -60,7 +61,18 @@ export class HomeTabPage {
   }
 
   showMenu() {
-    console.log(this.menu.open());
+   this.menu.toggle();
+   console.log('button toggle menu clicked')
+  }
+
+  onItemClicked(which: Number) {
+    console.log(which);
+    switch (which) {
+      case 0: {
+        this.navCtrl.push(PersonalInfoPage);
+        break;
+      }
+    }
   }
 
 }

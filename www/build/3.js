@@ -1,14 +1,14 @@
 webpackJsonp([3],{
 
-/***/ 296:
+/***/ 292:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PayPlatformPageModule", function() { return PayPlatformPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditPersonalInfoPageModule", function() { return EditPersonalInfoPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pay_platform__ = __webpack_require__(307);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_personal_info__ = __webpack_require__(309);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,31 +18,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var PayPlatformPageModule = (function () {
-    function PayPlatformPageModule() {
+var EditPersonalInfoPageModule = (function () {
+    function EditPersonalInfoPageModule() {
     }
-    PayPlatformPageModule = __decorate([
+    EditPersonalInfoPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__pay_platform__["a" /* PayPlatformPage */],
+                __WEBPACK_IMPORTED_MODULE_2__edit_personal_info__["a" /* EditPersonalInfoPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__pay_platform__["a" /* PayPlatformPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__edit_personal_info__["a" /* EditPersonalInfoPage */]),
             ],
         })
-    ], PayPlatformPageModule);
-    return PayPlatformPageModule;
+    ], EditPersonalInfoPageModule);
+    return EditPersonalInfoPageModule;
 }());
 
-//# sourceMappingURL=pay-platform.module.js.map
+//# sourceMappingURL=edit-personal-info.module.js.map
 
 /***/ }),
 
-/***/ 307:
+/***/ 309:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PayPlatformPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditPersonalInfoPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -57,29 +57,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the PayPlatformPage page.
+ * Generated class for the EditPersonalInfoPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var PayPlatformPage = (function () {
-    function PayPlatformPage(navCtrl, navParams) {
+var EditPersonalInfoPage = (function () {
+    function EditPersonalInfoPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    PayPlatformPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad PayPlatformPage');
+    EditPersonalInfoPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad EditPersonalInfoPage');
     };
-    PayPlatformPage = __decorate([
+    EditPersonalInfoPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-pay-platform',template:/*ion-inline-start:"/Users/chengpiao/ionic/mevur/src/pages/pay-platform/pay-platform.html"*/'<!--\n  Generated template for the PayPlatformPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>pay-platform</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/mevur/src/pages/pay-platform/pay-platform.html"*/,
+            selector: 'page-edit-personal-info',template:/*ion-inline-start:"/Users/chengpiao/ionic/mevur/src/pages/edit-personal-info/edit-personal-info.html"*/'<!--\n  Generated template for the EditPersonalInfoPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>edit-personal-info</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/mevur/src/pages/edit-personal-info/edit-personal-info.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
-    ], PayPlatformPage);
-    return PayPlatformPage;
+    ], EditPersonalInfoPage);
+    return EditPersonalInfoPage;
 }());
 
-//# sourceMappingURL=pay-platform.js.map
+//# sourceMappingURL=edit-personal-info.js.map
 
 /***/ })
 

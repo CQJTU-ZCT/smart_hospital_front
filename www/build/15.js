@@ -1,14 +1,14 @@
 webpackJsonp([15],{
 
-/***/ 291:
+/***/ 294:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeTabPageModule", function() { return HomeTabPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HospitalPageModule", function() { return HospitalPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_tab__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hospital__ = __webpack_require__(106);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var HomeTabPageModule = (function () {
-    function HomeTabPageModule() {
+var HospitalPageModule = (function () {
+    function HospitalPageModule() {
     }
-    HomeTabPageModule = __decorate([
+    HospitalPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__home_tab__["a" /* HomeTabPage */],
+                __WEBPACK_IMPORTED_MODULE_2__hospital__["a" /* HospitalPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__home_tab__["a" /* HomeTabPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__hospital__["a" /* HospitalPage */]),
             ],
         })
-    ], HomeTabPageModule);
-    return HomeTabPageModule;
+    ], HospitalPageModule);
+    return HospitalPageModule;
 }());
 
-//# sourceMappingURL=home-tab.module.js.map
+//# sourceMappingURL=hospital.module.js.map
 
 /***/ })
 

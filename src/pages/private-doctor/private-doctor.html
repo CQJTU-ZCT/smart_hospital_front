@@ -6,13 +6,22 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>private-doctor</ion-title>
+  <ion-navbar color="primary">
+    <ion-title text-center>专属医生</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="color-content">
+
+  <ion-card *ngIf="!hasPrivateDoctor">
+    <div class="bg"></div>
+
+    <ion-card-content>
+      <p>您还没有匹配任何专属医生，请点击下方按钮如私人医生匹配系统</p>
+    </ion-card-content>
+    <button ion-button clear full>匹配</button>
+  </ion-card>
 
 </ion-content>

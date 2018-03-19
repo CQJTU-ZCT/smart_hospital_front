@@ -15,7 +15,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PrivateDoctorPage {
 
+  hasPrivateDoctor: boolean;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    var i = Math.random();
+    console.log(i);
+    if (i % 2 === 0) {
+      this.hasPrivateDoctor = true;
+    } else {
+      this.hasPrivateDoctor = false;
+    }
   }
 
   ionViewDidLoad() {
