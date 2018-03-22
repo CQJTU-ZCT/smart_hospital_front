@@ -28231,11 +28231,130 @@ page-personal-info ion-card ion-card-content ion-label {
   font-size: small;
 }
 
-page-private-doctor .bg {
-  background-image: url("../../assets/imgs/card_img_bg.png");
-  width: 100%;
-  height: auto;
+page-private-doctor {
+  overflow: hidden;
+}
+
+page-private-doctor .head-info {
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #f4f4f4;
+}
+
+page-private-doctor .line-breaker {
+  white-space: pre-line;
+}
+
+page-private-doctor .message-wrap {
+  padding: 0 10px;
+}
+
+page-private-doctor .message-wrap .message {
+  position: relative;
+  padding: 7px 0;
+}
+
+page-private-doctor .message-wrap .message .user-img {
   position: absolute;
+  border-radius: 45px;
+  width: 45px;
+  height: 45px;
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.36);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.36);
+}
+
+page-private-doctor .message-wrap .message .msg-detail {
+  width: 100%;
+  display: inline-block;
+}
+
+page-private-doctor .message-wrap .message .msg-detail p {
+  margin: 0;
+}
+
+page-private-doctor .message-wrap .message .msg-detail .msg-info p {
+  font-size: .8em;
+  color: #888;
+}
+
+page-private-doctor .message-wrap .message .msg-detail .msg-content {
+  position: relative;
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  color: #fff;
+  width: auto;
+  max-width: 80%;
+}
+
+page-private-doctor .message-wrap .message .msg-detail .msg-content span.triangle {
+  background-color: #fff;
+  border-radius: 2px;
+  height: 8px;
+  width: 8px;
+  top: 12px;
+  display: block;
+  border-style: solid;
+  border-color: #ddd;
+  border-width: 1px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+page-private-doctor .message-wrap .message.left .msg-content {
+  background-color: #fff;
+  float: left;
+}
+
+page-private-doctor .message-wrap .message.left .msg-detail {
+  padding-left: 60px;
+}
+
+page-private-doctor .message-wrap .message.left .user-img {
+  left: 0;
+}
+
+page-private-doctor .message-wrap .message.left .msg-content {
+  color: #343434;
+}
+
+page-private-doctor .message-wrap .message.left .msg-content span.triangle {
+  border-top-width: 0;
+  border-right-width: 0;
+  left: -5px;
+}
+
+page-private-doctor .message-wrap .message.right .msg-detail {
+  padding-right: 60px;
+}
+
+page-private-doctor .message-wrap .message.right .msg-detail .msg-info {
+  text-align: right;
+}
+
+page-private-doctor .message-wrap .message.right .user-img {
+  right: 0;
+}
+
+page-private-doctor .message-wrap .message.right ion-spinner {
+  position: absolute;
+  right: 10px;
+  top: 50px;
+}
+
+page-private-doctor .message-wrap .message.right .msg-content {
+  background-color: #387ef5;
+  float: right;
+}
+
+page-private-doctor .message-wrap .message.right .msg-content span.triangle {
+  background-color: #387ef5;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  right: -5px;
 }
 
 page-welcom ion-slide {

@@ -13,15 +13,65 @@
 </ion-header>
 
 
-<ion-content class="color-content">
-
-  <ion-card *ngIf="!hasPrivateDoctor">
-    <div class="bg"></div>
-
+<ion-content class="color-content" *ngIf="!hasPrivateDoctor">
+  <ion-card>
     <ion-card-content>
-      <p>您还没有匹配任何专属医生，请点击下方按钮如私人医生匹配系统</p>
+      <img src="../../assets/imgs/oops.png">
+      <p style="color: #488aff">您还没有匹配任何专属医生，请点击下方按钮进入私人医生匹配系统</p>
     </ion-card-content>
-    <button ion-button clear full>匹配</button>
+    <button ion-button color="primary" full>寻找专属医生</button>
   </ion-card>
-
 </ion-content>
+
+
+<ion-content class="color-content" *ngIf="hasPrivateDoctor">
+  <header class="head-info">
+    <ion-card>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/person_info.jpg">
+        </ion-avatar>
+        <h2>Marty McFly</h2>
+        <p>November 5, 1955</p>
+        <p>
+          <ion-icon name="md-disc" style="color: deepskyblue"></ion-icon>
+          在线
+        </p>
+      </ion-item>
+    </ion-card>
+  </header>
+  <div class="message-wrap">
+
+    <div *ngFor="let msg of msgList"
+         class="message"
+         [class.left]=" msg.userId === toUserId "
+         [class.right]=" msg.userId === userId ">
+      <img class="user-img" [src]="msg.userAvatar" alt="" src="">
+      <ion-spinner name="dots" *ngIf="msg.status === 'pending'"></ion-spinner>
+      <div class="msg-detail">
+        <div class="msg-info">
+          <p>
+            {{msg.userName}}&nbsp;&nbsp;&nbsp;{{convertTime(msg.time)}}</p>
+        </div>
+        <div class="msg-content">
+          <span class="triangle"></span>
+          <p class="line-breaker ">{{msg.message}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer no-border>
+  <ion-item>
+    <button ion-button small clear icon-only item-left (click)="switchEmojiPicker()">
+      <ion-icon name="md-happy"></ion-icon>
+    </button>
+    <ion-textarea placeholder="输入文本信息" [(ngModel)]="msg">
+    </ion-textarea>
+    <button small ion-button outline item-right (click)="sendMsg()">
+      发送
+    </button>
+  </ion-item>
+
+</ion-footer>

@@ -1,14 +1,14 @@
 webpackJsonp([3],{
 
-/***/ 292:
+/***/ 290:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditPersonalInfoPageModule", function() { return EditPersonalInfoPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CureProgressPageModule", function() { return CureProgressPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_personal_info__ = __webpack_require__(309);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cure_progress__ = __webpack_require__(309);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var EditPersonalInfoPageModule = (function () {
-    function EditPersonalInfoPageModule() {
+var CureProgressPageModule = (function () {
+    function CureProgressPageModule() {
     }
-    EditPersonalInfoPageModule = __decorate([
+    CureProgressPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__edit_personal_info__["a" /* EditPersonalInfoPage */],
+                __WEBPACK_IMPORTED_MODULE_2__cure_progress__["a" /* CureProgressPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__edit_personal_info__["a" /* EditPersonalInfoPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cure_progress__["a" /* CureProgressPage */]),
             ],
         })
-    ], EditPersonalInfoPageModule);
-    return EditPersonalInfoPageModule;
+    ], CureProgressPageModule);
+    return CureProgressPageModule;
 }());
 
-//# sourceMappingURL=edit-personal-info.module.js.map
+//# sourceMappingURL=cure-progress.module.js.map
 
 /***/ }),
 
@@ -42,9 +42,9 @@ var EditPersonalInfoPageModule = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditPersonalInfoPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CureProgressPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -57,29 +57,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the EditPersonalInfoPage page.
+ * Generated class for the CureProgressPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var EditPersonalInfoPage = (function () {
-    function EditPersonalInfoPage(navCtrl, navParams) {
+var CureProgressPage = (function () {
+    function CureProgressPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    EditPersonalInfoPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad EditPersonalInfoPage');
+    CureProgressPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad CureProgressPage');
     };
-    EditPersonalInfoPage = __decorate([
+    CureProgressPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-edit-personal-info',template:/*ion-inline-start:"/Users/chengpiao/ionic/mevur/src/pages/edit-personal-info/edit-personal-info.html"*/'<!--\n  Generated template for the EditPersonalInfoPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>edit-personal-info</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/mevur/src/pages/edit-personal-info/edit-personal-info.html"*/,
+            selector: 'page-cure-progress',template:/*ion-inline-start:"/Users/chengpiao/ionic/mevur/src/pages/cure-progress/cure-progress.html"*/'<!--\n  Generated template for the CureProgressPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>cure-progress</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/mevur/src/pages/cure-progress/cure-progress.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
-    ], EditPersonalInfoPage);
-    return EditPersonalInfoPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]])
+    ], CureProgressPage);
+    return CureProgressPage;
 }());
 
-//# sourceMappingURL=edit-personal-info.js.map
+//# sourceMappingURL=cure-progress.js.map
 
 /***/ })
 

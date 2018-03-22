@@ -20,6 +20,7 @@ import {AppointmentListPage} from "../pages/appointment-list/appointment-list";
 import {PersonalInfoPage} from "../pages/personal-info/personal-info";
 import {EditMedicalCardPage} from "../pages/edit-medical-card/edit-medical-card";
 import {PrivateDoctorPage} from "../pages/private-doctor/private-doctor";
+import {EmojiProvider} from "../providers/emoji";
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import {PrivateDoctorPage} from "../pages/private-doctor/private-doctor";
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    EmojiProvider
   ]
 })
 export class AppModule {}
