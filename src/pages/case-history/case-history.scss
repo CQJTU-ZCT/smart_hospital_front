@@ -1,3 +1,38 @@
 page-case-history {
+  .m-list-header {
+    background-color: #f8f8f8;
+    color: darksalmon;
+    height: 30px;
+    min-height: 30px !important;
+  }
+  .case-card {
+    ion-card-header {
+      color: #f53d3d;
+      font-weight: bolder;
+    }
+  }
+  .case-item {
+    padding: 5px;
+    height: 40px;
+
+    .case-title {
+      float: left;
+      line-height: 40px;
+      width: 70px;
+      margin-top: auto;
+      margin-bottom: auto;
+      font-size: 1.0em;
+    }
+    .case-info {
+      float: left;
+      line-height: 40px;
+      margin-top: auto;
+      margin-bottom: auto;
+      font-size: 1.1em;
+    }
+  }
+  .breaker {
+    clear: both;
+  }
 
 }

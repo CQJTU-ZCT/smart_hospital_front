@@ -21,6 +21,8 @@ import {PersonalInfoPage} from "../pages/personal-info/personal-info";
 import {EditMedicalCardPage} from "../pages/edit-medical-card/edit-medical-card";
 import {PrivateDoctorPage} from "../pages/private-doctor/private-doctor";
 import {EmojiProvider} from "../providers/emoji";
+import {CaseHistoryPage} from "../pages/case-history/case-history";
+import {AddCaseHistoryPage} from "../pages/add-case-history/add-case-history";
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import {EmojiProvider} from "../providers/emoji";
     AppointmentListPage,
     PersonalInfoPage,
     EditMedicalCardPage,
-    PrivateDoctorPage
+    PrivateDoctorPage,
+    CaseHistoryPage,
+    AddCaseHistoryPage
   ],
   imports: [
     BrowserModule,
@@ -66,7 +70,9 @@ import {EmojiProvider} from "../providers/emoji";
     AppointmentListPage,
     PersonalInfoPage,
     EditMedicalCardPage,
-    PrivateDoctorPage
+    PrivateDoctorPage,
+    CaseHistoryPage,
+    AddCaseHistoryPage
   ],
   providers: [
     StatusBar,

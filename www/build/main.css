@@ -28031,8 +28031,60 @@ ion-navbar.toolbar {
   background-size: cover;
 }
 
+page-add-case-history .alert-info {
+  background-color: blanchedalmond;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+page-add-case-history .alert-info p {
+  margin-top: -30px;
+  padding: 5px;
+}
+
 page-appointment-list ion-item {
   margin-top: 0;
+}
+
+page-case-history .m-list-header {
+  background-color: #f8f8f8;
+  color: darksalmon;
+  height: 30px;
+  min-height: 30px !important;
+}
+
+page-case-history .case-card ion-card-header {
+  color: #f53d3d;
+  font-weight: bolder;
+}
+
+page-case-history .case-item {
+  padding: 5px;
+  height: 40px;
+}
+
+page-case-history .case-item .case-title {
+  float: left;
+  line-height: 40px;
+  width: 70px;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 1.0em;
+}
+
+page-case-history .case-item .case-info {
+  float: left;
+  line-height: 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 1.1em;
+}
+
+page-case-history .breaker {
+  clear: both;
 }
 
 page-doctor ion-card img {
