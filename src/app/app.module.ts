@@ -23,6 +23,7 @@ import {PrivateDoctorPage} from "../pages/private-doctor/private-doctor";
 import {EmojiProvider} from "../providers/emoji";
 import {CaseHistoryPage} from "../pages/case-history/case-history";
 import {AddCaseHistoryPage} from "../pages/add-case-history/add-case-history";
+import {BodyMassPage} from "../pages/body-mass/body-mass";
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import {AddCaseHistoryPage} from "../pages/add-case-history/add-case-history";
     EditMedicalCardPage,
     PrivateDoctorPage,
     CaseHistoryPage,
-    AddCaseHistoryPage
+    AddCaseHistoryPage,
+    BodyMassPage
   ],
   imports: [
     BrowserModule,
@@ -72,7 +74,8 @@ import {AddCaseHistoryPage} from "../pages/add-case-history/add-case-history";
     EditMedicalCardPage,
     PrivateDoctorPage,
     CaseHistoryPage,
-    AddCaseHistoryPage
+    AddCaseHistoryPage,
+    BodyMassPage
   ],
   providers: [
     StatusBar,

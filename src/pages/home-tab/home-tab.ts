@@ -4,6 +4,7 @@ import {HospitalPage} from "../hospital/hospital";
 import {PersonalInfoPage} from "../personal-info/personal-info";
 import {PrivateDoctorPage} from "../private-doctor/private-doctor";
 import {CaseHistoryPage} from "../case-history/case-history";
+import {BodyMassPage} from "../body-mass/body-mass";
 
 /**
  * Generated class for the HomeTabPage page.
@@ -31,23 +32,23 @@ export class HomeTabPage {
               public menu: MenuController) {
     this.menu.enable(true);
     this.name = '程飘';
-    this.profile = '../../assets/imgs/person_info.jpg';
+    this.profile = './assets/imgs/person_info.jpg';
     this.describe = 'cheng.bug@gmail.com';
     this.hospitals = [{
         name: '新桥医院',
-        img: '../../assets/imgs/person_info.jpg',
+        img: './assets/imgs/person_info.jpg',
         add: '重庆市沙坪坝区',
         tel: '0231-321412'
       },
       {
         name: '西南医院',
-        img: '../../assets/imgs/person_info.jpg',
+        img: './assets/imgs/person_info.jpg',
         add: '重庆市沙坪坝区',
         tel: '0231-321412'
       },
       {
         name: '新桥医院',
-        img: '../../assets/imgs/person_info.jpg',
+        img: './assets/imgs/person_info.jpg',
         add: '重庆市沙坪坝区',
         tel: '0231-321412'
       }
@@ -80,6 +81,10 @@ export class HomeTabPage {
       }
       case 2: {
         this.navCtrl.push(CaseHistoryPage);
+        break;
+      }
+      case 3: {
+        this.navCtrl.push(BodyMassPage);
         break;
       }
     }

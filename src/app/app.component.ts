@@ -7,12 +7,14 @@ import {PersonalInfoPage} from "../pages/personal-info/personal-info";
 import {PrivateDoctorPage} from "../pages/private-doctor/private-doctor";
 import {CaseHistoryPage} from "../pages/case-history/case-history";
 import {AddCaseHistoryPage} from "../pages/add-case-history/add-case-history";
+import {BodyMassPage} from "../pages/body-mass/body-mass";
+import {WelcomPage} from "../pages/welcom/welcom";
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = MainTabPage;
+  rootPage:any = WelcomPage;
 
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {

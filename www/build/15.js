@@ -1,14 +1,14 @@
 webpackJsonp([15],{
 
-/***/ 296:
+/***/ 780:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditMedicalCardPageModule", function() { return EditMedicalCardPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_medical_card__ = __webpack_require__(105);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DoctorPageModule", function() { return DoctorPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__doctor__ = __webpack_require__(212);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var EditMedicalCardPageModule = (function () {
-    function EditMedicalCardPageModule() {
+var DoctorPageModule = (function () {
+    function DoctorPageModule() {
     }
-    EditMedicalCardPageModule = __decorate([
+    DoctorPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__edit_medical_card__["a" /* EditMedicalCardPage */],
+                __WEBPACK_IMPORTED_MODULE_2__doctor__["a" /* DoctorPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__edit_medical_card__["a" /* EditMedicalCardPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__doctor__["a" /* DoctorPage */]),
             ],
         })
-    ], EditMedicalCardPageModule);
-    return EditMedicalCardPageModule;
+    ], DoctorPageModule);
+    return DoctorPageModule;
 }());
 
-//# sourceMappingURL=edit-medical-card.module.js.map
+//# sourceMappingURL=doctor.module.js.map
 
 /***/ })
 

@@ -28077,6 +28077,12 @@ page-appointment-list ion-item {
   margin-top: 0;
 }
 
+page-body-mass .chart {
+  width: 100%;
+  height: 200px;
+  margin: 5px;
+}
+
 page-case-history .m-list-header {
   background-color: #f8f8f8;
   color: darksalmon;
@@ -28273,7 +28279,7 @@ page-message-tab .i-badge {
 page-personal-info .head {
   width: 100%;
   height: 150px;
-  background-image: url("../../assets/imgs/health_action.png");
+  background-image: url("../assets/imgs/health_action.png");
   background-size: cover;
   position: relative;
 }
@@ -28444,19 +28450,19 @@ page-welcom ion-slide {
 }
 
 page-welcom #slide1 {
-  background-image: url("../../assets/imgs/slide1.png");
+  background-image: url("../assets/imgs/slide1.png");
 }
 
 page-welcom #slide2 {
-  background-image: url("../../assets/imgs/slide2.png");
+  background-image: url("../assets/imgs/slide2.png");
 }
 
 page-welcom #slide3 {
-  background-image: url("../../assets/imgs/slide3.png");
+  background-image: url("../assets/imgs/slide3.png");
 }
 
 page-welcom #slide4 {
-  background-image: url("../../assets/imgs/slide4.png");
+  background-image: url("../assets/imgs/slide4.png");
 }
 
 page-welcom .container {

@@ -21,6 +21,7 @@ export class CaseHistoryPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CaseHistoryPage');
+
   }
   add() {
     this.navCtrl.push(AddCaseHistoryPage);
