@@ -1,0 +1,65 @@
+<!--
+  Generated template for the AddCaseHistoryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary" [hideBackButton]="true">
+    <ion-buttons left>
+      <button ion-button icon-only (click)="close()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>添加病历记录</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="submit()">
+        <ion-icon name="checkmark"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+<ion-content>
+  <div id="alert" div class="alert-info">
+    <ion-buttons end>
+      <button ion-button icon-only clear small (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <p>
+      请如实填写如下信息
+    </p>
+  </div>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>就诊医院</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>就诊时间</ion-label>
+      <ion-datetime displayFormat="YYYY 年 MM 月 DD 日"
+                    pickerFormat="YYYY 年 MM 月 DD 日"
+                    [(ngModel)]="time"
+                    cancelText="取消"
+                    doneText="确认"
+                    color="primary"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>出诊医生</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>诊断结果</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>治疗意见</ion-label>
+      <ion-textarea type="text"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
