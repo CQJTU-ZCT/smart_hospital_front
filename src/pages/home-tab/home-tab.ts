@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import {App, IonicPage, MenuController, NavController, NavParams} from 'ionic-angular';
 import {HospitalPage} from "../hospital/hospital";
 import {PersonalInfoPage} from "../personal-info/personal-info";
+import {PrivateDoctorPage} from "../private-doctor/private-doctor";
+import {CaseHistoryPage} from "../case-history/case-history";
 
 /**
  * Generated class for the HomeTabPage page.
@@ -70,6 +72,14 @@ export class HomeTabPage {
     switch (which) {
       case 0: {
         this.navCtrl.push(PersonalInfoPage);
+        break;
+      }
+      case 1: {
+        this.navCtrl.push(PrivateDoctorPage);
+        break;
+      }
+      case 2: {
+        this.navCtrl.push(CaseHistoryPage);
         break;
       }
     }

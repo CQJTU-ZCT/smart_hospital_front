@@ -12,7 +12,7 @@ import {AddCaseHistoryPage} from "../pages/add-case-history/add-case-history";
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = AddCaseHistoryPage;
+  rootPage:any = MainTabPage;
 
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {

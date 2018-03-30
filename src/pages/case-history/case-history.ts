@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {AddCaseHistoryPage} from "../add-case-history/add-case-history";
 
 /**
  * Generated class for the CaseHistoryPage page.
@@ -20,6 +21,9 @@ export class CaseHistoryPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CaseHistoryPage');
+  }
+  add() {
+    this.navCtrl.push(AddCaseHistoryPage);
   }
 
 }
