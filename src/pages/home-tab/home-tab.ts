@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
-import {App, IonicPage, MenuController, NavController, NavParams} from 'ionic-angular';
+import {App, IonicPage, LoadingController, MenuController, NavController, NavParams} from 'ionic-angular';
 import {HospitalPage} from "../hospital/hospital";
 import {PersonalInfoPage} from "../personal-info/personal-info";
 import {PrivateDoctorPage} from "../private-doctor/private-doctor";
 import {CaseHistoryPage} from "../case-history/case-history";
 import {BodyMassPage} from "../body-mass/body-mass";
+import {TokenProvider} from "../../providers/token/token";
+import {HomePage} from "../home/home";
+import {HospitalProvider} from "../../providers/hospital/hospital";
 
 /**
  * Generated class for the HomeTabPage page.
@@ -26,10 +29,29 @@ export class HomeTabPage {
 
   hospitals: Array<any>;
 
+  loader: any;
+
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               public app: App,
-              public menu: MenuController) {
+              public menu: MenuController,
+              public token: TokenProvider,
+              public loading: LoadingController,
+              public hospital: HospitalProvider) {
+
+    //init loader
+    this.loader = this.loading.create({
+      content: '数据加载中，请稍后...',
+      spinner: 'Bubbles'
+    });
+    this.loader.present();
+
+    if (!this.token.checkToken()) {
+      this.navCtrl.push(HomePage);
+    } else {
+      console.log(this.token.getToken());
+      console.log(this.token.getUser());
+    }
     this.menu.enable(true);
     this.name = '程飘';
     this.profile = './assets/imgs/person_info.jpg';
@@ -57,6 +79,8 @@ export class HomeTabPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomeTabPage');
+    console.log(this.hospital.getHospital());
+    this.loader.dismiss();
   }
 
   toHospital() {

@@ -1,16 +1,17 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { StatusBar } from '@ionic-native/status-bar';
+import {BrowserModule} from '@angular/platform-browser';
+import {ErrorHandler, NgModule} from '@angular/core';
+import {IonicApp, IonicErrorHandler, IonicModule} from 'ionic-angular';
+import {SplashScreen} from '@ionic-native/splash-screen';
+import {StatusBar} from '@ionic-native/status-bar';
+import {HttpClientModule} from "@angular/common/http";
 
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { RegisterPage } from "../pages/register/register"
-import { MainTabPage } from "../pages/main-tab/main-tab";
-import { DoctorTabPage } from "../pages/doctor-tab/doctor-tab";
-import { HomeTabPage } from "../pages/home-tab/home-tab";
-import { AppointmentTabPage } from "../pages/appoinment-tab/appoinment-tab";
+import {MyApp} from './app.component';
+import {HomePage} from '../pages/home/home';
+import {RegisterPage} from "../pages/register/register"
+import {MainTabPage} from "../pages/main-tab/main-tab";
+import {DoctorTabPage} from "../pages/doctor-tab/doctor-tab";
+import {HomeTabPage} from "../pages/home-tab/home-tab";
+import {AppointmentTabPage} from "../pages/appoinment-tab/appoinment-tab";
 import {WelcomPage} from "../pages/welcom/welcom";
 import {MessageTabPage} from "../pages/message-tab/message-tab";
 import {HospitalPage} from "../pages/hospital/hospital";
@@ -24,6 +25,11 @@ import {EmojiProvider} from "../providers/emoji";
 import {CaseHistoryPage} from "../pages/case-history/case-history";
 import {AddCaseHistoryPage} from "../pages/add-case-history/add-case-history";
 import {BodyMassPage} from "../pages/body-mass/body-mass";
+import {HttpProvider} from '../providers/http/http';
+import { ApiProvider } from '../providers/api/api';
+import { TokenProvider } from '../providers/token/token';
+import {SelecthospitalPage} from "../pages/selecthospital/selecthospital";
+import { HospitalProvider } from '../providers/hospital/hospital';
 
 @NgModule({
   declarations: [
@@ -45,7 +51,8 @@ import {BodyMassPage} from "../pages/body-mass/body-mass";
     PrivateDoctorPage,
     CaseHistoryPage,
     AddCaseHistoryPage,
-    BodyMassPage
+    BodyMassPage,
+    SelecthospitalPage
   ],
   imports: [
     BrowserModule,
@@ -53,7 +60,9 @@ import {BodyMassPage} from "../pages/body-mass/body-mass";
       // add global configuration here
       tabsHideOnSubPages: 'true',  //hide tabs bar on subpage
       backButtonText: ''
-    })
+    }),
+    HttpClientModule
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -75,13 +84,19 @@ import {BodyMassPage} from "../pages/body-mass/body-mass";
     PrivateDoctorPage,
     CaseHistoryPage,
     AddCaseHistoryPage,
-    BodyMassPage
+    BodyMassPage,
+    SelecthospitalPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    EmojiProvider
+    EmojiProvider,
+    HttpProvider,
+    ApiProvider,
+    TokenProvider,
+    HospitalProvider
   ]
 })
-export class AppModule {}
+export class AppModule {
+}

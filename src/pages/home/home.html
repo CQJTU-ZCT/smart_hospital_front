@@ -11,15 +11,15 @@
     <ion-list id="login-ion-list">
       <ion-item>
         <ion-label floating>身份证号码或者手机号码</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" [(ngModel)]="username"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label floating>密码</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>记住登录状态</ion-label>
-        <ion-checkbox color="secondary" checked="true"></ion-checkbox>
+        <ion-checkbox color="secondary" checked="true" [(ngModel)]="remember"></ion-checkbox>
       </ion-item>
     </ion-list>
     <button ion-button class="md" [full]="true" (click)="routeLogin()">登录</button>
