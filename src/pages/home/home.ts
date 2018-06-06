@@ -55,7 +55,7 @@ export class HomePage {
     if (data['code'] === 1) {
       //store data
       let token = data['map']['token'];
-      let user = data['map']['user']['realname'] + "#" + data['map']['user']['idCard'];
+      let user = JSON.stringify(data['map']['user']);
       this.token.storeToken(token);
       this.token.storeUser(user);
       this.navCtrl.push(SelecthospitalPage);

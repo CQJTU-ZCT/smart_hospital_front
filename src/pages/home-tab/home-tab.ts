@@ -27,7 +27,7 @@ export class HomeTabPage {
   name: string;
   describe: string;
 
-  hospitals: Array<any>;
+  hospitalData: any;
 
   loader: any;
 
@@ -56,25 +56,7 @@ export class HomeTabPage {
     this.name = '程飘';
     this.profile = './assets/imgs/person_info.jpg';
     this.describe = 'cheng.bug@gmail.com';
-    this.hospitals = [{
-        name: '新桥医院',
-        img: './assets/imgs/person_info.jpg',
-        add: '重庆市沙坪坝区',
-        tel: '0231-321412'
-      },
-      {
-        name: '西南医院',
-        img: './assets/imgs/person_info.jpg',
-        add: '重庆市沙坪坝区',
-        tel: '0231-321412'
-      },
-      {
-        name: '新桥医院',
-        img: './assets/imgs/person_info.jpg',
-        add: '重庆市沙坪坝区',
-        tel: '0231-321412'
-      }
-    ]
+    this.hospitalData = this.hospital.getHospital();
   }
 
   ionViewDidLoad() {

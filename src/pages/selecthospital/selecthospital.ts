@@ -33,6 +33,7 @@ export class SelecthospitalPage {
               public load: LoadingController,
               public alert: AlertController,
               public hos: HospitalProvider) {
+    console.log(this.currentHospital);
   }
 
   ionViewDidLoad() {
@@ -48,13 +49,13 @@ export class SelecthospitalPage {
     $.get(this.api.getHospitalsApi(),
       {pageNum: this.page++},
       function (data) {
-        that.loader.dismiss();
-        if (data['code'] === 200) {
-          that.hospitals = data['map']['pageInfo']['list'];
-          that.maxPage = data['map']['pageInfo']['pages'];
-          console.log(that.hospitals);
-        }
+      that.loader.dismiss();
+      if (data['code'] === 200) {
+        that.hospitals = data['map']['pageInfo']['list'];
+        that.maxPage = data['map']['pageInfo']['pages'];
+        console.log(that.hospitals);
       }
+    }
     );
   }
 
@@ -83,7 +84,8 @@ export class SelecthospitalPage {
   }
 
   toMain() {
-    if (this.currentHospital === null) {
+    if (this.currentHospital === null ||
+        this.currentHospital === undefined) {
       this.alert.create({
         title: '提示',
         subTitle: '请选择医院'
