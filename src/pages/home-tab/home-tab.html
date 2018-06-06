@@ -48,38 +48,38 @@
 
   <ion-slides pager>
 
-    <ion-slide (tap)="toHospital()">
-      <img src="./assets/imgs/person_info.jpg">
-      <h2>Slide 1</h2>
+    <ion-slide>
+      <img src="https://ss0.bdstatic.com/6KYTfyqn1Ah3otqbppnN2DJv/comt/1498096950_32d8a37ca37e8b3fdace4c3257060e64_w800.jpeg">
+      <h2>高效</h2>
     </ion-slide>
 
     <ion-slide>
-      <img src="./assets/imgs/person_info.jpg">
-      <h2>Slide 2</h2>
+      <img src="https://ss0.bdstatic.com/6KYTfyqn1Ah3otqbppnN2DJv/comt/1498097073_c1e10842f9b9b93f92e43ec8cc54f9cd_w800.jpeg">
+      <h2>便捷</h2>
     </ion-slide>
 
     <ion-slide>
-      <img src="./assets/imgs/person_info.jpg">
-      <h2>Slide 3</h2>
+      <img src="https://ss0.bdstatic.com/6KYTfyqn1Ah3otqbppnN2DJv/comt/1498097087_4fb2839a0f84a11a8b1b0bdeb71f10cc_w800.jpeg">
+      <h2>智慧</h2>
     </ion-slide>
 
   </ion-slides>
 
   <ion-list>
     <ion-card>
-      <img class="hospital-img" src="{{hospital.img}}">
-      <div class="hospital-name">{{hospital.name}}</div>
+      <img class="hospital-img" src="https://ss0.bdstatic.com/6KYTfyqn1Ah3otqbppnN2DJv/comt/1498096950_32d8a37ca37e8b3fdace4c3257060e64_w800.jpeg">
+      <div class="hospital-name">{{hospitalData.hospitalName}}</div>
       <div class="item">
         <ion-icon name="navigate" item-start small></ion-icon>
-        <p>{{hospital.add}}</p>
+        <p>{{hospitalData.address}}</p>
       </div>
 
       <div class="item">
         <ion-icon name="call" item-left small></ion-icon>
-        <p>{{hospital.tel}}</p>
+        <p>{{hospitalData.longitude}},{{hospitalData.latitude}}</p>
       </div>
       <div class="divider"></div>
-      <button ion-button full clear>
+      <button ion-button full clear (tap)="toHospital()">
         查看详情
       </button>
     </ion-card>

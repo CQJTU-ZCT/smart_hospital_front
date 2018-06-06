@@ -61,7 +61,6 @@ export class HomeTabPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomeTabPage');
-    console.log(this.hospital.getHospital());
     this.loader.dismiss();
   }
 
