@@ -43,41 +43,32 @@
     <ion-card-content>
       <ion-card-title text-center color="danger">
         <ion-icon name="medical"></ion-icon>
-        医疗急救卡
+        用户信息卡
       </ion-card-title>
-      <p>医疗急救卡可在您出现注入过敏反应和医疗状况等紧急情况时，提供您的重要医疗信息。</p>
       <hr>
       <p>
         <ion-label>出生日期</ion-label>
-        {{medicalCard.birth_date}}
+        {{userInfo.usersDetail.birthYMD}}
       </p>
       <p>
-        <ion-label>医疗状况</ion-label>
-        {{medicalCard.state}}
+        <ion-label>身份证号码</ion-label>
+        {{userInfo.users.idCard}}
       </p>
       <p>
-        <ion-label>医疗笔记</ion-label>
-        {{medicalCard.note}}
+        <ion-label>住址</ion-label>
+        {{userInfo.usersDetail.address}}
       </p>
       <p>
-        <ion-label>过敏反应</ion-label>
-        {{medicalCard.hypersensitivity}}
+        <ion-label>电话号码</ion-label>
+        {{userInfo.users.phone}}
       </p>
       <p>
-        <ion-label>药物使用</ion-label>
-        {{medicalCard.medicine}}
+        <ion-label>邮箱</ion-label>
+        {{userInfo.users.mail}}
       </p>
       <p>
-        <ion-label>血型</ion-label>
-        {{medicalCard.blood_type}} 型
-      </p>
-      <p>
-        <ion-label>体重</ion-label>
-        {{medicalCard.weight}} KG
-      </p>
-      <p>
-        <ion-label>身高</ion-label>
-        {{medicalCard.height}} CM
+        <ion-label>民族</ion-label>
+        {{userInfo.nation.nationDesc}}
       </p>
     </ion-card-content>
   </ion-card>

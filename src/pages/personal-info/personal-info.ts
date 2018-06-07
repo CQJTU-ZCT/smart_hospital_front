@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {EditMedicalCardPage} from "../edit-medical-card/edit-medical-card";
 import {TokenProvider} from "../../providers/token/token";
+import * as $ from 'jquery';
 
 /**
  * Generated class for the PersonalInfoPage page.
@@ -17,28 +18,73 @@ import {TokenProvider} from "../../providers/token/token";
 })
 export class PersonalInfoPage {
 
-  medicalCard: any;
+  userInfo: any;
 
   user: any;
 
+  accessToken: any;
+
   constructor(public navCtrl: NavController,
-               public navParams: NavParams,
-               public token: TokenProvider) {
-    this.medicalCard = {
-      birth_date: '2018年03月19日',
-      state: '慢性胃炎',
-      note: '未列明',
-      hypersensitivity: '未列明',
-      medicine: '未列明',
-      blood_type: 'O',
-      weight: '65',
-      height: '170'
-    }
+              public navParams: NavParams,
+              public token: TokenProvider) {
     this.user = JSON.parse(this.token.getUser());
+    this.accessToken = this.token.getToken();
+    this.userInfo = {
+      "users": {
+        "idCard": "",
+        "accountStatusId": 1,
+        "roleId": 1,
+        "realname": "",
+        "phone": "",
+        "password": "",
+        "mail": ""
+      },
+      "accountStatus": {
+        "accountStatusId": 1,
+        "description": "正常"
+      },
+      "role": {
+        "roleId": 1,
+        "description": "普通用户"
+      },
+      "usersDetail": {
+        "idCard": "",
+        "nationId": 1,
+        "photoId": null,
+        "profileId": "",
+        "sexId": 1,
+        "address": "",
+        "birthYMD": ""
+      },
+      "nation": {
+        "nationId": 1,
+        "nationDesc": "汉族"
+      },
+      "profile": {
+        "profileId": "",
+        "profilePath": ""
+      },
+      "photo": null
+    };
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PersonalInfoPage');
+    let that = this;
+    $.get('http://api.zjhfyq.cn/api-user/users/detail', {
+        token: this.accessToken
+      },
+      function (data) {
+        console.log(data);
+        that.userInfo = data['map']['userDetail'];
+        if (that.userInfo.nation === null ||
+           that.userInfo.nation == undefined) {
+           that.userInfo.nation = {
+             nationId: 1,
+             nationDesc: '汉族'
+           }
+        }
+      });
   }
 
   edit() {

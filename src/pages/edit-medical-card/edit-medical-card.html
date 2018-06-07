@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <ion-title text-center>修改医疗急救卡</ion-title>
+    <ion-title text-center>修改个人信息</ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click)="submit()">
         <ion-icon name="checkmark"></ion-icon>
@@ -19,30 +19,16 @@
 <ion-content>
   <ion-list>
     <ion-item>
-      <ion-label stacked="">医疗状况</ion-label>
+      <ion-label stacked="">密码</ion-label>
       <ion-input type="text" [(ngModel)]="medicalCard.state"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label stacked="">医疗笔记</ion-label>
+      <ion-label stacked="">住址</ion-label>
       <ion-input type="text" [(ngModel)]="medicalCard.note"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked="">过敏反应</ion-label>
       <ion-input type="text" [(ngModel)]="medicalCard.hypersensitivity"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label stacked="">药物使用</ion-label>
-      <ion-input type="text" [(ngModel)]="medicalCard.medicine"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label stacked="">血型</ion-label>
-      <ion-select [(ngModel)]="medicalCard.blood_type" cancelText="取消" okText="确认">
-        <ion-option value="A">A型</ion-option>
-        <ion-option value="B">B型</ion-option>
-        <ion-option value="AB">AB型</ion-option>
-        <ion-option value="O">O型</ion-option>
-        <ion-option value="Rh">Rh阴性型</ion-option>
-      </ion-select>
     </ion-item>
 
     <ion-item>
