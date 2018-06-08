@@ -16,42 +16,27 @@
 </ion-header>
 <ion-content padding>
   <ion-list>
-    <ion-item>
-      <ion-label><span style="color: red">*</span>选择医院</ion-label>
-      <ion-select [(ngModel)]="hospital" submitText="确认" cancelText="取消">
-        <ion-option value="dos">DOS</ion-option>
-        <ion-option value="lunix">Linux</ion-option>
-        <ion-option value="mac7">Mac OS 7</ion-option>
-        <ion-option value="mac8">Mac OS 8</ion-option>
-        <ion-option value="win3.1">Windows 3.1</ion-option>
-        <ion-option value="win95">Windows 95</ion-option>
-        <ion-option value="win98">Windows 98</ion-option>
-      </ion-select>
-    </ion-item>
 
     <ion-item>
       <ion-label><span style="color: red">*</span>选择科室</ion-label>
       <ion-select [(ngModel)]="branch" submitText="确认" cancelText="取消">
-        <ion-option value="enable">Enable</ion-option>
-        <ion-option value="mute">Mute</ion-option>
-        <ion-option value="mute_week">Mute for a week</ion-option>
-        <ion-option value="mute_year">Mute for a year</ion-option>
+
       </ion-select>
     </ion-item>
 
     <ion-item>
       <ion-label>选择医生</ion-label>
-      <ion-select multiple [(ngModel)]="doctor" submitText="确认" cancelText="取消">
-        <ion-option value="enable">Enable</ion-option>
-        <ion-option value="mute">Mute</ion-option>
-        <ion-option value="mute_week">Mute for a week</ion-option>
-        <ion-option value="mute_year">Mute for a year</ion-option>
+      <ion-select [(ngModel)]="doctorId" submitText="确认" cancelText="取消">
+        <ion-option value="id">Enable</ion-option>
+        <ion-option value="id">Mute</ion-option>
+        <ion-option value="id">Mute for a week</ion-option>
+        <ion-option value="id">Mute for a year</ion-option>
       </ion-select>
     </ion-item>
 
     <ion-item>
       <ion-label>预约时间</ion-label>
-      <ion-datetime displayFormat="YYYY年MM月DD日 HH时后"
+      <ion-datetime [(ngModel)]="preorderTime" displayFormat="YYYY年MM月DD日 HH时后"
                     pickerFormat="YYYY 年 MM 月 DD 年 HH 时"
                     [(ngModel)]="time"
                     min="2018-03-14"

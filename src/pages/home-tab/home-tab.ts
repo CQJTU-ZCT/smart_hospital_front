@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import {App, IonicPage, LoadingController, MenuController, NavController, NavParams} from 'ionic-angular';
+import {
+  AlertController, App, IonicPage, LoadingController, MenuController, NavController,
+  NavParams
+} from 'ionic-angular';
 import {HospitalPage} from "../hospital/hospital";
 import {PersonalInfoPage} from "../personal-info/personal-info";
 import {PrivateDoctorPage} from "../private-doctor/private-doctor";
@@ -37,7 +40,8 @@ export class HomeTabPage {
               public menu: MenuController,
               public token: TokenProvider,
               public loading: LoadingController,
-              public hospital: HospitalProvider) {
+              public hospital: HospitalProvider,
+              public alert: AlertController) {
 
     //init loader
     this.loader = this.loading.create({
@@ -91,6 +95,27 @@ export class HomeTabPage {
       case 3: {
         this.navCtrl.push(BodyMassPage);
         break;
+      }
+      case 5: {
+        this.alert.create({
+          title: '提示',
+          subTitle: '是否需要呼救急救服务',
+          buttons: [
+            {
+              text: '取消',
+              role: 'cancel',
+              handler: () => {
+                console.log('Cancel clicked');
+              }
+            },
+            {
+              text: '确认',
+              handler: () => {
+                console.log('Buy clicked');
+              }
+            }
+          ]
+        }).present();
       }
     }
   }

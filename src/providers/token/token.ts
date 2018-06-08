@@ -42,4 +42,12 @@ export class TokenProvider {
     }
   }
 
+  storeUserDetail(userDetail: string) {
+    window.localStorage.setItem("userDetail", userDetail);
+  }
+
+  getUserDetail() {
+    return JSON.parse(window.localStorage.getItem("userDetail"));
+  }
+
 }

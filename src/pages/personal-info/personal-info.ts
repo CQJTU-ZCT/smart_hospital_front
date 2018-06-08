@@ -84,6 +84,7 @@ export class PersonalInfoPage {
              nationDesc: '汉族'
            }
         }
+        that.token.storeUserDetail(JSON.stringify(that.userInfo));
       });
   }
 

@@ -1,6 +1,10 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
 
+import * as $ from 'jquery';
+import {TokenProvider} from "../../providers/token/token";
+import {ApiProvider} from "../../providers/api/api";
+
 /**
  * Generated class for the MessageTabPage page.
  *
@@ -17,7 +21,12 @@ export class MessageTabPage {
 
   msg: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  appointments: any;
+
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public token: TokenProvider,
+              public api: ApiProvider) {
     this.msg = {
       title: '内科预约',
       describe: '预约成功',
@@ -28,6 +37,13 @@ export class MessageTabPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MessageTabPage');
+    let that = this;
+    $.get(this.api.getPreorders(),
+      {token: this.token.getToken()},
+      function (data) {
+        console.log(data);
+        that.appointments = data['map'];
+      });
   }
 
   showMsg($event) {

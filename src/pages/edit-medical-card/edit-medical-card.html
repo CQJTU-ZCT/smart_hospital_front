@@ -19,33 +19,30 @@
 <ion-content>
   <ion-list>
     <ion-item>
-      <ion-label stacked="">密码</ion-label>
-      <ion-input type="text" [(ngModel)]="medicalCard.state"></ion-input>
+      <ion-label stacked="">地址</ion-label>
+      <ion-input type="text" [(ngModel)]="personalInfo.usersDetail.address"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label stacked="">住址</ion-label>
-      <ion-input type="text" [(ngModel)]="medicalCard.note"></ion-input>
+      <ion-label stacked="">姓名</ion-label>
+      <ion-input type="text" [(ngModel)]="personalInfo.users.realname"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label stacked="">过敏反应</ion-label>
-      <ion-input type="text" [(ngModel)]="medicalCard.hypersensitivity"></ion-input>
+      <ion-label stacked="">手机号</ion-label>
+      <ion-input type="text" [(ngModel)]="personalInfo.users.phone"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked="">生日</ion-label>
+      <ion-datetime displayFormat="YYYY-MM-DD" pickerFormat="YYYY-MM-DD"
+                    placeholder = "选择出生年月日"
+                    [(ngModel)]="personalInfo.usersDetail.birthYMD"></ion-datetime>
     </ion-item>
 
     <ion-item>
-      <ion-label stacked="">体重</ion-label>
-      <ion-select [(ngModel)]="medicalCard.weight" cancelText="取消" okText="确认!">
-        <ion-option *ngFor="let i of weight" value="{{i}}">{{i}} kg</ion-option>
+      <ion-label stacked="">民族</ion-label>
+      <ion-select [(ngModel)]="personalInfo.nation.nationId" cancelText="取消" okText="确认!">
+        <ion-option *ngFor="let mz of nations" value="{{mz.id}}">{{mz.name}}</ion-option>
       </ion-select>
     </ion-item>
-
-    <ion-item>
-      <ion-label stacked="">身高</ion-label>
-      <ion-select [(ngModel)]="medicalCard.height" cancelText="取消" okText="确认!">
-        <ion-option *ngFor="let i of height" value="{{i}}">{{i}} cm</ion-option>
-      </ion-select>
-    </ion-item>
-
-
 
   </ion-list>
 </ion-content>

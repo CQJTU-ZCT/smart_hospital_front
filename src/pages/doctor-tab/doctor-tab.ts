@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import {App, IonicPage, NavController, NavParams} from 'ionic-angular';
 import {DoctorPage} from "../doctor/doctor";
 
+import * as $ from 'jquery';
+import {ApiProvider} from "../../providers/api/api";
+import {TokenProvider} from "../../providers/token/token";
+
 /**
  * Generated class for the DoctorTabPage page.
  *
@@ -18,11 +22,18 @@ export class DoctorTabPage {
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
-              public app: App) {
+              public app: App,
+              public api: ApiProvider,
+              public token: TokenProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DoctorTabPage');
+    $.get(this.api.getDocters(),
+      {token: this.token.getToken()},
+      function (data) {
+      console.log(data);
+    })
   }
 
   toDoctor($event) {

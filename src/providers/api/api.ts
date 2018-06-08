@@ -28,4 +28,20 @@ export class ApiProvider {
     return "http://sh.zjhfyq.cn/hospital";
   }
 
+  getDocters() {
+    return this.server + "/api-onelinediagnose/doctor";
+  }
+
+  getBranches() {
+    return this.server + "/api-hospital/hospital/branch";
+  }
+
+  getPreorders() {
+    return this.server + "/api-appointment/appointment";
+  }
+
+  postPreorder() {
+    return this.server + "/api-appointment/appointment";
+  }
+
 }
