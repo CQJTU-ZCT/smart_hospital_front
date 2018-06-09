@@ -29,7 +29,7 @@ export class ApiProvider {
   }
 
   getDocters() {
-    return this.server + "/api-onelinediagnose/doctor";
+    return this.server + "/api-hospital/hospital/doctor";
   }
 
   getBranches() {

@@ -10,21 +10,25 @@
   </ion-navbar>
 </ion-header>
 <ion-content class="color-content">
+  <ion-refresher #refresh (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content>
+    </ion-refresher-content>
+  </ion-refresher>
 
-  <ion-card>
+  <ion-card *ngFor="let doctor of doctors">
     <ion-item>
       <ion-avatar item-start>
-        <img src="./assets/imgs/slide1.png">
+        <img src="./assets/imgs/doctor.jpg">
       </ion-avatar>
-      <h2>Marty McFly</h2>
-      <p>西南医院</p>
+      <h2>{{doctor.name}}</h2>
+      <p>mail:{{doctor.mail}}</p>
     </ion-item>
     <ion-card-content>
-      <p>科室：耳鼻喉科</p>
+      <p>手机:{{doctor.phone}}</p>
       <p>状态：值班</p>
     </ion-card-content>
     <div class="divider"></div>
-    <button data-doctor-id="2" ion-button clear full (click)="toDoctor($event)">预约</button>
+    <button ion-button clear full (click)="toDoctor(doctor)">预约</button>
   </ion-card>
 
 </ion-content>

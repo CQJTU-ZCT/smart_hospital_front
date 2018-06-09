@@ -28,6 +28,9 @@ export class AppointmentTabPage {
   loadDialog: any;
 
   doctors: any;
+  branch: any;
+
+  branchId: string;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -36,7 +39,38 @@ export class AppointmentTabPage {
               public api: ApiProvider,
               public token: TokenProvider,
               public loader: LoadingController) {
-
+    this.branch = [];
+    this.doctors = [];
+    let that = this;
+    $.get(this.api.getBranches(),
+      {token: this.token.getToken()},
+      function (data) {
+        // that.loadDialog.dismiss();
+        console.log(data);
+        if (data['code'] !== 200) {
+          that.toastCtrl.create({
+            message: '请求科室数据失败，请稍后再试',
+            duration: 1000
+          }).present();
+          return;
+        } else {
+          that.branch = data['map']['pageInfo']['list'];
+        }
+      });
+    $.get(this.api.getDocters(),
+      {token: this.token.getToken()},
+      function (data) {
+        console.log(data['code']);
+        if (data['code'] !== 200) {
+          that.toastCtrl.create({
+            message: '请求医生数据失败，请稍后再试',
+            duration: 1000
+          }).present();
+          return;
+        } else {
+          that.doctors = data['map']['pageInfo']['list'];
+        }
+      })
   }
 
 
@@ -46,18 +80,18 @@ export class AppointmentTabPage {
       content: '数据加载中, 请稍后',
     });
     // this.loadDialog.present();
-    let that = this;
-    $.get(this.api.getBranches(),
-      {token: this.token.getToken()},
-    function (data) {
-      // that.loadDialog.dismiss();
-      console.log(data);
-    })
-    $.get(this.api.getDocters(),
-      {token: this.token.getToken()},
-    function (data) {
-      console.log(data);
-    })
+    // let that = this;
+    // $.get(this.api.getBranches(),
+    //   {token: this.token.getToken()},
+    // function (data) {
+    //   // that.loadDialog.dismiss();
+    //   console.log(data);
+    // })
+    // $.get(this.api.getDocters(),
+    //   {token: this.token.getToken()},
+    // function (data) {
+    //   console.log(data);
+    // })
   }
 
   submit() {
@@ -81,6 +115,42 @@ export class AppointmentTabPage {
 
   toList() {
     this.app.getRootNav().push(AppointmentListPage);
+  }
+
+  doRefresh(refresher) {
+    let that = this;
+    $.get(this.api.getBranches(),
+      {token: this.token.getToken()},
+      function (data) {
+        // that.loadDialog.dismiss();
+        console.log(data);
+        refresher.cancel();
+        if (data['code'] !== 200) {
+          that.toastCtrl.create({
+            message: '请求科室数据失败，请稍后再试',
+            duration: 1000
+          }).present();
+          return;
+        } else {
+          that.branch = data['map']['pageInfo']['list'];
+        }
+      });
+    $.get(this.api.getDocters(),
+      {token: this.token.getToken()},
+      function (data) {
+        refresher.cancel();
+        console.log(data['code']);
+        if (data['code'] !== 200) {
+          that.toastCtrl.create({
+            message: '请求医生数据失败，请稍后再试',
+            duration: 1000
+          }).present();
+          return;
+        } else {
+          that.doctors = data['map']['pageInfo']['list'];
+        }
+
+      })
   }
 
 }

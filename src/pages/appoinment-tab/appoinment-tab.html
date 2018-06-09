@@ -15,22 +15,24 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
+
+  <ion-refresher #refresh (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content>
+    </ion-refresher-content>
+  </ion-refresher>
   <ion-list>
 
     <ion-item>
       <ion-label><span style="color: red">*</span>选择科室</ion-label>
-      <ion-select [(ngModel)]="branch" submitText="确认" cancelText="取消">
-
+      <ion-select [(ngModel)]="branchId" submitText="确认" cancelText="取消">
+        <ion-option *ngFor="let item of branch" value="{{item.branchId}}">{{item.name}}</ion-option>
       </ion-select>
     </ion-item>
 
     <ion-item>
       <ion-label>选择医生</ion-label>
       <ion-select [(ngModel)]="doctorId" submitText="确认" cancelText="取消">
-        <ion-option value="id">Enable</ion-option>
-        <ion-option value="id">Mute</ion-option>
-        <ion-option value="id">Mute for a week</ion-option>
-        <ion-option value="id">Mute for a year</ion-option>
+        <ion-option *ngFor="let item of doctors" value="{{item.idCard}}">{{item.name}}</ion-option>
       </ion-select>
     </ion-item>
 
