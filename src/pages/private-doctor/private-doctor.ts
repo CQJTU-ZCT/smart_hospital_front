@@ -25,9 +25,13 @@ export class PrivateDoctorPage {
   hasPrivateDoctor: boolean;
   msg: string;
 
+  ws: any;
+
   @ViewChild(List) list: List;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.ws = new WebSocket("ws://10.0.0.8:8090/ws");
+    this.ws.subscribe();
     this.hasPrivateDoctor = true;
     this.userId = '140000198202211138';
     this.toUserId = '210000198410281948';

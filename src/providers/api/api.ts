@@ -37,11 +37,28 @@ export class ApiProvider {
   }
 
   getPreorders() {
-    return this.server + "/api-appointment/appointment";
+    return this.server + "/api-appointment/preorder";
   }
 
   postPreorder() {
-    return this.server + "/api-appointment/appointment";
+    return this.server + "/api-appointment/preorder";
   }
+
+  deletePreorder() {
+    return this.server + "/api-appointment/preorder";
+  }
+
+  getBranchDoctor() {
+    return this.server + "/api-hospital/branch-doctor-title";
+  }
+
+  getDoctorBranches() {
+    return this.server + "/api-hospital/branch-doctor-title";
+  }
+
+  postFirstAid() {
+    return this.server + "/api-onekeyfirstaid/sos"
+  }
+
 
 }

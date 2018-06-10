@@ -11,13 +11,17 @@
 </ion-header>
 
 <ion-content>
+  <ion-refresher #refresh (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content>
+    </ion-refresher-content>
+  </ion-refresher>
   <ion-card>
     <div class="car-img-bg img-bg">
       <img (click)="showImg($event)" src="http://www.xqhospital.com.cn/image/expertimages/21300601.jpg"/>
     </div>
     <ion-card-content>
-      <ion-card-title>
-        郑宏庭
+      <ion-card-title ([ngModel])="doctorNme">
+        {{doctorName}}
       </ion-card-title>
       <p>
         <ion-chip>
@@ -48,17 +52,14 @@
   <ion-list>
     <ion-item>
       <ion-label><span style="color: red">*</span>选择科室</ion-label>
-      <ion-select [(ngModel)]="branch" submitText="确认" cancelText="取消">
-        <ion-option value="enable" [selected]="true">Enable</ion-option>
-        <ion-option value="mute">Mute</ion-option>
-        <ion-option value="mute_week">Mute for a week</ion-option>
-        <ion-option value="mute_year">Mute for a year</ion-option>
+      <ion-select [(ngModel)]="branchId" submitText="确认" cancelText="取消">
+        <ion-option *ngFor="let branch of branches" value="branch.branch.branchId">{{branch.branch.name}}</ion-option>
       </ion-select>
     </ion-item>
     <ion-item>
       <ion-label>预约时间</ion-label>
-      <ion-datetime displayFormat="YYYY年MM月DD日 HH时后"
-                    pickerFormat="YYYY 年 MM 月 DD 年 HH 时"
+      <ion-datetime ([ngModel])="time" displayFormat="YYYY-MM-DD HH:mm:ss"
+                    pickerFormat="YYYY-MM-DD HH:mm:ss"
                     [(ngModel)]="time"
                     min="2018-03-14"
                     cancelText="取消"

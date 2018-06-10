@@ -19,12 +19,18 @@ import {MessageTabPage} from "../message-tab/message-tab";
 })
 export class MainTabPage {
 
+  msgCount: number;
+
   homeTabRoot = HomeTabPage;
   doctorTabRoot = DoctorTabPage;
   appointmentTabPageRoot = AppointmentTabPage;
   messageTabRoot = MessageTabPage;
 
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController) {
+    this.msgCount = 0;
+
+
+  }
 
 }

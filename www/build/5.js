@@ -1,14 +1,14 @@
 webpackJsonp([5],{
 
-/***/ 805:
+/***/ 807:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WelcomPageModule", function() { return WelcomPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PrivateDoctorPageModule", function() { return PrivateDoctorPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__welcom__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__private_doctor__ = __webpack_require__(224);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var WelcomPageModule = (function () {
-    function WelcomPageModule() {
+var PrivateDoctorPageModule = (function () {
+    function PrivateDoctorPageModule() {
     }
-    WelcomPageModule = __decorate([
+    PrivateDoctorPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__welcom__["a" /* WelcomPage */],
+                __WEBPACK_IMPORTED_MODULE_2__private_doctor__["a" /* PrivateDoctorPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__welcom__["a" /* WelcomPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__private_doctor__["a" /* PrivateDoctorPage */]),
             ],
         })
-    ], WelcomPageModule);
-    return WelcomPageModule;
+    ], PrivateDoctorPageModule);
+    return PrivateDoctorPageModule;
 }());
 
-//# sourceMappingURL=welcom.module.js.map
+//# sourceMappingURL=private-doctor.module.js.map
 
 /***/ })
 

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {
   AlertController, App, IonicPage, LoadingController, MenuController, NavController,
-  NavParams
+  NavParams, ToastController
 } from 'ionic-angular';
 import {HospitalPage} from "../hospital/hospital";
 import {PersonalInfoPage} from "../personal-info/personal-info";
@@ -11,6 +11,7 @@ import {BodyMassPage} from "../body-mass/body-mass";
 import {TokenProvider} from "../../providers/token/token";
 import {HomePage} from "../home/home";
 import {HospitalProvider} from "../../providers/hospital/hospital";
+import {ApiProvider} from "../../providers/api/api";
 
 /**
  * Generated class for the HomeTabPage page.
@@ -41,7 +42,9 @@ export class HomeTabPage {
               public token: TokenProvider,
               public loading: LoadingController,
               public hospital: HospitalProvider,
-              public alert: AlertController) {
+              public alert: AlertController,
+              public toast: ToastController,
+              public api: ApiProvider) {
 
     //init loader
     this.loader = this.loading.create({
@@ -97,6 +100,7 @@ export class HomeTabPage {
         break;
       }
       case 5: {
+        let that = this;
         this.alert.create({
           title: '提示',
           subTitle: '是否需要呼救急救服务',
@@ -111,7 +115,49 @@ export class HomeTabPage {
             {
               text: '确认',
               handler: () => {
-                console.log('Buy clicked');
+                if (navigator.geolocation) {
+                  console.log("开始定位");
+                  let loading = that.loading.create({
+                    content: "定位中..."
+                  });
+                  loading.present();
+                  navigator.geolocation.getCurrentPosition(
+                    function (pos) {
+                      loading.dismiss();
+                      $.post(that.api.postFirstAid(), {
+                        token: that.token.getToken(),
+                        latitude: pos.coords.latitude,
+                        longitude: pos.coords.longitude
+                      }, function (data) {
+                        if (data['code'] === 200) {
+                          that.toast.create({
+                            message: '请求成功',
+                            duration: 1000
+                          }).present();
+                        }
+                      });
+                    },
+                    function (err) {
+                      loading.dismiss();
+                      if(err.code == 1) {
+                        that.toast.create({
+                          message: '请求定位被拒绝',
+                          duration: 1000
+                        }).present();
+                      }else if( err.code == 2) {
+                        that.toast.create({
+                          message: '定位失败',
+                          duration: 1000
+                        }).present();
+                      }
+                    }
+                  );
+                } else {
+                  that.toast.create({
+                    message: '不支持定位',
+                    duration: 1000
+                  }).present();
+                }
               }
             }
           ]

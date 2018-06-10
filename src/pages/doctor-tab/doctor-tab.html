@@ -30,5 +30,5 @@
     <div class="divider"></div>
     <button ion-button clear full (click)="toDoctor(doctor)">预约</button>
   </ion-card>
-
+  <button *ngIf="showLoadMore" ion-button color="primary" full clear (click)="loadMore()">加载更多...</button>
 </ion-content>

@@ -30,6 +30,8 @@ import { ApiProvider } from '../providers/api/api';
 import { TokenProvider } from '../providers/token/token';
 import {SelecthospitalPage} from "../pages/selecthospital/selecthospital";
 import { HospitalProvider } from '../providers/hospital/hospital';
+import { DoctorProvider } from '../providers/doctor/doctor';
+import { WsProvider } from '../providers/ws/ws';
 
 @NgModule({
   declarations: [
@@ -95,7 +97,9 @@ import { HospitalProvider } from '../providers/hospital/hospital';
     HttpProvider,
     ApiProvider,
     TokenProvider,
-    HospitalProvider
+    HospitalProvider,
+    DoctorProvider,
+    WsProvider
   ]
 })
 export class AppModule {

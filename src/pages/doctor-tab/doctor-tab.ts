@@ -1,10 +1,11 @@
 import {Component} from '@angular/core';
-import {App, IonicPage, NavController, NavParams, ToastCmp, ToastController} from 'ionic-angular';
+import {App, IonicPage, LoadingController, NavController, NavParams, ToastCmp, ToastController} from 'ionic-angular';
 import {DoctorPage} from "../doctor/doctor";
 
 import * as $ from 'jquery';
 import {ApiProvider} from "../../providers/api/api";
 import {TokenProvider} from "../../providers/token/token";
+import {DoctorProvider} from "../../providers/doctor/doctor";
 
 /**
  * Generated class for the DoctorTabPage page.
@@ -21,27 +22,21 @@ import {TokenProvider} from "../../providers/token/token";
 export class DoctorTabPage {
 
   doctors: any;
+  showLoadMore: boolean;
+  currentPage: number;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               public app: App,
               public api: ApiProvider,
               public token: TokenProvider,
-              public toast: ToastController) {
+              public toast: ToastController,
+              public load: LoadingController,
+              public doctorCtrl: DoctorProvider) {
     this.doctors = [];
-    let that = this;
-    $.get(this.api.getDocters(),
-      {token: this.token.getToken()},
-      function (data) {
-        if (data['code'] !== 200) {
-          that.toast.create({
-            message: "请求医生数据错误",
-            duration: 1000
-          }).present();
-        } else {
-          that.doctors = data['map']['pageInfo']['list'];
-        }
-      })
+    this.currentPage = 2;
+    this.getDoctor(null);
+
   }
 
   ionViewDidLoad() {
@@ -54,17 +49,21 @@ export class DoctorTabPage {
     // })
   }
 
-  toDoctor($event) {
-    console.log($event.target.offsetParent.getAttribute('data-doctor-id'));
+  toDoctor(doctor) {
+    this.doctorCtrl.setCurrentDoctor(doctor);
     this.app.getRootNav().push(DoctorPage);
   }
 
-  doRefresh(refresher) {
+  getDoctor(refresher) {
     let that = this;
+    this.showLoadMore = false;
     $.get(this.api.getDocters(),
       {token: this.token.getToken()},
       function (data) {
-      refresher.cancel();
+        if (refresher !== null &&
+          refresher !== undefined) {
+          refresher.cancel();
+        }
         if (data['code'] !== 200) {
           that.toast.create({
             message: "请求医生数据错误",
@@ -72,8 +71,44 @@ export class DoctorTabPage {
           }).present();
         } else {
           that.doctors = data['map']['pageInfo']['list'];
+          if (data['map']['pageInfo']['isLastPage'] !== true) {
+            that.showLoadMore = true;
+          }
         }
-      })
+      });
+  }
+
+  doRefresh(refresher) {
+    this.getDoctor(refresher);
+  }
+
+  loadMore() {
+    let loader = this.load.create({
+      content: "数据加载中..."
+    });
+    loader.present();
+    let that = this;
+    $.get(this.api.getDocters(),
+      {token: this.token.getToken(),
+       pageNum: this.currentPage++},
+      function (data) {
+        loader.dismiss();
+        if (data['code'] !== 200) {
+          that.toast.create({
+            message: "请求医生数据错误",
+            duration: 1000
+          }).present();
+        } else {
+          let nds = data['map']['pageInfo']['list'];
+          for (var h in nds) {
+            that.doctors.push(nds[h]);
+            //that.doctors.unshift(nds[h]);
+          }
+          if (data['map']['pageInfo']['isLastPage'] === true) {
+            that.showLoadMore = false;
+          }
+        }
+      });
   }
 }
 
