@@ -25,7 +25,7 @@ export class EditMedicalCardPage {
     this.personalInfo = this.token.getUserDetail();
 
     console.log(this.personalInfo);
-
+    //<editor-fold desc="民族">
     this.nations = [{
       id: 1,
       name: '汉族'
@@ -250,6 +250,7 @@ export class EditMedicalCardPage {
         id: 56,
         name: '基诺族'
       }];
+    //</editor-fold>
   }
 
   ionViewDidLoad() {

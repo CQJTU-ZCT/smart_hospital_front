@@ -12,7 +12,10 @@
 
 
 <ion-content>
-
+  <ion-refresher #refresh (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content>
+    </ion-refresher-content>
+  </ion-refresher>
   <ion-list>
     <button ion-item data-msg="4" (click)="showMsg($event)">
       <ion-badge class="i-badge" color="danger" item-start> </ion-badge>
