@@ -1,6 +1,6 @@
 webpackJsonp([3],{
 
-/***/ 790:
+/***/ 791:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -72,7 +72,7 @@ var CureProgressPage = (function () {
     };
     CureProgressPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-cure-progress',template:/*ion-inline-start:"D:\github\smart_hospital_front\src\pages\cure-progress\cure-progress.html"*/'<!--\n\n  Generated template for the CureProgressPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>cure-progress</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"D:\github\smart_hospital_front\src\pages\cure-progress\cure-progress.html"*/,
+            selector: 'page-cure-progress',template:/*ion-inline-start:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/cure-progress/cure-progress.html"*/'<!--\n  Generated template for the CureProgressPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>cure-progress</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/cure-progress/cure-progress.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */]])
     ], CureProgressPage);
