@@ -40,7 +40,7 @@ export class DoctorPage {
               public toast: ToastController) {
     this.doctor = this.doctorCtrl.getCurrentDoctor();
     console.log(this.doctor);
-    this.doctorName = this.doctor['name'];
+    this.doctorName = this.doctor['doctor']['name'];
     console.log(this.doctorName);
     this.branches = [];
     this.getBranches(null);

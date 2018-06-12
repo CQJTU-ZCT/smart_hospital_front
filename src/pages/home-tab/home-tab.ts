@@ -13,6 +13,8 @@ import {HomePage} from "../home/home";
 import {HospitalProvider} from "../../providers/hospital/hospital";
 import {ApiProvider} from "../../providers/api/api";
 import {CaseBookPage} from "../case-book/case-book";
+import * as $ from 'jquery';
+import {FeedbackPage} from "../feedback/feedback";
 
 /**
  * Generated class for the HomeTabPage page.
@@ -101,6 +103,15 @@ export class HomeTabPage {
       }
       case 3: {
         this.navCtrl.push(BodyMassPage);
+        break;
+      }
+      case 4: {
+        //to feedback
+        this.navCtrl.push(FeedbackPage);
+        break
+      }
+      case 6: {
+        this.navCtrl.push(HomePage);
         break;
       }
       case 5: {

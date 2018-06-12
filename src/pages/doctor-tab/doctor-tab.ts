@@ -70,7 +70,19 @@ export class DoctorTabPage {
             duration: 1000
           }).present();
         } else {
-          that.doctors = data['map']['pageInfo']['list'];
+
+          let datas = data['map']['pageInfo']['list'];
+          for (let index in datas) {
+            let nd = datas[index];
+            if (nd['profile'] === null || nd['profile'] === '') {
+              nd['profile'] = './assets/imgs/person_info.jpg';
+            } else {
+              let url = nd['profile']['profilePath'];
+              console.log(url);
+              nd['profile'] = 'https://api.zjhfyq.cn/api-file' + url + '?token=' + that.token.getToken();
+            }
+            that.doctors.push(nd);
+          }
           if (data['map']['pageInfo']['isLastPage'] !== true) {
             that.showLoadMore = true;
           }
@@ -99,10 +111,15 @@ export class DoctorTabPage {
             duration: 1000
           }).present();
         } else {
-          let nds = data['map']['pageInfo']['list'];
-          for (var h in nds) {
-            that.doctors.push(nds[h]);
-            //that.doctors.unshift(nds[h]);
+          let datas = data['map']['pageInfo']['list'];
+          for (let index in datas) {
+            let nd = datas[index];
+            if (nd['profile'] === null || nd['profile'] === '') {
+              nd['profile'] = './assets/imgs/person_info.jpg';
+            } else {
+              nd['profile'] = 'https://api.zjhfyq.cn/api-file' + nd['profile'];
+            }
+            that.doctors.push(nd);
           }
           if (data['map']['pageInfo']['isLastPage'] === true) {
             that.showLoadMore = false;

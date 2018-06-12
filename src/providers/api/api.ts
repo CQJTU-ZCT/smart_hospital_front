@@ -75,5 +75,9 @@ export class ApiProvider {
     return this.server + "/api-emr/emr/record";
   }
 
+  putUserInfo() {
+    return this.server + "/api-user/users";
+  }
+
 
 }

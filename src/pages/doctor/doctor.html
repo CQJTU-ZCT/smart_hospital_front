@@ -17,34 +17,41 @@
   </ion-refresher>
   <ion-card>
     <div class="car-img-bg img-bg">
-      <img (click)="showImg($event)" src="http://www.xqhospital.com.cn/image/expertimages/21300601.jpg"/>
+      <img (click)="showImg($event)" src="{{doctor.profile}}"/>
     </div>
     <ion-card-content>
-      <ion-card-title ([ngModel])="doctorNme">
+      <ion-card-title>
         {{doctorName}}
       </ion-card-title>
       <p>
         <ion-chip>
-          <ion-icon name="flash" color="primary"></ion-icon>
-          <ion-label>职称:</ion-label>
+          <ion-icon name="body" color="primary"></ion-icon>
+          <ion-label>民族:</ion-label>
         </ion-chip>
-        科室主任，博士研究生导师，美国亚利桑那大学博士后
+        {{doctor.nation.nationDesc}}
       </p>
       <div class="divider"></div>
       <p>
         <ion-chip>
-          <ion-icon name="analytics" color="primary"></ion-icon>
-          <ion-label>主要擅长：</ion-label>
+          <ion-icon name="at" color="primary"></ion-icon>
+          <ion-label>邮箱：</ion-label>
         </ion-chip>
-        糖尿病自体骨髓干细胞移植治疗，糖尿病及并发症诊治, 自身免疫性甲状腺疾病的诊治。
+        {{doctor.doctor.mail}}
       </p>
       <div class="divider"></div>
       <p>
         <ion-chip>
-          <ion-icon name="clock" color="primary"></ion-icon>
-          <ion-label>门诊时间：</ion-label>
+          <ion-icon name="call" color="primary"></ion-icon>
+          <ion-label>电话：</ion-label>
         </ion-chip>
-        周二、周四上午
+        {{doctor.doctor.phone}}
+      </p>
+      <p>
+        <ion-chip>
+          <ion-icon name="locate" color="primary"></ion-icon>
+          <ion-label>地址：</ion-label>
+        </ion-chip>
+        {{doctor.doctorDetail.address}}
       </p>
     </ion-card-content>
   </ion-card>
