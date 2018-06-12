@@ -17,46 +17,43 @@
 </ion-header>
 
 <ion-content>
+  <ion-refresher #refresh (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content>
+    </ion-refresher-content>
+  </ion-refresher>
   <ion-list no-lines class="color-content">
-    <ion-list-header class="m-list-header">
-      2014年12月
-    </ion-list-header>
-    <ion-card class="case-card">
+    <ion-card *ngFor="let emr of emrs" class="case-card">
       <ion-card-header text-center>
         <ion-icon name="logo-buffer"></ion-icon>
-        就诊记录
+        {{emr.title}}
       </ion-card-header>
       <hr>
       <ion-card-content>
         <div class="case-item">
           <label class="case-title">病&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;情:</label>
-          <p class="case-info">眼组织受损</p>
+          <p class="case-info">{{emr.desc}}</p>
         </div>
         <div class="breaker"></div>
         <div class="case-item">
           <label class="case-title">治疗医院:</label>
-          <p class="case-info">新桥医院</p>
+          <p class="case-info">{{hospital}}</p>
         </div>
         <div class="breaker"></div>
         <div class="case-item">
           <label class="case-title">科&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;室:</label>
-          <p class="case-info">眼科</p>
+          <p class="case-info">{{emr.branch.name}}</p>
         </div>
         <div class="breaker"></div>
         <div class="case-item">
           <label class="case-title">大&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;夫:</label>
-          <p class="case-info">李医生</p>
+          <p class="case-info">{{emr.doctor.name}}</p>
         </div>
         <div class="breaker"></div>
         <div class="case-item">
           <label class="case-title">时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;间:</label>
-          <p class="case-info">2014年04月21日</p>
+          <p class="case-info">{{emr.time}}</p>
         </div>
         <div class="breaker"></div>
-        <div class="case-item">
-          <label class="case-title">治疗记录:</label>
-          <p class="case-info">眼角膜修复手术</p>
-        </div>
       </ion-card-content>
     </ion-card>
   </ion-list>

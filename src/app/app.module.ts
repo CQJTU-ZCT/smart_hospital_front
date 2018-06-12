@@ -32,6 +32,8 @@ import {SelecthospitalPage} from "../pages/selecthospital/selecthospital";
 import { HospitalProvider } from '../providers/hospital/hospital';
 import { DoctorProvider } from '../providers/doctor/doctor';
 import { WsProvider } from '../providers/ws/ws';
+import {CaseBookPage} from "../pages/case-book/case-book";
+import { CasebookProvider } from '../providers/casebook/casebook';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,8 @@ import { WsProvider } from '../providers/ws/ws';
     CaseHistoryPage,
     AddCaseHistoryPage,
     BodyMassPage,
-    SelecthospitalPage
+    SelecthospitalPage,
+    CaseBookPage
   ],
   imports: [
     BrowserModule,
@@ -87,7 +90,8 @@ import { WsProvider } from '../providers/ws/ws';
     CaseHistoryPage,
     AddCaseHistoryPage,
     BodyMassPage,
-    SelecthospitalPage
+    SelecthospitalPage,
+    CaseBookPage
   ],
   providers: [
     StatusBar,
@@ -99,7 +103,8 @@ import { WsProvider } from '../providers/ws/ws';
     TokenProvider,
     HospitalProvider,
     DoctorProvider,
-    WsProvider
+    WsProvider,
+    CasebookProvider
   ]
 })
 export class AppModule {

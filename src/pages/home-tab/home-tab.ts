@@ -12,6 +12,7 @@ import {TokenProvider} from "../../providers/token/token";
 import {HomePage} from "../home/home";
 import {HospitalProvider} from "../../providers/hospital/hospital";
 import {ApiProvider} from "../../providers/api/api";
+import {CaseBookPage} from "../case-book/case-book";
 
 /**
  * Generated class for the HomeTabPage page.
@@ -60,9 +61,12 @@ export class HomeTabPage {
       console.log(this.token.getUser());
     }
     this.menu.enable(true);
-    this.name = '程飘';
+    let user = JSON.parse(this.token.getUser());
+    this.name = user['realname'];
     this.profile = './assets/imgs/person_info.jpg';
-    this.describe = 'cheng.bug@gmail.com';
+    this.describe = user['mail'];
+    console.log(this.name);
+    console.log(this.describe);
     this.hospitalData = this.hospital.getHospital();
   }
 
@@ -92,7 +96,7 @@ export class HomeTabPage {
         break;
       }
       case 2: {
-        this.navCtrl.push(CaseHistoryPage);
+        this.navCtrl.push(CaseBookPage);
         break;
       }
       case 3: {

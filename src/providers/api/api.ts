@@ -60,5 +60,20 @@ export class ApiProvider {
     return this.server + "/api-onekeyfirstaid/sos"
   }
 
+  getEmrs() {
+    return this.server + "/api-emr/emr";
+  }
+  postEmr() {
+    return this.server + "/api-emr/emr";
+  }
+
+  getEmrRecord() {
+    return this.server + "/api-emr/emr/record";
+  }
+
+  postEmrRecord() {
+    return this.server + "/api-emr/emr/record";
+  }
+
 
 }

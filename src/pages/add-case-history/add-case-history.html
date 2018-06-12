@@ -13,53 +13,50 @@
       </button>
     </ion-buttons>
     <ion-title text-center>添加病历记录</ion-title>
-    <ion-buttons end>
-      <button ion-button icon-only (click)="submit()">
-        <ion-icon name="checkmark"></ion-icon>
-      </button>
-    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 <ion-content>
   <div id="alert" div class="alert-info">
-    <ion-buttons end>
-      <button ion-button icon-only clear small (click)="dismiss()">
-        <ion-icon name="close"></ion-icon>
-      </button>
-    </ion-buttons>
     <p>
       请如实填写如下信息
     </p>
   </div>
   <ion-list>
     <ion-item>
-      <ion-label floating>就诊医院</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-label floating>名称</ion-label>
+      <ion-input [(ngModel)]="title" type="text"></ion-input>
     </ion-item>
-  </ion-list>
-  <ion-list>
     <ion-item>
-      <ion-label floating>就诊时间</ion-label>
+      <ion-label floating>描述</ion-label>
+      <ion-input [(ngModel)]="desc" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>治疗记录</ion-label>
+      <ion-input [(ngModel)]="treatment" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>治疗时间</ion-label>
       <ion-datetime displayFormat="YYYY 年 MM 月 DD 日"
-                    pickerFormat="YYYY 年 MM 月 DD 日"
+                    pickerFormat="YYYY-MM-DD"
                     [(ngModel)]="time"
                     cancelText="取消"
                     doneText="确认"
                     color="primary"></ion-datetime>
     </ion-item>
     <ion-item>
-      <ion-label floating>出诊医生</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-label>选择科室</ion-label>
+      <ion-select [(ngModel)]="branch" submitText="确认"
+                  (ngModelChange)="branchIdChanged()" cancelText="取消">
+        <ion-option *ngFor="let item of branches" value="{{item.branchId}}">{{item.name}}</ion-option>
+      </ion-select>
     </ion-item>
     <ion-item>
-      <ion-label floating>诊断结果</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>治疗意见</ion-label>
-      <ion-textarea type="text"></ion-textarea>
+      <ion-label>选择医生</ion-label>
+      <ion-select [(ngModel)]="doctor" submitText="确认" cancelText="取消">
+        <ion-option *ngFor="let item of doctors" value="{{item.doctor.idCard}}">{{item.doctor.name}}</ion-option>
+      </ion-select>
     </ion-item>
   </ion-list>
-
+  <button ion-button color="primary" full (click)="submit()">确认</button>
 </ion-content>
