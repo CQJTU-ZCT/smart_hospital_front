@@ -44,5 +44,13 @@
       </ion-select>
     </ion-item>
 
+    <ion-item>
+      <ion-label stacked="">性别：</ion-label>
+      <ion-select [(ngModel)]="personalInfo.usersDetail.sexId" cancelText="取消" okText="确认!">
+        <ion-option value="1">男</ion-option>
+        <ion-option value="2">女</ion-option>
+      </ion-select>
+    </ion-item>
+
   </ion-list>
 </ion-content>

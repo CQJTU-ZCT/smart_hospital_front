@@ -35,11 +35,14 @@
       <button ion-item (tap)="onItemClicked(3)">
         身体体征
       </button>
-      <button ion-item (tap)="onItemClicked(4)">
-        医疗进度
-      </button>
       <button ion-item (tap)="onItemClicked(5)">
         一键急救
+      </button>
+      <button ion-item (tap)="onItemClicked(4)">
+        提交反馈
+      </button>
+      <button ion-item (tap)="onItemClicked(6)">
+        退出登录
       </button>
     </ion-list>
   </ion-content>
@@ -78,7 +81,7 @@
       </div>
 
       <div class="item">
-        <ion-icon name="call" item-left small></ion-icon>
+        <ion-icon name="navigate" item-left small></ion-icon>
         <p>{{hospitalData.longitude}},{{hospitalData.latitude}}</p>
       </div>
       <div class="divider"></div>

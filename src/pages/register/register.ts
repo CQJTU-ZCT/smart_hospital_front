@@ -57,7 +57,7 @@ export class RegisterPage {
       return;
     }
 
-    let url = 'http://api.zjhfyq.cn/api-user/users/';
+
     // var resp: string;
     let body = {
       idCard: this.id_card,

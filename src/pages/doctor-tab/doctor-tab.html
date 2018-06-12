@@ -18,17 +18,17 @@
   <ion-card *ngFor="let doctor of doctors">
     <ion-item>
       <ion-avatar item-start>
-        <img src="./assets/imgs/doctor.jpg">
+        <img src="{{doctor.profile}}">
       </ion-avatar>
-      <h2>{{doctor.name}}</h2>
-      <p>mail:{{doctor.mail}}</p>
+      <h2>{{doctor.doctor.name}}</h2>
+      <p>mail:{{doctor.doctor.mail}}</p>
     </ion-item>
     <ion-card-content>
-      <p>手机:{{doctor.phone}}</p>
+      <p>手机:{{doctor.doctor.phone}}</p>
       <p>状态：值班</p>
     </ion-card-content>
     <div class="divider"></div>
     <button ion-button clear full (click)="toDoctor(doctor)">预约</button>
   </ion-card>
-
+  <button *ngIf="showLoadMore" ion-button color="primary" full clear (click)="loadMore()">加载更多...</button>
 </ion-content>

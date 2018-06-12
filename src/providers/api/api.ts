@@ -13,7 +13,7 @@ export class ApiProvider {
   constructor(public http: HttpClient) {
     console.log('Hello ApiProvider Provider');
   }
-  private server = "http://api.zjhfyq.cn";
+  private server = "https://api.zjhfyq.cn";
 
 
   getReigiterApi() {
@@ -25,7 +25,7 @@ export class ApiProvider {
   }
 
   getHospitalsApi(): string {
-    return "http://sh.zjhfyq.cn/hospital";
+    return "https://sh.zjhfyq.cn/hospital";
   }
 
   getDocters() {
@@ -37,11 +37,47 @@ export class ApiProvider {
   }
 
   getPreorders() {
-    return this.server + "/api-appointment/appointment";
+    return this.server + "/api-appointment/preorder";
   }
 
   postPreorder() {
-    return this.server + "/api-appointment/appointment";
+    return this.server + "/api-appointment/preorder";
   }
+
+  deletePreorder() {
+    return this.server + "/api-appointment/preorder";
+  }
+
+  getBranchDoctor() {
+    return this.server + "/api-hospital/branch-doctor-title";
+  }
+
+  getDoctorBranches() {
+    return this.server + "/api-hospital/branch-doctor-title";
+  }
+
+  postFirstAid() {
+    return this.server + "/api-onekeyfirstaid/sos"
+  }
+
+  getEmrs() {
+    return this.server + "/api-emr/emr";
+  }
+  postEmr() {
+    return this.server + "/api-emr/emr";
+  }
+
+  getEmrRecord() {
+    return this.server + "/api-emr/emr/record";
+  }
+
+  postEmrRecord() {
+    return this.server + "/api-emr/emr/record";
+  }
+
+  putUserInfo() {
+    return this.server + "/api-user/users";
+  }
+
 
 }

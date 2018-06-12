@@ -71,7 +71,7 @@ export class PersonalInfoPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad PersonalInfoPage');
     let that = this;
-    $.get('http://api.zjhfyq.cn/api-user/users/detail', {
+    $.get('https://api.zjhfyq.cn/api-user/users/detail', {
         token: this.accessToken
       },
       function (data) {

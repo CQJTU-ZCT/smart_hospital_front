@@ -11,36 +11,47 @@
 </ion-header>
 
 <ion-content>
+  <ion-refresher #refresh (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content>
+    </ion-refresher-content>
+  </ion-refresher>
   <ion-card>
     <div class="car-img-bg img-bg">
-      <img (click)="showImg($event)" src="http://www.xqhospital.com.cn/image/expertimages/21300601.jpg"/>
+      <img (click)="showImg($event)" src="{{doctor.profile}}"/>
     </div>
     <ion-card-content>
       <ion-card-title>
-        郑宏庭
+        {{doctorName}}
       </ion-card-title>
       <p>
         <ion-chip>
-          <ion-icon name="flash" color="primary"></ion-icon>
-          <ion-label>职称:</ion-label>
+          <ion-icon name="body" color="primary"></ion-icon>
+          <ion-label>民族:</ion-label>
         </ion-chip>
-        科室主任，博士研究生导师，美国亚利桑那大学博士后
+        {{doctor.nation.nationDesc}}
       </p>
       <div class="divider"></div>
       <p>
         <ion-chip>
-          <ion-icon name="analytics" color="primary"></ion-icon>
-          <ion-label>主要擅长：</ion-label>
+          <ion-icon name="at" color="primary"></ion-icon>
+          <ion-label>邮箱：</ion-label>
         </ion-chip>
-        糖尿病自体骨髓干细胞移植治疗，糖尿病及并发症诊治, 自身免疫性甲状腺疾病的诊治。
+        {{doctor.doctor.mail}}
       </p>
       <div class="divider"></div>
       <p>
         <ion-chip>
-          <ion-icon name="clock" color="primary"></ion-icon>
-          <ion-label>门诊时间：</ion-label>
+          <ion-icon name="call" color="primary"></ion-icon>
+          <ion-label>电话：</ion-label>
         </ion-chip>
-        周二、周四上午
+        {{doctor.doctor.phone}}
+      </p>
+      <p>
+        <ion-chip>
+          <ion-icon name="locate" color="primary"></ion-icon>
+          <ion-label>地址：</ion-label>
+        </ion-chip>
+        {{doctor.doctorDetail.address}}
       </p>
     </ion-card-content>
   </ion-card>
@@ -48,17 +59,14 @@
   <ion-list>
     <ion-item>
       <ion-label><span style="color: red">*</span>选择科室</ion-label>
-      <ion-select [(ngModel)]="branch" submitText="确认" cancelText="取消">
-        <ion-option value="enable" [selected]="true">Enable</ion-option>
-        <ion-option value="mute">Mute</ion-option>
-        <ion-option value="mute_week">Mute for a week</ion-option>
-        <ion-option value="mute_year">Mute for a year</ion-option>
+      <ion-select [(ngModel)]="branchId" submitText="确认" cancelText="取消">
+        <ion-option *ngFor="let branch of branches" value="branch.branch.branchId">{{branch.branch.name}}</ion-option>
       </ion-select>
     </ion-item>
     <ion-item>
       <ion-label>预约时间</ion-label>
-      <ion-datetime displayFormat="YYYY年MM月DD日 HH时后"
-                    pickerFormat="YYYY 年 MM 月 DD 年 HH 时"
+      <ion-datetime ([ngModel])="time" displayFormat="YYYY-MM-DD HH:mm:ss"
+                    pickerFormat="YYYY-MM-DD HH:mm:ss"
                     [(ngModel)]="time"
                     min="2018-03-14"
                     cancelText="取消"

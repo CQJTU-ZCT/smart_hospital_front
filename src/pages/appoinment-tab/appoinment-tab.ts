@@ -57,20 +57,6 @@ export class AppointmentTabPage {
           that.branch = data['map']['pageInfo']['list'];
         }
       });
-    $.get(this.api.getDocters(),
-      {token: this.token.getToken()},
-      function (data) {
-        console.log(data['code']);
-        if (data['code'] !== 200) {
-          that.toastCtrl.create({
-            message: '请求医生数据失败，请稍后再试',
-            duration: 1000
-          }).present();
-          return;
-        } else {
-          that.doctors = data['map']['pageInfo']['list'];
-        }
-      })
   }
 
 
@@ -95,22 +81,41 @@ export class AppointmentTabPage {
   }
 
   submit() {
-    let body = {
-      preorderTime: this.preorderTime,
-      doctorId: this.doctorId,
-      token: this.token
-    };
-    let url = this.api.postPreorder() + "?token=" + this.token.getToken();
-    $.post(url, body,
-    function (data) {
-      console.log(data);
-    })
-    const toast = this.toastCtrl.create({
-      message: '您的预约申请提交成功',
-      showCloseButton: true,
-      closeButtonText: '确认'
-    });
-    toast.present();
+    if (this.preorderTime === undefined || this.preorderTime === '') {
+      this.toastCtrl.create({
+        message: '预约时间不能为空',
+        duration: 1000
+      }).present();
+      return;
+    }
+    if (this.branchId === undefined || this.branchId === '') {
+      this.toastCtrl.create({
+        message: '请选择科室',
+        duration: 1000
+      }).present();
+      return;
+    }
+    if (this.doctorId === undefined || this.doctorId === '') {
+      this.toastCtrl.create({
+        message: '请选择医生',
+        duration: 1000
+      }).present();
+      return;
+    }
+    let time = this.preorderTime.replace('T', ' ').replace('Z', '');
+    let that = this;
+    $.post(this.api.postPreorder(), {
+        doctorId: this.doctorId,
+        preorderTime: time,
+        branchId: this.branchId,
+        token: this.token.getToken()
+      },
+      function (data) {
+        that.toastCtrl.create({
+          message: data['info'],
+          duration: 1000
+        }).present();
+      });
   }
 
   toList() {
@@ -135,10 +140,23 @@ export class AppointmentTabPage {
           that.branch = data['map']['pageInfo']['list'];
         }
       });
-    $.get(this.api.getDocters(),
-      {token: this.token.getToken()},
+  }
+
+  branchIdChanged() {
+    this.getBranchDoctor();
+  }
+
+  getBranchDoctor() {
+    let loading = this.loader.create({
+      content: "数据加载中，请稍后..."
+    });
+    loading.present();
+    let that = this;
+    $.get(this.api.getBranchDoctor(),
+      {token: this.token.getToken(),
+       branchId: this.branchId},
       function (data) {
-        refresher.cancel();
+        loading.dismiss();
         console.log(data['code']);
         if (data['code'] !== 200) {
           that.toastCtrl.create({
@@ -149,8 +167,10 @@ export class AppointmentTabPage {
         } else {
           that.doctors = data['map']['pageInfo']['list'];
         }
-
       })
+
   }
+
+
 
 }
