@@ -1,11 +1,57 @@
-webpackJsonp([23],{
+webpackJsonp([25],{
 
-/***/ 187:
+/***/ 112:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CasebookProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/*
+  Generated class for the CasebookProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var CasebookProvider = (function () {
+    function CasebookProvider(http) {
+        this.http = http;
+        console.log('Hello CasebookProvider Provider');
+    }
+    CasebookProvider.prototype.storeBook = function (book) {
+        window.localStorage.setItem("casebook", JSON.stringify(book));
+    };
+    CasebookProvider.prototype.getBook = function () {
+        return JSON.parse(window.localStorage.getItem("casebook"));
+    };
+    CasebookProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]])
+    ], CasebookProvider);
+    return CasebookProvider;
+}());
+
+//# sourceMappingURL=casebook.js.map
+
+/***/ }),
+
+/***/ 189:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -46,19 +92,19 @@ var DoctorProvider = (function () {
 
 /***/ }),
 
-/***/ 188:
+/***/ 190:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__register_register__ = __webpack_require__(225);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__register_register__ = __webpack_require__(227);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_api_api__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_token_token__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__selecthospital_selecthospital__ = __webpack_require__(226);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_api_api__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_token_token__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__selecthospital_selecthospital__ = __webpack_require__(228);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -139,59 +185,19 @@ var HomePage = (function () {
 
 /***/ }),
 
-/***/ 189:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HospitalProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-/*
-  Generated class for the HospitalProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
-var HospitalProvider = (function () {
-    function HospitalProvider(http) {
-        this.http = http;
-        console.log('Hello HospitalProvider Provider');
-    }
-    HospitalProvider.prototype.storeHospital = function (hospital) {
-        window.localStorage.setItem('hospital', hospital);
-    };
-    HospitalProvider.prototype.getHospital = function () {
-        return JSON.parse(window.localStorage.getItem('hospital'));
-    };
-    HospitalProvider = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]])
-    ], HospitalProvider);
-    return HospitalProvider;
-}());
-
-//# sourceMappingURL=hospital.js.map
-
-/***/ }),
-
-/***/ 212:
+/***/ 213:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddCaseHistoryPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_api_api__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_token_token__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_hospital_hospital__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jquery__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_casebook_casebook__ = __webpack_require__(112);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -201,6 +207,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
+
+
+
 
 
 /**
@@ -212,29 +223,145 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var AddCaseHistoryPage = (function () {
     // @ViewChild('alert')
     // alert: ElementRef;
-    function AddCaseHistoryPage(navCtrl, navParams) {
+    function AddCaseHistoryPage(navCtrl, navParams, api, token, load, toast, hos, caseBook) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.api = api;
+        this.token = token;
+        this.load = load;
+        this.toast = toast;
+        this.hos = hos;
+        this.caseBook = caseBook;
         this.showAlert = true;
+        this.hospital = this.hos.getHospital();
+        this.user = this.token.getUser();
+        this.hospitalName = this.hospital['hospitalName'];
+        this.emr = this.caseBook.getBook();
+        this.branches = [];
+        this.getBranch();
     }
     AddCaseHistoryPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad AddCaseHistoryPage');
     };
-    AddCaseHistoryPage.prototype.dismiss = function () {
-        var alert = document.getElementById("alert");
-        alert.style.animation = "dismissing 2s";
+    AddCaseHistoryPage.prototype.getBranch = function () {
+        var that = this;
+        var loader = this.load.create({
+            content: "数据加载中..."
+        });
+        loader.present();
+        __WEBPACK_IMPORTED_MODULE_5_jquery__["get"](this.api.getBranches(), { token: this.token.getToken() }, function (data) {
+            loader.dismiss();
+            if (data['code'] === 200) {
+                that.branches = data['map']['pageInfo']['list'];
+            }
+            else {
+                that.toast.create({
+                    message: "获取科室数据出错...",
+                    duration: 1000
+                }).present();
+            }
+        });
+    };
+    AddCaseHistoryPage.prototype.branchIdChanged = function () {
+        var loader = this.load.create({
+            content: "加载医生数据..."
+        });
+        loader.present();
+        var that = this;
+        __WEBPACK_IMPORTED_MODULE_5_jquery__["get"](this.api.getBranchDoctor(), {
+            token: this.token.getToken(),
+            branchId: this.branch
+        }, function (data) {
+            loader.dismiss();
+            if (data['code'] === 200) {
+                that.doctors = data['map']['pageInfo']['list'];
+            }
+            else {
+                that.toast.create({
+                    message: '请求医生数据失败，请稍后再试',
+                    duration: 1000
+                }).present();
+            }
+        });
     };
     AddCaseHistoryPage.prototype.close = function () {
         this.navCtrl.pop();
     };
     AddCaseHistoryPage.prototype.submit = function () {
+        var that = this;
+        var hospitalId = this.hospital['hospitalId'];
+        var branchId = this.branch;
+        var doctorId = this.doctor;
+        if (hospitalId === undefined) {
+            this.toast.create({
+                message: "请选择医院",
+                duration: 1000
+            }).present();
+        }
+        if (branchId === undefined) {
+            this.toast.create({
+                message: "请选择科室",
+                duration: 1000
+            }).present();
+        }
+        if (this.time === undefined) {
+            this.toast.create({
+                message: "请选择时间",
+                duration: 1000
+            }).present();
+        }
+        if (this.title === undefined) {
+            this.toast.create({
+                message: "请输入标题",
+                duration: 1000
+            }).present();
+        }
+        if (this.desc === undefined) {
+            this.toast.create({
+                message: "请输入描述",
+                duration: 1000
+            }).present();
+        }
+        if (this.treatment === undefined) {
+            this.toast.create({
+                message: "请输入治疗记录",
+                duration: 1000
+            }).present();
+        }
+        console.log(this.emr);
+        var body = {
+            emrId: this.emr['emrId'],
+            title: this.title,
+            description: this.desc,
+            createTime: this.time,
+            treament: this.treatment,
+            hospitalId: hospitalId,
+            branchId: branchId,
+            doctorId: doctorId,
+            token: this.token.getToken()
+        };
+        __WEBPACK_IMPORTED_MODULE_5_jquery__["post"](this.api.postEmrRecord(), body, function (data) {
+            console.log(data);
+            if (data['code'] === 200) {
+                that.toast.create({
+                    message: "添加电子病历记录成功",
+                    duration: 1000
+                }).present();
+            }
+        });
     };
     AddCaseHistoryPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-add-case-history',template:/*ion-inline-start:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/add-case-history/add-case-history.html"*/'<!--\n  Generated template for the AddCaseHistoryPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary" [hideBackButton]="true">\n    <ion-buttons left>\n      <button ion-button icon-only (click)="close()">\n        <ion-icon name="close"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title text-center>添加病历记录</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="submit()">\n        <ion-icon name="checkmark"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n<ion-content>\n  <div id="alert" div class="alert-info">\n    <ion-buttons end>\n      <button ion-button icon-only clear small (click)="dismiss()">\n        <ion-icon name="close"></ion-icon>\n      </button>\n    </ion-buttons>\n    <p>\n      请如实填写如下信息\n    </p>\n  </div>\n  <ion-list>\n    <ion-item>\n      <ion-label floating>就诊医院</ion-label>\n      <ion-input type="text"></ion-input>\n    </ion-item>\n  </ion-list>\n  <ion-list>\n    <ion-item>\n      <ion-label floating>就诊时间</ion-label>\n      <ion-datetime displayFormat="YYYY 年 MM 月 DD 日"\n                    pickerFormat="YYYY 年 MM 月 DD 日"\n                    [(ngModel)]="time"\n                    cancelText="取消"\n                    doneText="确认"\n                    color="primary"></ion-datetime>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>出诊医生</ion-label>\n      <ion-input type="text"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>诊断结果</ion-label>\n      <ion-input type="text"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>治疗意见</ion-label>\n      <ion-textarea type="text"></ion-textarea>\n    </ion-item>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/add-case-history/add-case-history.html"*/,
+            selector: 'page-add-case-history',template:/*ion-inline-start:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/add-case-history/add-case-history.html"*/'<!--\n  Generated template for the AddCaseHistoryPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary" [hideBackButton]="true">\n    <ion-buttons left>\n      <button ion-button icon-only (click)="close()">\n        <ion-icon name="close"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title text-center>添加病历记录</ion-title>\n  </ion-navbar>\n\n</ion-header>\n<ion-content>\n  <div id="alert" div class="alert-info">\n    <p>\n      请如实填写如下信息\n    </p>\n  </div>\n  <ion-list>\n    <ion-item>\n      <ion-label floating>名称</ion-label>\n      <ion-input [(ngModel)]="title" type="text"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>描述</ion-label>\n      <ion-input [(ngModel)]="desc" type="text"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>治疗记录</ion-label>\n      <ion-input [(ngModel)]="treatment" type="text"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>治疗时间</ion-label>\n      <ion-datetime displayFormat="YYYY 年 MM 月 DD 日"\n                    pickerFormat="YYYY-MM-DD"\n                    [(ngModel)]="time"\n                    cancelText="取消"\n                    doneText="确认"\n                    color="primary"></ion-datetime>\n    </ion-item>\n    <ion-item>\n      <ion-label>选择科室</ion-label>\n      <ion-select [(ngModel)]="branch" submitText="确认"\n                  (ngModelChange)="branchIdChanged()" cancelText="取消">\n        <ion-option *ngFor="let item of branches" value="{{item.branchId}}">{{item.name}}</ion-option>\n      </ion-select>\n    </ion-item>\n    <ion-item>\n      <ion-label>选择医生</ion-label>\n      <ion-select [(ngModel)]="doctor" submitText="确认" cancelText="取消">\n        <ion-option *ngFor="let item of doctors" value="{{item.doctor.idCard}}">{{item.doctor.name}}</ion-option>\n      </ion-select>\n    </ion-item>\n  </ion-list>\n  <button ion-button color="primary" full (click)="submit()">确认</button>\n</ion-content>\n'/*ion-inline-end:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/add-case-history/add-case-history.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */]])
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_api_api__["a" /* ApiProvider */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_token_token__["a" /* TokenProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* ToastController */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_hospital_hospital__["a" /* HospitalProvider */],
+            __WEBPACK_IMPORTED_MODULE_6__providers_casebook_casebook__["a" /* CasebookProvider */]])
     ], AddCaseHistoryPage);
     return AddCaseHistoryPage;
 }());
@@ -243,17 +370,17 @@ var AddCaseHistoryPage = (function () {
 
 /***/ }),
 
-/***/ 213:
+/***/ 214:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppointmentTabPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__appointment_list_appointment_list__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_api_api__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_token_token__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jquery__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__appointment_list_appointment_list__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_api_api__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_token_token__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jquery__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_jquery__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -423,18 +550,18 @@ var AppointmentTabPage = (function () {
 
 /***/ }),
 
-/***/ 214:
+/***/ 215:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppointmentListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_api_api__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_token_token__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common_http__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_api_api__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_token_token__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common_http__ = __webpack_require__(42);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -556,14 +683,14 @@ var AppointmentListPage = (function () {
 
 /***/ }),
 
-/***/ 215:
+/***/ 216:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BodyMassPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_echarts__ = __webpack_require__(456);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_echarts__ = __webpack_require__(458);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_echarts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_echarts__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -682,14 +809,19 @@ var BodyMassPage = (function () {
 
 /***/ }),
 
-/***/ 216:
+/***/ 217:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CaseHistoryPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CaseBookPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_case_history_add_case_history__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_api_api__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_token_token__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_jquery__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_casebook_casebook__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__case_history_case_history__ = __webpack_require__(218);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -702,6 +834,125 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
+
+/**
+ * Generated class for the CaseBookPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var CaseBookPage = (function () {
+    function CaseBookPage(navCtrl, navParams, api, load, toast, token, casebook) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.api = api;
+        this.load = load;
+        this.toast = toast;
+        this.token = token;
+        this.casebook = casebook;
+        this.getEmrs();
+    }
+    CaseBookPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad CaseBookPage');
+    };
+    CaseBookPage.prototype.add = function () {
+        //添加电子病例数据
+        var loader = this.load.create({
+            content: '请稍后...'
+        });
+        loader.present();
+        var that = this;
+        __WEBPACK_IMPORTED_MODULE_4_jquery__["post"](this.api.postEmr(), { token: this.token.getToken() }, function (data) {
+            loader.dismiss();
+            if (data['code'] === 200) {
+                that.toast.create({
+                    message: '创建电子病历成功成功',
+                    duration: 1000
+                }).present();
+                that.getEmrs();
+            }
+        });
+    };
+    CaseBookPage.prototype.getEmrs = function () {
+        var loader = this.load.create({
+            content: '数据加载中，请稍后...'
+        });
+        loader.present();
+        var that = this;
+        __WEBPACK_IMPORTED_MODULE_4_jquery__["get"](this.api.getEmrs(), { token: this.token.getToken() }, function (data) {
+            loader.dismiss();
+            if (data['code'] === 200) {
+                that.books = data['map']['emrs'];
+            }
+            else {
+                that.toast.create({
+                    message: '获取电子病历簿数据失败',
+                    duration: 1000
+                }).present();
+            }
+        });
+    };
+    CaseBookPage.prototype.doRefresh = function (refresher) {
+        refresher.cancel();
+        this.getEmrs();
+    };
+    CaseBookPage.prototype.checkBook = function (book) {
+        this.casebook.storeBook(book);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__case_history_case_history__["a" /* CaseHistoryPage */]);
+    };
+    CaseBookPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-case-book',template:/*ion-inline-start:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/case-book/case-book.html"*/'<!--\n  Generated template for the CaseBookPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title text-center>电子病历管理</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="add()">\n        <ion-icon name="add"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-refresher #refresh (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content>\n    </ion-refresher-content>\n  </ion-refresher>\n<ion-list>\n  <button ion-item *ngFor="let book of books" (click)="checkBook(book)">\n   病历簿{{ book.emrId }}\n  </button>\n</ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/case-book/case-book.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_api_api__["a" /* ApiProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* ToastController */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_token_token__["a" /* TokenProvider */],
+            __WEBPACK_IMPORTED_MODULE_5__providers_casebook_casebook__["a" /* CasebookProvider */]])
+    ], CaseBookPage);
+    return CaseBookPage;
+}());
+
+//# sourceMappingURL=case-book.js.map
+
+/***/ }),
+
+/***/ 218:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CaseHistoryPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_case_history_add_case_history__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_token_token__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_api_api__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_casebook_casebook__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_jquery__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_hospital_hospital__ = __webpack_require__(76);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
 /**
  * Generated class for the CaseHistoryPage page.
  *
@@ -709,9 +960,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var CaseHistoryPage = (function () {
-    function CaseHistoryPage(navCtrl, navParams) {
+    function CaseHistoryPage(navCtrl, navParams, token, api, toast, load, casebook, hos) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.token = token;
+        this.api = api;
+        this.toast = toast;
+        this.load = load;
+        this.casebook = casebook;
+        this.hos = hos;
+        this.emrs = [];
+        this.hospital = this.hos.getHospital()['hospitalName'];
+        this.getRecords();
     }
     CaseHistoryPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad CaseHistoryPage');
@@ -719,11 +979,37 @@ var CaseHistoryPage = (function () {
     CaseHistoryPage.prototype.add = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__add_case_history_add_case_history__["a" /* AddCaseHistoryPage */]);
     };
+    CaseHistoryPage.prototype.getRecords = function () {
+        var loader = this.load.create({
+            content: '数据加载中,请稍后...'
+        });
+        loader.present();
+        var emr = this.casebook.getBook();
+        var that = this;
+        __WEBPACK_IMPORTED_MODULE_6_jquery__["get"](this.api.getEmrRecord(), { token: this.token.getToken(),
+            emrId: emr['emrId'] }, function (data) {
+            loader.dismiss();
+            if (data['code'] === 200) {
+                that.emrs = data['map']['emrRecords'];
+            }
+        });
+    };
+    CaseHistoryPage.prototype.doRefresh = function (refresher) {
+        refresher.cancel();
+        this.getRecords();
+    };
     CaseHistoryPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-case-history',template:/*ion-inline-start:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/case-history/case-history.html"*/'<!--\n  Generated template for the CaseHistoryPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title text-center>电子病历数据</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="add()">\n        <ion-icon name="add"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list no-lines class="color-content">\n    <ion-list-header class="m-list-header">\n      2014年12月\n    </ion-list-header>\n    <ion-card class="case-card">\n      <ion-card-header text-center>\n        <ion-icon name="logo-buffer"></ion-icon>\n        就诊记录\n      </ion-card-header>\n      <hr>\n      <ion-card-content>\n        <div class="case-item">\n          <label class="case-title">病&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;情:</label>\n          <p class="case-info">眼组织受损</p>\n        </div>\n        <div class="breaker"></div>\n        <div class="case-item">\n          <label class="case-title">治疗医院:</label>\n          <p class="case-info">新桥医院</p>\n        </div>\n        <div class="breaker"></div>\n        <div class="case-item">\n          <label class="case-title">科&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;室:</label>\n          <p class="case-info">眼科</p>\n        </div>\n        <div class="breaker"></div>\n        <div class="case-item">\n          <label class="case-title">大&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;夫:</label>\n          <p class="case-info">李医生</p>\n        </div>\n        <div class="breaker"></div>\n        <div class="case-item">\n          <label class="case-title">时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;间:</label>\n          <p class="case-info">2014年04月21日</p>\n        </div>\n        <div class="breaker"></div>\n        <div class="case-item">\n          <label class="case-title">治疗记录:</label>\n          <p class="case-info">眼角膜修复手术</p>\n        </div>\n      </ion-card-content>\n    </ion-card>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/case-history/case-history.html"*/,
+            selector: 'page-case-history',template:/*ion-inline-start:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/case-history/case-history.html"*/'<!--\n  Generated template for the CaseHistoryPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title text-center>电子病历数据</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="add()">\n        <ion-icon name="add"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-refresher #refresh (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content>\n    </ion-refresher-content>\n  </ion-refresher>\n  <ion-list no-lines class="color-content">\n    <ion-card *ngFor="let emr of emrs" class="case-card">\n      <ion-card-header text-center>\n        <ion-icon name="logo-buffer"></ion-icon>\n        {{emr.title}}\n      </ion-card-header>\n      <hr>\n      <ion-card-content>\n        <div class="case-item">\n          <label class="case-title">病&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;情:</label>\n          <p class="case-info">{{emr.desc}}</p>\n        </div>\n        <div class="breaker"></div>\n        <div class="case-item">\n          <label class="case-title">治疗医院:</label>\n          <p class="case-info">{{hospital}}</p>\n        </div>\n        <div class="breaker"></div>\n        <div class="case-item">\n          <label class="case-title">科&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;室:</label>\n          <p class="case-info">{{emr.branch.name}}</p>\n        </div>\n        <div class="breaker"></div>\n        <div class="case-item">\n          <label class="case-title">大&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;夫:</label>\n          <p class="case-info">{{emr.doctor.name}}</p>\n        </div>\n        <div class="breaker"></div>\n        <div class="case-item">\n          <label class="case-title">时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;间:</label>\n          <p class="case-info">{{emr.time}}</p>\n        </div>\n        <div class="breaker"></div>\n      </ion-card-content>\n    </ion-card>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/case-history/case-history.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_token_token__["a" /* TokenProvider */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_api_api__["a" /* ApiProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* ToastController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_5__providers_casebook_casebook__["a" /* CasebookProvider */],
+            __WEBPACK_IMPORTED_MODULE_7__providers_hospital_hospital__["a" /* HospitalProvider */]])
     ], CaseHistoryPage);
     return CaseHistoryPage;
 }());
@@ -732,19 +1018,19 @@ var CaseHistoryPage = (function () {
 
 /***/ }),
 
-/***/ 217:
+/***/ 219:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorTabPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__doctor_doctor__ = __webpack_require__(218);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__doctor_doctor__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_api_api__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_token_token__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_doctor_doctor__ = __webpack_require__(187);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_api_api__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_token_token__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_doctor_doctor__ = __webpack_require__(189);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -866,18 +1152,18 @@ var DoctorTabPage = (function () {
 
 /***/ }),
 
-/***/ 218:
+/***/ 220:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__img_preview_img_preview__ = __webpack_require__(219);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_doctor_doctor__ = __webpack_require__(187);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_api_api__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_token_token__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_jquery__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__img_preview_img_preview__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_doctor_doctor__ = __webpack_require__(189);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_api_api__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_token_token__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_jquery__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_jquery__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -984,13 +1270,13 @@ var DoctorPage = (function () {
 
 /***/ }),
 
-/***/ 219:
+/***/ 221:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ImgPreviewPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1031,14 +1317,14 @@ var ImgPreviewPage = (function () {
 
 /***/ }),
 
-/***/ 220:
+/***/ 222:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditMedicalCardPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_token_token__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_token_token__ = __webpack_require__(29);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1310,22 +1596,22 @@ var EditMedicalCardPage = (function () {
 
 /***/ }),
 
-/***/ 221:
+/***/ 223:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeTabPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hospital_hospital__ = __webpack_require__(222);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__personal_info_personal_info__ = __webpack_require__(223);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__private_doctor_private_doctor__ = __webpack_require__(224);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__case_history_case_history__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__body_mass_body_mass__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_token_token__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__home_home__ = __webpack_require__(188);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_hospital_hospital__ = __webpack_require__(189);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_api_api__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hospital_hospital__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__personal_info_personal_info__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__private_doctor_private_doctor__ = __webpack_require__(226);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__body_mass_body_mass__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_token_token__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__home_home__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_hospital_hospital__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_api_api__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__case_book_case_book__ = __webpack_require__(217);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1371,16 +1657,19 @@ var HomeTabPage = (function () {
         });
         this.loader.present();
         if (!this.token.checkToken()) {
-            this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_8__home_home__["a" /* HomePage */]);
+            this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__home_home__["a" /* HomePage */]);
         }
         else {
             console.log(this.token.getToken());
             console.log(this.token.getUser());
         }
         this.menu.enable(true);
-        this.name = '程飘';
+        var user = JSON.parse(this.token.getUser());
+        this.name = user['realname'];
         this.profile = './assets/imgs/person_info.jpg';
-        this.describe = 'cheng.bug@gmail.com';
+        this.describe = user['mail'];
+        console.log(this.name);
+        console.log(this.describe);
         this.hospitalData = this.hospital.getHospital();
     }
     HomeTabPage.prototype.ionViewDidLoad = function () {
@@ -1406,11 +1695,11 @@ var HomeTabPage = (function () {
                 break;
             }
             case 2: {
-                this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__case_history_case_history__["a" /* CaseHistoryPage */]);
+                this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_10__case_book_case_book__["a" /* CaseBookPage */]);
                 break;
             }
             case 3: {
-                this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__body_mass_body_mass__["a" /* BodyMassPage */]);
+                this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__body_mass_body_mass__["a" /* BodyMassPage */]);
                 break;
             }
             case 5: {
@@ -1486,12 +1775,12 @@ var HomeTabPage = (function () {
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* App */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* MenuController */],
-            __WEBPACK_IMPORTED_MODULE_7__providers_token_token__["a" /* TokenProvider */],
+            __WEBPACK_IMPORTED_MODULE_6__providers_token_token__["a" /* TokenProvider */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* LoadingController */],
-            __WEBPACK_IMPORTED_MODULE_9__providers_hospital_hospital__["a" /* HospitalProvider */],
+            __WEBPACK_IMPORTED_MODULE_8__providers_hospital_hospital__["a" /* HospitalProvider */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* ToastController */],
-            __WEBPACK_IMPORTED_MODULE_10__providers_api_api__["a" /* ApiProvider */]])
+            __WEBPACK_IMPORTED_MODULE_9__providers_api_api__["a" /* ApiProvider */]])
     ], HomeTabPage);
     return HomeTabPage;
 }());
@@ -1500,13 +1789,14 @@ var HomeTabPage = (function () {
 
 /***/ }),
 
-/***/ 222:
+/***/ 224:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HospitalPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_hospital_hospital__ = __webpack_require__(76);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1518,6 +1808,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 /**
  * Generated class for the HospitalPage page.
  *
@@ -1525,10 +1816,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var HospitalPage = (function () {
-    function HospitalPage(navCtrl, navParams) {
+    function HospitalPage(navCtrl, navParams, hos) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.title = '新桥医院';
+        this.hos = hos;
+        this.title = this.hos['hospitalName'];
     }
     HospitalPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad HospitalPage');
@@ -1538,7 +1830,9 @@ var HospitalPage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-hospital',template:/*ion-inline-start:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/hospital/hospital.html"*/'<!--\n  Generated template for the HospitalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title>{{title}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="color-content">\n  <ion-slides pager>\n\n    <ion-slide>\n    <img src="https://ss0.bdstatic.com/6KYTfyqn1Ah3otqbppnN2DJv/comt/1498096950_32d8a37ca37e8b3fdace4c3257060e64_w800.jpeg">\n    <h2>高效</h2>\n    </ion-slide>\n\n    <ion-slide>\n      <img src="https://ss0.bdstatic.com/6KYTfyqn1Ah3otqbppnN2DJv/comt/1498097073_c1e10842f9b9b93f92e43ec8cc54f9cd_w800.jpeg">\n      <h2>便捷</h2>\n    </ion-slide>\n\n  </ion-slides>\n\n\n  <ion-card>\n    <ion-card-header>\n      医院简介\n    </ion-card-header>\n    <div class="divider"></div>\n    <ion-card-content>\n      <p>重庆交通大学校医院现已成为一所综合性现代化教学医院。</p>\n    </ion-card-content>\n  </ion-card>\n  <ion-card>\n    <ion-card-header>\n      历史沿革\n    </ion-card-header>\n    <div class="divider"></div>\n    <ion-card-content>\n      <p>新桥医院是第三军医大学第二附属医院，始建于1944年，前身是国民党军\n        政部陆军医院，1950年改编为西南军区总医院，1955年转隶第七军医大学，\n        为第二附属医院，对外称新桥医院。1975年改称第三军医大学第二附属医院，\n        现址由贺龙、邓小平等老一辈革命家亲自选定。</p>\n    </ion-card-content>\n  </ion-card>\n  <ion-card>\n    <ion-card-header>\n      特色科室\n    </ion-card-header>\n    <div class="divider"></div>\n    <ion-card-content>\n      <p>医院设有临床和医技科室45个，国家级重点学科10个（呼吸内科、心血管内科、\n        心血管外科、骨科、泌尿外科、神经外科、普通外科、肝胆外科、胸外科、整形外\n        科），国家中医药管理局重点建设专科1个（中西医结合肾脏病重点建设专科），\n        全军医学研究所4个（呼吸、心内、心外、肿瘤），全军医学专科（病）中心6个（\n        肾内、超声、骨科、神外、血液、口腔），优生优育中心学科3个（妇产、儿科、泌外）\n        。医院是临床医学博士后流动站，有博士学位授权点学科22个、硕士学位授权点学科2\n        8个。有6个重庆市质量控制中心（血液内科医疗质量控制中心、肾移植质控中心、\n        心脏大血管外科（含心脏移植）医疗质量控制中心、美容外科质量控制中心、\n        临床输血质量控制中心、护理质量控制中心）。</p>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/hospital/hospital.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_hospital_hospital__["a" /* HospitalProvider */]])
     ], HospitalPage);
     return HospitalPage;
 }());
@@ -1547,16 +1841,16 @@ var HospitalPage = (function () {
 
 /***/ }),
 
-/***/ 223:
+/***/ 225:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PersonalInfoPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_medical_card_edit_medical_card__ = __webpack_require__(220);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_token_token__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_jquery__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_medical_card_edit_medical_card__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_token_token__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_jquery__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_jquery__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1626,7 +1920,7 @@ var PersonalInfoPage = (function () {
     PersonalInfoPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad PersonalInfoPage');
         var that = this;
-        __WEBPACK_IMPORTED_MODULE_4_jquery__["get"]('http://api.zjhfyq.cn/api-user/users/detail', {
+        __WEBPACK_IMPORTED_MODULE_4_jquery__["get"]('https://api.zjhfyq.cn/api-user/users/detail', {
             token: this.accessToken
         }, function (data) {
             console.log(data);
@@ -1659,13 +1953,13 @@ var PersonalInfoPage = (function () {
 
 /***/ }),
 
-/***/ 224:
+/***/ 226:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PrivateDoctorPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1687,97 +1981,10 @@ var PrivateDoctorPage = (function () {
     function PrivateDoctorPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.ws = new WebSocket("ws://10.0.0.8:8090/ws");
-        this.ws.subscribe();
         this.hasPrivateDoctor = true;
         this.userId = '140000198202211138';
         this.toUserId = '210000198410281948';
-        this.msgList = [
-            {
-                "messageId": "1",
-                "userId": "140000198202211138",
-                "userName": "Luff",
-                "userImgUrl": "./assets/imgs/slide1.png",
-                "toUserId": "210000198410281948",
-                "toUserName": "Hancock",
-                "userAvatar": "./assets/imgs/slide1.png",
-                "time": 1488349800000,
-                "message": "A good programmer is someone who always looks both ways before crossing a one-way street. ",
-                "status": "success"
-            },
-            {
-                "messageId": "2",
-                "userId": "210000198410281948",
-                "userName": "Hancock",
-                "userImgUrl": "./assets/imgs/slide2.jpg",
-                "toUserId": "140000198202211138",
-                "toUserName": "Luff",
-                "userAvatar": "./assets/imgs/slide1.jpg",
-                "time": 1491034800000,
-                "message": "Don’t worry if it doesn't work right. If everything did, you’d be out of a job.",
-                "status": "success"
-            },
-            {
-                "messageId": "3",
-                "userId": "140000198202211138",
-                "userName": "Luff",
-                "userImgUrl": "./assets/imgs/slide1.jpg",
-                "toUserId": "210000198410281948",
-                "toUserName": "Hancock",
-                "userAvatar": "./assets/imgs/slide2.jpg",
-                "time": 1491034920000,
-                "message": "Most of you are familiar with the virtues of a programmer. There are three, of course: laziness, impatience, and hubris.",
-                "status": "success"
-            },
-            {
-                "messageId": "4",
-                "userId": "210000198410281948",
-                "userName": "Hancock",
-                "userImgUrl": "./assets/to-user.jpg",
-                "toUserId": "140000198202211138",
-                "toUserName": "Luff",
-                "userAvatar": "./assets/user.jpg",
-                "time": 1491036720000,
-                "message": "One man’s crappy software is another man’s full time job.",
-                "status": "success"
-            },
-            {
-                "messageId": "5",
-                "userId": "210000198410281948",
-                "userName": "Hancock",
-                "userImgUrl": "./assets/to-user.jpg",
-                "toUserId": "140000198202211138",
-                "toUserName": "Luff",
-                "userAvatar": "./assets/user.jpg",
-                "time": 1491108720000,
-                "message": "Programming is 10% science, 20% ingenuity, and 70% getting the ingenuity to work with the science.",
-                "status": "success"
-            },
-            {
-                "messageId": "6",
-                "userId": "140000198202211138",
-                "userName": "Luff",
-                "userImgUrl": "./assets/user.jpg",
-                "toUserId": "210000198410281948",
-                "toUserName": "Hancock",
-                "userAvatar": "./assets/to-user.jpg",
-                "time": 1491231120000,
-                "message": "If at first you don’t succeed, call it version 1.0",
-                "status": "success"
-            },
-            {
-                "messageId": "7",
-                "userId": "140000198202211138",
-                "userName": "Luff",
-                "userImgUrl": "./assets/user.jpg",
-                "toUserId": "210000198410281948",
-                "toUserName": "Hancock",
-                "userAvatar": "./assets/to-user.jpg",
-                "time": 1491231150000,
-                "message": "The <textarea> tag defines a multi-line text input control.\nA text area can hold an unlimited number of characters, and the text renders in a fixed-width font (usually Courier).\nThe size of a text area can be specified by the cols and rows attributes, or even better; through CSS' height and width properties.",
-                "status": "success"
-            }
-        ];
+        this.msgList = [];
     }
     PrivateDoctorPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad PrivateDoctorPage');
@@ -1845,17 +2052,17 @@ var PrivateDoctorPage = (function () {
 
 /***/ }),
 
-/***/ 225:
+/***/ 227:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_api_api__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_api_api__ = __webpack_require__(28);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1903,7 +2110,6 @@ var RegisterPage = (function () {
             alert.present();
             return;
         }
-        var url = 'http://api.zjhfyq.cn/api-user/users/';
         // var resp: string;
         var body = {
             idCard: this.id_card,
@@ -1951,18 +2157,18 @@ var RegisterPage = (function () {
 
 /***/ }),
 
-/***/ 226:
+/***/ 228:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SelecthospitalPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_api_api__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_hospital_hospital__ = __webpack_require__(189);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__main_tab_main_tab__ = __webpack_require__(227);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_api_api__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_hospital_hospital__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__main_tab_main_tab__ = __webpack_require__(229);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2063,17 +2269,17 @@ var SelecthospitalPage = (function () {
 
 /***/ }),
 
-/***/ 227:
+/***/ 229:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MainTabPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_tab_home_tab__ = __webpack_require__(221);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__doctor_tab_doctor_tab__ = __webpack_require__(217);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__appoinment_tab_appoinment_tab__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__message_tab_message_tab__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_tab_home_tab__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__doctor_tab_doctor_tab__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__appoinment_tab_appoinment_tab__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__message_tab_message_tab__ = __webpack_require__(230);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2117,17 +2323,17 @@ var MainTabPage = (function () {
 
 /***/ }),
 
-/***/ 228:
+/***/ 230:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MessageTabPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_token_token__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_api_api__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_token_token__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_api_api__ = __webpack_require__(28);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2208,14 +2414,14 @@ var MessageTabPage = (function () {
 
 /***/ }),
 
-/***/ 229:
+/***/ 231:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WelcomPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(188);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(190);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2259,7 +2465,7 @@ var WelcomPage = (function () {
 
 /***/ }),
 
-/***/ 241:
+/***/ 243:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -2272,133 +2478,16 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 241;
+webpackEmptyAsyncContext.id = 243;
 
 /***/ }),
 
-/***/ 283:
-/***/ (function(module, exports, __webpack_require__) {
-
-var map = {
-	"../pages/about/about.module": [
-		808,
-		30
-	],
-	"../pages/add-case-history/add-case-history.module": [
-		786,
-		48
-	],
-	"../pages/appoinment-tab/appoinment-tab.module": [
-		787,
-		47
-	],
-	"../pages/appointment-list/appointment-list.module": [
-		788,
-		46
-	],
-	"../pages/body-mass/body-mass.module": [
-		789,
-		45
-	],
-	"../pages/case-book/case-book.module": [
-		814,
-		29
-	],
-	"../pages/case-history/case-history.module": [
-		790,
-		44
-	],
-	"../pages/cure-progress/cure-progress.module": [
-		791,
-		28
-	],
-	"../pages/doctor-tab/doctor-tab.module": [
-		792,
-		43
-	],
-	"../pages/doctor/doctor.module": [
-		793,
-		42
-	],
-	"../pages/edit-medical-card/edit-medical-card.module": [
-		795,
-		41
-	],
-	"../pages/edit-personal-info/edit-personal-info.module": [
-		794,
-		27
-	],
-	"../pages/home-tab/home-tab.module": [
-		796,
-		40
-	],
-	"../pages/hospital/hospital.module": [
-		797,
-		39
-	],
-	"../pages/img-preview/img-preview.module": [
-		798,
-		38
-	],
-	"../pages/main-tab/main-tab.module": [
-		799,
-		37
-	],
-	"../pages/message-tab/message-tab.module": [
-		800,
-		36
-	],
-	"../pages/pay-platform/pay-platform.module": [
-		801,
-		26
-	],
-	"../pages/personal-info/personal-info.module": [
-		802,
-		35
-	],
-	"../pages/private-doctor/private-doctor.module": [
-		803,
-		34
-	],
-	"../pages/register/register.module": [
-		804,
-		33
-	],
-	"../pages/selecthospital/selecthospital.module": [
-		805,
-		32
-	],
-	"../pages/sos/sos.module": [
-		806,
-		25
-	],
-	"../pages/welcom/welcom.module": [
-		807,
-		31
-	]
-};
-function webpackAsyncContext(req) {
-	var ids = map[req];
-	if(!ids)
-		return Promise.reject(new Error("Cannot find module '" + req + "'."));
-	return __webpack_require__.e(ids[1]).then(function() {
-		return __webpack_require__(ids[0]);
-	});
-};
-webpackAsyncContext.keys = function webpackAsyncContextKeys() {
-	return Object.keys(map);
-};
-webpackAsyncContext.id = 283;
-module.exports = webpackAsyncContext;
-
-/***/ }),
-
-/***/ 40:
+/***/ 28:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ApiProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2420,7 +2509,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var ApiProvider = (function () {
     function ApiProvider(http) {
         this.http = http;
-        this.server = "http://api.zjhfyq.cn";
+        this.server = "https://api.zjhfyq.cn";
         console.log('Hello ApiProvider Provider');
     }
     ApiProvider.prototype.getReigiterApi = function () {
@@ -2430,7 +2519,7 @@ var ApiProvider = (function () {
         return this.server + "/api-sso/login";
     };
     ApiProvider.prototype.getHospitalsApi = function () {
-        return "http://sh.zjhfyq.cn/hospital";
+        return "https://sh.zjhfyq.cn/hospital";
     };
     ApiProvider.prototype.getDocters = function () {
         return this.server + "/api-hospital/hospital/doctor";
@@ -2456,6 +2545,18 @@ var ApiProvider = (function () {
     ApiProvider.prototype.postFirstAid = function () {
         return this.server + "/api-onekeyfirstaid/sos";
     };
+    ApiProvider.prototype.getEmrs = function () {
+        return this.server + "/api-emr/emr";
+    };
+    ApiProvider.prototype.postEmr = function () {
+        return this.server + "/api-emr/emr";
+    };
+    ApiProvider.prototype.getEmrRecord = function () {
+        return this.server + "/api-emr/emr/record";
+    };
+    ApiProvider.prototype.postEmrRecord = function () {
+        return this.server + "/api-emr/emr/record";
+    };
     ApiProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]])
@@ -2467,28 +2568,135 @@ var ApiProvider = (function () {
 
 /***/ }),
 
-/***/ 404:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ 285:
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(405);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(426);
-
-
-Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
-//# sourceMappingURL=main.js.map
+var map = {
+	"../pages/about/about.module": [
+		788,
+		5
+	],
+	"../pages/add-case-book/add-case-book.module": [
+		789,
+		4
+	],
+	"../pages/add-case-history/add-case-history.module": [
+		790,
+		24
+	],
+	"../pages/appoinment-tab/appoinment-tab.module": [
+		791,
+		23
+	],
+	"../pages/appointment-list/appointment-list.module": [
+		793,
+		22
+	],
+	"../pages/body-mass/body-mass.module": [
+		792,
+		21
+	],
+	"../pages/case-book/case-book.module": [
+		794,
+		20
+	],
+	"../pages/case-history/case-history.module": [
+		795,
+		19
+	],
+	"../pages/cure-progress/cure-progress.module": [
+		796,
+		3
+	],
+	"../pages/doctor-tab/doctor-tab.module": [
+		797,
+		18
+	],
+	"../pages/doctor/doctor.module": [
+		798,
+		17
+	],
+	"../pages/edit-medical-card/edit-medical-card.module": [
+		799,
+		16
+	],
+	"../pages/edit-personal-info/edit-personal-info.module": [
+		800,
+		2
+	],
+	"../pages/home-tab/home-tab.module": [
+		801,
+		15
+	],
+	"../pages/hospital/hospital.module": [
+		802,
+		14
+	],
+	"../pages/img-preview/img-preview.module": [
+		803,
+		13
+	],
+	"../pages/main-tab/main-tab.module": [
+		804,
+		12
+	],
+	"../pages/message-tab/message-tab.module": [
+		805,
+		11
+	],
+	"../pages/pay-platform/pay-platform.module": [
+		806,
+		1
+	],
+	"../pages/personal-info/personal-info.module": [
+		812,
+		10
+	],
+	"../pages/private-doctor/private-doctor.module": [
+		808,
+		9
+	],
+	"../pages/register/register.module": [
+		811,
+		8
+	],
+	"../pages/selecthospital/selecthospital.module": [
+		807,
+		7
+	],
+	"../pages/sos/sos.module": [
+		809,
+		0
+	],
+	"../pages/welcom/welcom.module": [
+		810,
+		6
+	]
+};
+function webpackAsyncContext(req) {
+	var ids = map[req];
+	if(!ids)
+		return Promise.reject(new Error("Cannot find module '" + req + "'."));
+	return __webpack_require__.e(ids[1]).then(function() {
+		return __webpack_require__(ids[0]);
+	});
+};
+webpackAsyncContext.keys = function webpackAsyncContextKeys() {
+	return Object.keys(map);
+};
+webpackAsyncContext.id = 285;
+module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 41:
+/***/ 29:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TokenProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2552,50 +2760,68 @@ var TokenProvider = (function () {
 
 /***/ }),
 
-/***/ 426:
+/***/ 406:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(407);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(428);
+
+
+Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
+//# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ 428:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(400);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(403);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common_http__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(782);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_home_home__ = __webpack_require__(188);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_register_register__ = __webpack_require__(225);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_main_tab_main_tab__ = __webpack_require__(227);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_doctor_tab_doctor_tab__ = __webpack_require__(217);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_home_tab_home_tab__ = __webpack_require__(221);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_appoinment_tab_appoinment_tab__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_welcom_welcom__ = __webpack_require__(229);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_message_tab_message_tab__ = __webpack_require__(228);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_hospital_hospital__ = __webpack_require__(222);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_doctor_doctor__ = __webpack_require__(218);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_img_preview_img_preview__ = __webpack_require__(219);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_appointment_list_appointment_list__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_personal_info_personal_info__ = __webpack_require__(223);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_edit_medical_card_edit_medical_card__ = __webpack_require__(220);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_private_doctor_private_doctor__ = __webpack_require__(224);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_emoji__ = __webpack_require__(783);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_case_history_case_history__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_add_case_history_add_case_history__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_body_mass_body_mass__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__providers_http_http__ = __webpack_require__(784);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__providers_api_api__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__providers_token_token__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_selecthospital_selecthospital__ = __webpack_require__(226);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__providers_hospital_hospital__ = __webpack_require__(189);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__providers_doctor_doctor__ = __webpack_require__(187);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__providers_ws_ws__ = __webpack_require__(785);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(402);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(405);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common_http__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(784);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_home_home__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_register_register__ = __webpack_require__(227);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_main_tab_main_tab__ = __webpack_require__(229);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_doctor_tab_doctor_tab__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_home_tab_home_tab__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_appoinment_tab_appoinment_tab__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_welcom_welcom__ = __webpack_require__(231);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_message_tab_message_tab__ = __webpack_require__(230);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_hospital_hospital__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_doctor_doctor__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_img_preview_img_preview__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_appointment_list_appointment_list__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_personal_info_personal_info__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_edit_medical_card_edit_medical_card__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_private_doctor_private_doctor__ = __webpack_require__(226);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_emoji__ = __webpack_require__(785);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_case_history_case_history__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_add_case_history_add_case_history__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_body_mass_body_mass__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__providers_http_http__ = __webpack_require__(786);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__providers_api_api__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__providers_token_token__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_selecthospital_selecthospital__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__providers_hospital_hospital__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__providers_doctor_doctor__ = __webpack_require__(189);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__providers_ws_ws__ = __webpack_require__(787);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__pages_case_book_case_book__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__providers_casebook_casebook__ = __webpack_require__(112);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -2654,7 +2880,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_23__pages_case_history_case_history__["a" /* CaseHistoryPage */],
                 __WEBPACK_IMPORTED_MODULE_24__pages_add_case_history_add_case_history__["a" /* AddCaseHistoryPage */],
                 __WEBPACK_IMPORTED_MODULE_25__pages_body_mass_body_mass__["a" /* BodyMassPage */],
-                __WEBPACK_IMPORTED_MODULE_29__pages_selecthospital_selecthospital__["a" /* SelecthospitalPage */]
+                __WEBPACK_IMPORTED_MODULE_29__pages_selecthospital_selecthospital__["a" /* SelecthospitalPage */],
+                __WEBPACK_IMPORTED_MODULE_33__pages_case_book_case_book__["a" /* CaseBookPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -2664,29 +2891,31 @@ var AppModule = (function () {
                     backButtonText: ''
                 }, {
                     links: [
+                        { loadChildren: '../pages/about/about.module#AboutPageModule', name: 'AboutPage', segment: 'about', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/add-case-book/add-case-book.module#AddCaseBookPageModule', name: 'AddCaseBookPage', segment: 'add-case-book', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/add-case-history/add-case-history.module#AddCaseHistoryPageModule', name: 'AddCaseHistoryPage', segment: 'add-case-history', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/appoinment-tab/appoinment-tab.module#AppoinmentTabPageModule', name: 'AppointmentTabPage', segment: 'appoinment-tab', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/appointment-list/appointment-list.module#AppointmentListPageModule', name: 'AppointmentListPage', segment: 'appointment-list', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/body-mass/body-mass.module#BodyMassPageModule', name: 'BodyMassPage', segment: 'body-mass', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/appointment-list/appointment-list.module#AppointmentListPageModule', name: 'AppointmentListPage', segment: 'appointment-list', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/case-book/case-book.module#CaseBookPageModule', name: 'CaseBookPage', segment: 'case-book', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/case-history/case-history.module#CaseHistoryPageModule', name: 'CaseHistoryPage', segment: 'case-history', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cure-progress/cure-progress.module#CureProgressPageModule', name: 'CureProgressPage', segment: 'cure-progress', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/doctor-tab/doctor-tab.module#DoctorTabPageModule', name: 'DoctorTabPage', segment: 'doctor-tab', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/doctor/doctor.module#DoctorPageModule', name: 'DoctorPage', segment: 'doctor', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/edit-personal-info/edit-personal-info.module#EditPersonalInfoPageModule', name: 'EditPersonalInfoPage', segment: 'edit-personal-info', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/edit-medical-card/edit-medical-card.module#EditMedicalCardPageModule', name: 'EditMedicalCardPage', segment: 'edit-medical-card', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/edit-personal-info/edit-personal-info.module#EditPersonalInfoPageModule', name: 'EditPersonalInfoPage', segment: 'edit-personal-info', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/home-tab/home-tab.module#HomeTabPageModule', name: 'HomeTabPage', segment: 'home-tab', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/hospital/hospital.module#HospitalPageModule', name: 'HospitalPage', segment: 'hospital', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/img-preview/img-preview.module#ImgPreviewPageModule', name: 'ImgPreviewPage', segment: 'img-preview', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/main-tab/main-tab.module#MainTabPageModule', name: 'MainTabPage', segment: 'main-tab', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/message-tab/message-tab.module#MessageTabPageModule', name: 'MessageTabPage', segment: 'message-tab', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/pay-platform/pay-platform.module#PayPlatformPageModule', name: 'PayPlatformPage', segment: 'pay-platform', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/personal-info/personal-info.module#PersonalInfoPageModule', name: 'PersonalInfoPage', segment: 'personal-info', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/private-doctor/private-doctor.module#PrivateDoctorPageModule', name: 'PrivateDoctorPage', segment: 'private-doctor', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/selecthospital/selecthospital.module#SelecthospitalPageModule', name: 'SelecthospitalPage', segment: 'selecthospital', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/private-doctor/private-doctor.module#PrivateDoctorPageModule', name: 'PrivateDoctorPage', segment: 'private-doctor', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/sos/sos.module#SosPageModule', name: 'SosPage', segment: 'sos', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/welcom/welcom.module#WelcomPageModule', name: 'WelcomPage', segment: 'welcom', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/about/about.module#AboutPageModule', name: 'AboutPage', segment: 'about', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/personal-info/personal-info.module#PersonalInfoPageModule', name: 'PersonalInfoPage', segment: 'personal-info', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["b" /* HttpClientModule */]
@@ -2712,7 +2941,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_23__pages_case_history_case_history__["a" /* CaseHistoryPage */],
                 __WEBPACK_IMPORTED_MODULE_24__pages_add_case_history_add_case_history__["a" /* AddCaseHistoryPage */],
                 __WEBPACK_IMPORTED_MODULE_25__pages_body_mass_body_mass__["a" /* BodyMassPage */],
-                __WEBPACK_IMPORTED_MODULE_29__pages_selecthospital_selecthospital__["a" /* SelecthospitalPage */]
+                __WEBPACK_IMPORTED_MODULE_29__pages_selecthospital_selecthospital__["a" /* SelecthospitalPage */],
+                __WEBPACK_IMPORTED_MODULE_33__pages_case_book_case_book__["a" /* CaseBookPage */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
@@ -2724,7 +2954,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_28__providers_token_token__["a" /* TokenProvider */],
                 __WEBPACK_IMPORTED_MODULE_30__providers_hospital_hospital__["a" /* HospitalProvider */],
                 __WEBPACK_IMPORTED_MODULE_31__providers_doctor_doctor__["a" /* DoctorProvider */],
-                __WEBPACK_IMPORTED_MODULE_32__providers_ws_ws__["a" /* WsProvider */]
+                __WEBPACK_IMPORTED_MODULE_32__providers_ws_ws__["a" /* WsProvider */],
+                __WEBPACK_IMPORTED_MODULE_34__providers_casebook_casebook__["a" /* CasebookProvider */]
             ]
         })
     ], AppModule);
@@ -2735,16 +2966,62 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 782:
+/***/ 76:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HospitalProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/*
+  Generated class for the HospitalProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var HospitalProvider = (function () {
+    function HospitalProvider(http) {
+        this.http = http;
+        console.log('Hello HospitalProvider Provider');
+    }
+    HospitalProvider.prototype.storeHospital = function (hospital) {
+        window.localStorage.setItem('hospital', hospital);
+    };
+    HospitalProvider.prototype.getHospital = function () {
+        return JSON.parse(window.localStorage.getItem('hospital'));
+    };
+    HospitalProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]])
+    ], HospitalProvider);
+    return HospitalProvider;
+}());
+
+//# sourceMappingURL=hospital.js.map
+
+/***/ }),
+
+/***/ 784:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(403);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(400);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_welcom_welcom__ = __webpack_require__(229);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(405);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(402);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_welcom_welcom__ = __webpack_require__(231);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2781,7 +3058,7 @@ var MyApp = (function () {
 
 /***/ }),
 
-/***/ 783:
+/***/ 785:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2815,12 +3092,12 @@ var EmojiProvider = (function () {
 
 /***/ }),
 
-/***/ 784:
+/***/ 786:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HttpProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2862,12 +3139,12 @@ var HttpProvider = (function () {
 
 /***/ }),
 
-/***/ 785:
+/***/ 787:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WsProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2902,5 +3179,5 @@ var WsProvider = (function () {
 
 /***/ })
 
-},[404]);
+},[406]);
 //# sourceMappingURL=main.js.map

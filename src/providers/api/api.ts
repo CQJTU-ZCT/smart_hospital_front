@@ -13,7 +13,7 @@ export class ApiProvider {
   constructor(public http: HttpClient) {
     console.log('Hello ApiProvider Provider');
   }
-  private server = "http://api.zjhfyq.cn";
+  private server = "https://api.zjhfyq.cn";
 
 
   getReigiterApi() {
@@ -25,7 +25,7 @@ export class ApiProvider {
   }
 
   getHospitalsApi(): string {
-    return "http://sh.zjhfyq.cn/hospital";
+    return "https://sh.zjhfyq.cn/hospital";
   }
 
   getDocters() {
