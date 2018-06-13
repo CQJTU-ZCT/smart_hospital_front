@@ -83,5 +83,9 @@ export class ApiProvider {
     return this.server + "/api-file/profile";
   }
 
+  postFeedback() {
+    return this.server + "/api-feedbackplatform/feedback";
+  }
+
 
 }

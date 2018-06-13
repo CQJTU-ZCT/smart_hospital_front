@@ -4,7 +4,7 @@ import { AddCaseHistoryPage } from './add-case-history';
 
 @NgModule({
   declarations: [
-    AddCaseHistoryPage,
+
   ],
   imports: [
     IonicPageModule.forChild(AddCaseHistoryPage),
