@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {AlertController, IonicPage, LoadingController, NavController, NavParams, ToastController} from 'ionic-angular';
 
 import * as $ from 'jquery';
 import {TokenProvider} from "../../providers/token/token";
@@ -19,57 +19,51 @@ import {ApiProvider} from "../../providers/api/api";
 })
 export class MessageTabPage {
 
-  msg: any;
-  page:number;
-  maxPage:number;
-
-  appointments: any;
+  records: any;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               public token: TokenProvider,
-              public api: ApiProvider) {
-    this.msg = {
-      title: '内科预约',
-      describe: '预约成功',
-      status: 0,
-      time: '2018-04-21'
-    }
+              public api: ApiProvider,
+              public alert: AlertController,
+              public load: LoadingController,
+              public toast: ToastController) {
+    this.records = [];
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MessageTabPage');
-    let that = this;
-    $.get(this.api.getPreorders(),
-      {token: this.token.getToken()},
-      function (data) {
-        console.log(data);
-        that.appointments = data['map'];
-      });
+    this.getPreorder();
   }
 
   showMsg($event) {
     //获取点击dom对象的参数值
-    console.log($event.target.offsetParent.getAttribute("data-msg"));
   }
 
-  doRefresh(refresher){
-    if (this.page > this.maxPage){
-        refresher.cancel();
-        return;
-    }
+  getPreorder() {
+    let loader = this.load.create({
+      content: "数据加载中,请稍后..."
+    });
     let that = this;
+    loader.present();
     $.get(this.api.getPreorders(),
-      {pageNum: this.page++},
+      {token: this.token.getToken()},
       function (data) {
-        if (data['cade'] === 200){
-          let pr = data['map']['pageInfo']['list'];
-          for (var p in pr){
-            that.msg.unshift(pr[p]);
-          }
-          refresher.cancel();
+        loader.dismiss();
+        if (data['code'] !== 200) {
+          that.toast.create({
+            message: '获取预约挂号数据失败...',
+            duration: 1000
+          }).present();
+        } else {
+          that.records = data['map']['preorders'];
         }
-      }
-    );
+      })
   }
+
+  doRefresh(refresher) {
+    refresher.cancel();
+    this.getPreorder();
+  }
+
 }

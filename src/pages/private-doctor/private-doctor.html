@@ -12,18 +12,6 @@
 
 </ion-header>
 
-
-<ion-content class="color-content" *ngIf="!hasPrivateDoctor">
-  <ion-card>
-    <ion-card-content>
-      <img src="../../assets/imgs/oops.png">
-      <p style="color: #488aff">您还没有匹配任何专属医生，请点击下方按钮进入私人医生匹配系统</p>
-    </ion-card-content>
-    <button ion-button color="primary" full>寻找专属医生</button>
-  </ion-card>
-</ion-content>
-
-
 <ion-content class="color-content" *ngIf="hasPrivateDoctor">
   <header class="head-info">
     <ion-card>

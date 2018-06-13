@@ -12,16 +12,18 @@
 
 
 <ion-content>
+
   <ion-refresher #refresh (ionRefresh)="doRefresh($event)">
     <ion-refresher-content>
     </ion-refresher-content>
   </ion-refresher>
+
   <ion-list>
-    <button ion-item data-msg="4" (click)="showMsg($event)">
+    <button ion-item *ngFor="let record of records" (click)="showMsg(record)">
       <ion-badge class="i-badge" color="danger" item-start> </ion-badge>
       <h2>预约提示</h2>
-      <p>您以成功预约12：30分李医生会诊</p>
-      <ion-note item-end>1:12 pm</ion-note>
+      <p>与{{record.doctor.name}}医生预约见面{{record.preorderStatus.description}}</p>
+      <ion-note item-end>{{record.preOrders.createTime}}</ion-note>
     </button>
   </ion-list>
 

@@ -1,6 +1,9 @@
 import {Component} from '@angular/core';
-import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {IonicPage, LoadingController, NavController, NavParams, ToastController} from 'ionic-angular';
 import {TokenProvider} from "../../providers/token/token";
+import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
+import {Loading} from "ionic-angular/umd";
+import {ApiProvider} from "../../providers/api/api";
 
 /**
  * Generated class for the EditMedicalCardPage page.
@@ -21,11 +24,18 @@ export class EditMedicalCardPage {
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
-              public token: TokenProvider) {
+              public token: TokenProvider,
+              public load: LoadingController,
+              public toast: ToastController,
+              public api: ApiProvider,
+              public http: HttpClient) {
     this.personalInfo = this.token.getUserDetail();
 
     console.log(this.personalInfo);
-    //<editor-fold desc="民族">
+    if (this.personalInfo['usersDetail']['sexId'] === null || this.personalInfo['usersDetail']['sexId'] === '') {
+      this.personalInfo['usersDetail']['sexId'] = '1';
+    }
+
     this.nations = [{
       id: 1,
       name: '汉族'
@@ -250,7 +260,6 @@ export class EditMedicalCardPage {
         id: 56,
         name: '基诺族'
       }];
-    //</editor-fold>
   }
 
   ionViewDidLoad() {
@@ -258,7 +267,37 @@ export class EditMedicalCardPage {
   }
 
   submit() {
-    console.log(this.personalInfo);
+    let headers = new HttpHeaders().set('token', this.token.getToken());
+    let body = {
+      idCard: this.personalInfo['usersDetail']['idCard'],
+      nationId: this.personalInfo['nation']['nationId'],
+      sexId: this.personalInfo['usersDetail']['sexId'],
+      address: this.personalInfo['usersDetail']['address'],
+      birthYMD: this.personalInfo['usersDetail']['birthYMD'],
+      token: this.token.getToken()
+    };
+    let loader = this.load.create({
+      content: '数据加载中,请稍候...'
+    });
+    loader.present();
+    this.http.put(this.api.putUserInfo(), body, {headers: headers})
+      .subscribe(
+      data => {
+        loader.dismiss();
+        this.toast.create({
+          message: data['info'],
+          duration: 1000
+        }).present();
+      },
+      err => {
+        loader.dismiss();
+        this.toast.create({
+          message: err,
+          duration: 1000
+        }).present();
+      }
+    );
+
   }
 
 }

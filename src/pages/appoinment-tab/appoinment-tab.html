@@ -24,7 +24,8 @@
 
     <ion-item>
       <ion-label><span style="color: red">*</span>选择科室</ion-label>
-      <ion-select [(ngModel)]="branchId" submitText="确认" cancelText="取消">
+      <ion-select [(ngModel)]="branchId" submitText="确认"
+                  (ngModelChange)="branchIdChanged()" cancelText="取消">
         <ion-option *ngFor="let item of branch" value="{{item.branchId}}">{{item.name}}</ion-option>
       </ion-select>
     </ion-item>
@@ -32,14 +33,14 @@
     <ion-item>
       <ion-label>选择医生</ion-label>
       <ion-select [(ngModel)]="doctorId" submitText="确认" cancelText="取消">
-        <ion-option *ngFor="let item of doctors" value="{{item.idCard}}">{{item.name}}</ion-option>
+        <ion-option *ngFor="let item of doctors" value="{{item.doctor.idCard}}">{{item.doctor.name}}</ion-option>
       </ion-select>
     </ion-item>
 
     <ion-item>
       <ion-label>预约时间</ion-label>
-      <ion-datetime [(ngModel)]="preorderTime" displayFormat="YYYY年MM月DD日 HH时后"
-                    pickerFormat="YYYY 年 MM 月 DD 年 HH 时"
+      <ion-datetime [(ngModel)]="preorderTime" displayFormat="YYYY年MM月DD日 HH:mm"
+                    pickerFormat="YYYY-MM-DD HH:mm:ss"
                     [(ngModel)]="time"
                     min="2018-03-14"
                     cancelText="取消"
