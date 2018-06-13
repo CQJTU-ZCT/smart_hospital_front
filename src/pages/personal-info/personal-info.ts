@@ -1,5 +1,12 @@
 import {Component} from '@angular/core';
-import {IonicPage, NavController, NavParams, PopoverController, LoadingController, ToastController} from 'ionic-angular';
+import {
+  IonicPage,
+  NavController,
+  NavParams,
+  PopoverController,
+  LoadingController,
+  ToastController
+} from 'ionic-angular';
 import {EditMedicalCardPage} from "../edit-medical-card/edit-medical-card";
 import {TokenProvider} from "../../providers/token/token";
 import {ChangeProfilePage} from '../change-profile/change-profile';
@@ -121,8 +128,10 @@ export class PersonalInfoPage {
             that.userInfo['profile'] = 'https://api.zjhfyq.cn/api-file' +
               that.userInfo['profile']['profilePath'] + '?token=' + that.token.getToken();
           }
-          that.userInfo['usersDetail']['birthYMD'] =
-            (that.userInfo['usersDetail']['birthYMD'] as string).substring(0, 10);
+          if (that.userInfo['usersDetail']['birthYMD'] !== null) {
+            that.userInfo['usersDetail']['birthYMD'] =
+              (that.userInfo['usersDetail']['birthYMD'] as string).substring(0, 10);
+          }
           that.token.storeUserDetail(JSON.stringify(that.userInfo));
         } else {
 

@@ -39,6 +39,12 @@ export class DoctorPage {
               public token: TokenProvider,
               public toast: ToastController) {
     this.doctor = this.doctorCtrl.getCurrentDoctor();
+    if (this.doctor['nation'] === null) {
+      this.doctor['nation'] = {
+        nataionId: 1,
+        nationDesc: '汉族'
+      }
+    }
     console.log(this.doctor);
     this.doctorName = this.doctor['doctor']['name'];
     console.log(this.doctorName);
@@ -60,9 +66,10 @@ export class DoctorPage {
   }
   getBranches(refresher) {
     let that = this;
+    console.log(this.doctor);
     $.get(this.api.getDoctorBranches(),
       {token: this.token.getToken(),
-       idCard: this.doctor['idCard']},
+       idCard: this.doctor['doctor']['idCard']},
     function (data) {
       if (refresher !== null &&
           refresher !== undefined) {
@@ -87,7 +94,7 @@ export class DoctorPage {
     let that = this;
     let preorderTime = this.time.replace('T', ' ').replace('Z', '');
     $.post(this.api.postPreorder(), {
-      doctorId: this.doctor['idCard'],
+      doctorId: this.doctor['doctor']['idCard'],
       preorderTime: preorderTime,
       branchId: this.branchId,
       token: this.token.getToken()

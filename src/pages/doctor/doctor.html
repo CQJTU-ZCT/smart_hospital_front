@@ -60,7 +60,7 @@
     <ion-item>
       <ion-label><span style="color: red">*</span>选择科室</ion-label>
       <ion-select [(ngModel)]="branchId" submitText="确认" cancelText="取消">
-        <ion-option *ngFor="let branch of branches" value="branch.branch.branchId">{{branch.branch.name}}</ion-option>
+        <ion-option *ngFor="let branch of branches" value="{{branch.branch.branchId}}">{{branch.branch.name}}</ion-option>
       </ion-select>
     </ion-item>
     <ion-item>
