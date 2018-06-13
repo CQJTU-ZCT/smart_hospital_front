@@ -1,11 +1,11 @@
-webpackJsonp([25],{
+webpackJsonp([27],{
 
 /***/ 112:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CasebookProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -51,7 +51,7 @@ var CasebookProvider = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -99,12 +99,12 @@ var DoctorProvider = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__register_register__ = __webpack_require__(227);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__register_register__ = __webpack_require__(229);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_api_api__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_token_token__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__selecthospital_selecthospital__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_token_token__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__selecthospital_selecthospital__ = __webpack_require__(230);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -171,7 +171,7 @@ var HomePage = (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar [hideBackButton]="true" text-center color="primary">\n    <ion-title>\n      智慧医院\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content scroll="false" id="login-container" padding>\n  <div id="login-bg">\n    <ion-list id="login-ion-list">\n      <ion-item>\n        <ion-label floating>身份证号码</ion-label>\n        <ion-input type="text" [(ngModel)]="username"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label floating>密码</ion-label>\n        <ion-input type="password" [(ngModel)]="password"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label>记住登录状态</ion-label>\n        <ion-checkbox color="secondary" checked="true" [(ngModel)]="remember"></ion-checkbox>\n      </ion-item>\n    </ion-list>\n    <button ion-button class="md" [full]="true" (click)="routeLogin()">登录</button>\n    <p text-center>\n      <a (click)="routeRegister()">没有帐号？点我注册</a>\n    </p>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar [hideBackButton]="true" text-center color="primary">\n    <ion-title>\n      智慧医院\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content scroll="false" id="login-container" padding>\n  <div id="login-bg">\n    <ion-list id="login-ion-list">\n      <ion-item>\n        <ion-label floating>身份证号码</ion-label>\n        <ion-input type="text" [(ngModel)]="username"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label floating>密码</ion-label>\n        <ion-input type="password" [(ngModel)]="password"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label>记住登录状态</ion-label>\n        <ion-checkbox color="secondary" checked="true" [(ngModel)]="remember"></ion-checkbox>\n      </ion-item>\n    </ion-list>\n    <button ion-button class="md" [full]="true" (click)="routeLogin()">登录</button>\n    <p text-center>\n      <a (click)="routeRegister()">没有帐号？点我注册</a>\n    </p>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_4__providers_api_api__["a" /* ApiProvider */],
@@ -193,9 +193,9 @@ var HomePage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_api_api__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_token_token__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_token_token__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_hospital_hospital__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jquery__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jquery__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_casebook_casebook__ = __webpack_require__(112);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -352,7 +352,7 @@ var AddCaseHistoryPage = (function () {
     };
     AddCaseHistoryPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-add-case-history',template:/*ion-inline-start:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/add-case-history/add-case-history.html"*/'<!--\n  Generated template for the AddCaseHistoryPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary" [hideBackButton]="true">\n    <ion-buttons left>\n      <button ion-button icon-only (click)="close()">\n        <ion-icon name="close"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title text-center>添加病历记录</ion-title>\n  </ion-navbar>\n\n</ion-header>\n<ion-content>\n  <div id="alert" div class="alert-info">\n    <p>\n      请如实填写如下信息\n    </p>\n  </div>\n  <ion-list>\n    <ion-item>\n      <ion-label floating>名称</ion-label>\n      <ion-input [(ngModel)]="title" type="text"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>描述</ion-label>\n      <ion-input [(ngModel)]="desc" type="text"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>治疗记录</ion-label>\n      <ion-input [(ngModel)]="treatment" type="text"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>治疗时间</ion-label>\n      <ion-datetime displayFormat="YYYY 年 MM 月 DD 日"\n                    pickerFormat="YYYY-MM-DD"\n                    [(ngModel)]="time"\n                    cancelText="取消"\n                    doneText="确认"\n                    color="primary"></ion-datetime>\n    </ion-item>\n    <ion-item>\n      <ion-label>选择科室</ion-label>\n      <ion-select [(ngModel)]="branch" submitText="确认"\n                  (ngModelChange)="branchIdChanged()" cancelText="取消">\n        <ion-option *ngFor="let item of branches" value="{{item.branchId}}">{{item.name}}</ion-option>\n      </ion-select>\n    </ion-item>\n    <ion-item>\n      <ion-label>选择医生</ion-label>\n      <ion-select [(ngModel)]="doctor" submitText="确认" cancelText="取消">\n        <ion-option *ngFor="let item of doctors" value="{{item.doctor.idCard}}">{{item.doctor.name}}</ion-option>\n      </ion-select>\n    </ion-item>\n  </ion-list>\n  <button ion-button color="primary" full (click)="submit()">确认</button>\n</ion-content>\n'/*ion-inline-end:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/add-case-history/add-case-history.html"*/,
+            selector: 'page-add-case-history',template:/*ion-inline-start:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/add-case-history/add-case-history.html"*/'<!--\n  Generated template for the AddCaseHistoryPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary" [hideBackButton]="true">\n    <ion-buttons left>\n      <button ion-button icon-only (click)="close()">\n        <ion-icon name="close"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title text-center>添加病历记录</ion-title>\n  </ion-navbar>\n\n</ion-header>\n<ion-content>\n  <div id="alert" div class="alert-info">\n    <p>\n      请如实填写如下信息\n    </p>\n  </div>\n  <ion-list>\n    <ion-item>\n      <ion-label floating>名称</ion-label>\n      <ion-input [(ngModel)]="title" type="text"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>描述</ion-label>\n      <ion-input [(ngModel)]="desc" type="text"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>治疗记录</ion-label>\n      <ion-input [(ngModel)]="treatment" type="text"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>治疗时间</ion-label>\n      <ion-datetime displayFormat="YYYY 年 MM 月 DD 日"\n                    pickerFormat="YYYY-MM-DD"\n                    [(ngModel)]="time"\n                    cancelText="取消"\n                    doneText="确认"\n                    color="primary"></ion-datetime>\n    </ion-item>\n    <ion-item>\n      <ion-label>选择科室</ion-label>\n      <ion-select [(ngModel)]="branch" submitText="确认"\n                  (ngModelChange)="branchIdChanged()" cancelText="取消">\n        <ion-option *ngFor="let item of branches" value="{{item.branchId}}">{{item.name}}</ion-option>\n      </ion-select>\n    </ion-item>\n    <ion-item>\n      <ion-label>选择医生</ion-label>\n      <ion-select [(ngModel)]="doctor" submitText="确认" cancelText="取消">\n        <ion-option *ngFor="let item of doctors" value="{{item.doctor.idCard}}">{{item.doctor.name}}</ion-option>\n      </ion-select>\n    </ion-item>\n  </ion-list>\n  <button ion-button color="primary" full (click)="submit()">确认</button>\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/add-case-history/add-case-history.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */],
@@ -379,8 +379,8 @@ var AddCaseHistoryPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__appointment_list_appointment_list__ = __webpack_require__(215);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_api_api__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_token_token__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jquery__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_token_token__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jquery__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_jquery__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -533,7 +533,7 @@ var AppointmentTabPage = (function () {
     };
     AppointmentTabPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-appoinment-tab',template:/*ion-inline-start:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/appoinment-tab/appoinment-tab.html"*/'<!--\n  Generated template for the AppointmentTabPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="primary">\n    <ion-title text-center>预约挂号</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="toList()">\n        <ion-icon name="list"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n\n  <ion-refresher #refresh (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content>\n    </ion-refresher-content>\n  </ion-refresher>\n  <ion-list>\n\n    <ion-item>\n      <ion-label><span style="color: red">*</span>选择科室</ion-label>\n      <ion-select [(ngModel)]="branchId" submitText="确认"\n                  (ngModelChange)="branchIdChanged()" cancelText="取消">\n        <ion-option *ngFor="let item of branch" value="{{item.branchId}}">{{item.name}}</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>选择医生</ion-label>\n      <ion-select [(ngModel)]="doctorId" submitText="确认" cancelText="取消">\n        <ion-option *ngFor="let item of doctors" value="{{item.doctor.idCard}}">{{item.doctor.name}}</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>预约时间</ion-label>\n      <ion-datetime [(ngModel)]="preorderTime" displayFormat="YYYY年MM月DD日 HH:mm"\n                    pickerFormat="YYYY-MM-DD HH:mm:ss"\n                    [(ngModel)]="time"\n                    min="2018-03-14"\n                    cancelText="取消"\n                    doneText="确认"\n                    placeholder="点击选择预约时间"\n                    color="primary"></ion-datetime>\n    </ion-item>\n\n  </ion-list>\n\n  <button ion-button full color="primary" style="margin-top: 80px" (click)="submit()">预约</button>\n\n\n</ion-content>\n'/*ion-inline-end:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/appoinment-tab/appoinment-tab.html"*/,
+            selector: 'page-appoinment-tab',template:/*ion-inline-start:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/appoinment-tab/appoinment-tab.html"*/'<!--\n  Generated template for the AppointmentTabPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="primary">\n    <ion-title text-center>预约挂号</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="toList()">\n        <ion-icon name="list"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n\n  <ion-refresher #refresh (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content>\n    </ion-refresher-content>\n  </ion-refresher>\n  <ion-list>\n\n    <ion-item>\n      <ion-label><span style="color: red">*</span>选择科室</ion-label>\n      <ion-select [(ngModel)]="branchId" submitText="确认"\n                  (ngModelChange)="branchIdChanged()" cancelText="取消">\n        <ion-option *ngFor="let item of branch" value="{{item.branchId}}">{{item.name}}</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>选择医生</ion-label>\n      <ion-select [(ngModel)]="doctorId" submitText="确认" cancelText="取消">\n        <ion-option *ngFor="let item of doctors" value="{{item.doctor.idCard}}">{{item.doctor.name}}</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>预约时间</ion-label>\n      <ion-datetime [(ngModel)]="preorderTime" displayFormat="YYYY年MM月DD日 HH:mm"\n                    pickerFormat="YYYY-MM-DD HH:mm:ss"\n                    [(ngModel)]="time"\n                    min="2018-03-14"\n                    cancelText="取消"\n                    doneText="确认"\n                    placeholder="点击选择预约时间"\n                    color="primary"></ion-datetime>\n    </ion-item>\n\n  </ion-list>\n\n  <button ion-button full color="primary" style="margin-top: 80px" (click)="submit()">预约</button>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/appoinment-tab/appoinment-tab.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */],
@@ -557,11 +557,11 @@ var AppointmentTabPage = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppointmentListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_api_api__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_token_token__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common_http__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_token_token__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common_http__ = __webpack_require__(38);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -665,7 +665,7 @@ var AppointmentListPage = (function () {
     };
     AppointmentListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-appointment-list',template:/*ion-inline-start:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/appointment-list/appointment-list.html"*/'<!--\n  Generated template for the AppointmentListPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title text-center>预约记录</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <ion-refresher #refresh (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content>\n    </ion-refresher-content>\n  </ion-refresher>\n\n  <ion-list>\n    <button ion-item *ngFor="let record of records" (click)="itemSelected(record)">\n      <h2>{{record.branch.name}}</h2>\n      <p>{{record.preorderStatus.description}}</p>\n      <ion-note item-end>{{record.preOrders.preorderTime}}</ion-note>\n    </button>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/appointment-list/appointment-list.html"*/,
+            selector: 'page-appointment-list',template:/*ion-inline-start:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/appointment-list/appointment-list.html"*/'<!--\n  Generated template for the AppointmentListPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title text-center>预约记录</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <ion-refresher #refresh (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content>\n    </ion-refresher-content>\n  </ion-refresher>\n\n  <ion-list>\n    <button ion-item *ngFor="let record of records" (click)="itemSelected(record)">\n      <h2>{{record.branch.name}}</h2>\n      <p>{{record.preorderStatus.description}}</p>\n      <ion-note item-end>{{record.preOrders.preorderTime}}</ion-note>\n    </button>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/appointment-list/appointment-list.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */],
@@ -690,7 +690,7 @@ var AppointmentListPage = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BodyMassPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_echarts__ = __webpack_require__(458);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_echarts__ = __webpack_require__(460);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_echarts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_echarts__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -798,7 +798,7 @@ var BodyMassPage = (function () {
     };
     BodyMassPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-body-mass',template:/*ion-inline-start:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/body-mass/body-mass.html"*/'<!--\n  Generated template for the BodyMassPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title text-center>body-mass</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="color-content">\n  <div class="chart" id="weight">\n  </div>\n  <div class="chart" id="treatment"></div>\n\n</ion-content>\n'/*ion-inline-end:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/body-mass/body-mass.html"*/,
+            selector: 'page-body-mass',template:/*ion-inline-start:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/body-mass/body-mass.html"*/'<!--\n  Generated template for the BodyMassPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title text-center>body-mass</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="color-content">\n  <div class="chart" id="weight">\n  </div>\n  <div class="chart" id="treatment"></div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/body-mass/body-mass.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */]])
     ], BodyMassPage);
@@ -817,8 +817,8 @@ var BodyMassPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_api_api__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_token_token__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_jquery__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_token_token__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_jquery__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_casebook_casebook__ = __webpack_require__(112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__case_history_case_history__ = __webpack_require__(218);
@@ -905,7 +905,7 @@ var CaseBookPage = (function () {
     };
     CaseBookPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-case-book',template:/*ion-inline-start:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/case-book/case-book.html"*/'<!--\n  Generated template for the CaseBookPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title text-center>电子病历管理</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="add()">\n        <ion-icon name="add"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-refresher #refresh (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content>\n    </ion-refresher-content>\n  </ion-refresher>\n<ion-list>\n  <button ion-item *ngFor="let book of books" (click)="checkBook(book)">\n   病历簿{{ book.emrId }}\n  </button>\n</ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/case-book/case-book.html"*/,
+            selector: 'page-case-book',template:/*ion-inline-start:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/case-book/case-book.html"*/'<!--\n  Generated template for the CaseBookPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title text-center>电子病历管理</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="add()">\n        <ion-icon name="add"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-refresher #refresh (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content>\n    </ion-refresher-content>\n  </ion-refresher>\n<ion-list>\n  <button ion-item *ngFor="let book of books" (click)="checkBook(book)">\n   病历簿{{ book.emrId }}\n  </button>\n</ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/case-book/case-book.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */],
@@ -930,10 +930,10 @@ var CaseBookPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_case_history_add_case_history__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_token_token__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_token_token__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_api_api__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_casebook_casebook__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_jquery__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_jquery__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_hospital_hospital__ = __webpack_require__(76);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1000,7 +1000,7 @@ var CaseHistoryPage = (function () {
     };
     CaseHistoryPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-case-history',template:/*ion-inline-start:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/case-history/case-history.html"*/'<!--\n  Generated template for the CaseHistoryPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title text-center>电子病历数据</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="add()">\n        <ion-icon name="add"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-refresher #refresh (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content>\n    </ion-refresher-content>\n  </ion-refresher>\n  <ion-list no-lines class="color-content">\n    <ion-card *ngFor="let emr of emrs" class="case-card">\n      <ion-card-header text-center>\n        <ion-icon name="logo-buffer"></ion-icon>\n        {{emr.title}}\n      </ion-card-header>\n      <hr>\n      <ion-card-content>\n        <div class="case-item">\n          <label class="case-title">病&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;情:</label>\n          <p class="case-info">{{emr.desc}}</p>\n        </div>\n        <div class="breaker"></div>\n        <div class="case-item">\n          <label class="case-title">治疗医院:</label>\n          <p class="case-info">{{hospital}}</p>\n        </div>\n        <div class="breaker"></div>\n        <div class="case-item">\n          <label class="case-title">科&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;室:</label>\n          <p class="case-info">{{emr.branch.name}}</p>\n        </div>\n        <div class="breaker"></div>\n        <div class="case-item">\n          <label class="case-title">大&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;夫:</label>\n          <p class="case-info">{{emr.doctor.name}}</p>\n        </div>\n        <div class="breaker"></div>\n        <div class="case-item">\n          <label class="case-title">时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;间:</label>\n          <p class="case-info">{{emr.time}}</p>\n        </div>\n        <div class="breaker"></div>\n      </ion-card-content>\n    </ion-card>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/case-history/case-history.html"*/,
+            selector: 'page-case-history',template:/*ion-inline-start:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/case-history/case-history.html"*/'<!--\n  Generated template for the CaseHistoryPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title text-center>电子病历数据</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="add()">\n        <ion-icon name="add"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-refresher #refresh (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content>\n    </ion-refresher-content>\n  </ion-refresher>\n  <ion-list no-lines class="color-content">\n    <ion-card *ngFor="let emr of emrs" class="case-card">\n      <ion-card-header text-center>\n        <ion-icon name="logo-buffer"></ion-icon>\n        {{emr.title}}\n      </ion-card-header>\n      <hr>\n      <ion-card-content>\n        <div class="case-item">\n          <label class="case-title">病&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;情:</label>\n          <p class="case-info">{{emr.desc}}</p>\n        </div>\n        <div class="breaker"></div>\n        <div class="case-item">\n          <label class="case-title">治疗医院:</label>\n          <p class="case-info">{{hospital}}</p>\n        </div>\n        <div class="breaker"></div>\n        <div class="case-item">\n          <label class="case-title">科&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;室:</label>\n          <p class="case-info">{{emr.branch.name}}</p>\n        </div>\n        <div class="breaker"></div>\n        <div class="case-item">\n          <label class="case-title">大&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;夫:</label>\n          <p class="case-info">{{emr.doctor.name}}</p>\n        </div>\n        <div class="breaker"></div>\n        <div class="case-item">\n          <label class="case-title">时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;间:</label>\n          <p class="case-info">{{emr.time}}</p>\n        </div>\n        <div class="breaker"></div>\n      </ion-card-content>\n    </ion-card>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/case-history/case-history.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */],
@@ -1022,14 +1022,128 @@ var CaseHistoryPage = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChangeProfilePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_api_api__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_token_token__ = __webpack_require__(30);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+/**
+ * Generated class for the ChangeProfilePage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ChangeProfilePage = (function () {
+    function ChangeProfilePage(navCtrl, navParams, load, toast, api, token) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.load = load;
+        this.toast = toast;
+        this.api = api;
+        this.token = token;
+        this.profilePath = this.navParams.get('profilePath');
+    }
+    ChangeProfilePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ChangeProfilePage');
+    };
+    ChangeProfilePage.prototype.choseFile = function () {
+        __WEBPACK_IMPORTED_MODULE_2_jquery__('#fileOpener').click();
+    };
+    ChangeProfilePage.prototype.fileChange = function () {
+        //预览用户选择的图片
+        var that = this;
+        var fileObj = window.document.getElementById('fileOpener');
+        var file = fileObj.files[0];
+        var reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.addEventListener('load', function () {
+            that.profilePath = reader.result;
+        });
+    };
+    ChangeProfilePage.prototype.submit = function () {
+        var loader = this.load.create({
+            content: '头像上传中，请稍后...'
+        });
+        var that = this;
+        var fileObj = window.document.getElementById('fileOpener');
+        var file = fileObj.files[0];
+        if (file === null || file === undefined) {
+            this.toast.create({
+                message: '请选择文件',
+                duration: 1000
+            }).present();
+        }
+        else {
+            loader.present();
+            var formData = new FormData();
+            formData.append('profile', file);
+            formData.append('token', this.token.getToken());
+            __WEBPACK_IMPORTED_MODULE_2_jquery__["ajax"]({
+                url: this.api.postFile(),
+                type: 'POST',
+                data: formData,
+                dataType: 'JSON',
+                cache: false,
+                processData: false,
+                contentType: false //不设置Content-type请求头
+            }).done(function (data) {
+                loader.dismiss();
+                that.toast.create({
+                    message: data['info'],
+                    duration: 1000
+                }).present();
+                if (data['code'] === 200) {
+                    that.navCtrl.pop();
+                }
+            });
+        }
+    };
+    ChangeProfilePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-change-profile',template:/*ion-inline-start:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/change-profile/change-profile.html"*/'<!--\n  Generated template for the ChangeProfilePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-content>\n  <img id="preview" src="{{profilePath}}">\n  <button ion-button small light full (click)="choseFile()">选择头像</button>\n  <button ion-button small light full (click)="submit()">确认上传</button>\n  <input id="fileOpener" ([ngModel])="file" type="file"\n         style="display: none"\n         accept="image/bmp, image/jpeg, image/png"\n         (change)="fileChange()"/>\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/change-profile/change-profile.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* ToastController */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_api_api__["a" /* ApiProvider */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_token_token__["a" /* TokenProvider */]])
+    ], ChangeProfilePage);
+    return ChangeProfilePage;
+}());
+
+//# sourceMappingURL=change-profile.js.map
+
+/***/ }),
+
+/***/ 220:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorTabPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__doctor_doctor__ = __webpack_require__(220);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__doctor_doctor__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_api_api__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_token_token__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_token_token__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_doctor_doctor__ = __webpack_require__(189);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1095,7 +1209,19 @@ var DoctorTabPage = (function () {
                 }).present();
             }
             else {
-                that.doctors = data['map']['pageInfo']['list'];
+                var datas = data['map']['pageInfo']['list'];
+                for (var index in datas) {
+                    var nd = datas[index];
+                    if (nd['profile'] === null || nd['profile'] === '') {
+                        nd['profile'] = './assets/imgs/person_info.jpg';
+                    }
+                    else {
+                        var url = nd['profile']['profilePath'];
+                        console.log(url);
+                        nd['profile'] = 'https://api.zjhfyq.cn/api-file' + url + '?token=' + that.token.getToken();
+                    }
+                    that.doctors.push(nd);
+                }
                 if (data['map']['pageInfo']['isLastPage'] !== true) {
                     that.showLoadMore = true;
                 }
@@ -1121,10 +1247,16 @@ var DoctorTabPage = (function () {
                 }).present();
             }
             else {
-                var nds = data['map']['pageInfo']['list'];
-                for (var h in nds) {
-                    that.doctors.push(nds[h]);
-                    //that.doctors.unshift(nds[h]);
+                var datas = data['map']['pageInfo']['list'];
+                for (var index in datas) {
+                    var nd = datas[index];
+                    if (nd['profile'] === null || nd['profile'] === '') {
+                        nd['profile'] = './assets/imgs/person_info.jpg';
+                    }
+                    else {
+                        nd['profile'] = 'https://api.zjhfyq.cn/api-file' + nd['profile'];
+                    }
+                    that.doctors.push(nd);
                 }
                 if (data['map']['pageInfo']['isLastPage'] === true) {
                     that.showLoadMore = false;
@@ -1134,7 +1266,7 @@ var DoctorTabPage = (function () {
     };
     DoctorTabPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-doctor-tab',template:/*ion-inline-start:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/doctor-tab/doctor-tab.html"*/'<!--\n  Generated template for the DoctorTabPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="primary">\n    <ion-title text-center>在线医生</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content class="color-content">\n  <ion-refresher #refresh (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content>\n    </ion-refresher-content>\n  </ion-refresher>\n\n  <ion-card *ngFor="let doctor of doctors">\n    <ion-item>\n      <ion-avatar item-start>\n        <img src="./assets/imgs/doctor.jpg">\n      </ion-avatar>\n      <h2>{{doctor.name}}</h2>\n      <p>mail:{{doctor.mail}}</p>\n    </ion-item>\n    <ion-card-content>\n      <p>手机:{{doctor.phone}}</p>\n      <p>状态：值班</p>\n    </ion-card-content>\n    <div class="divider"></div>\n    <button ion-button clear full (click)="toDoctor(doctor)">预约</button>\n  </ion-card>\n  <button *ngIf="showLoadMore" ion-button color="primary" full clear (click)="loadMore()">加载更多...</button>\n</ion-content>\n'/*ion-inline-end:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/doctor-tab/doctor-tab.html"*/,
+            selector: 'page-doctor-tab',template:/*ion-inline-start:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/doctor-tab/doctor-tab.html"*/'<!--\n  Generated template for the DoctorTabPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="primary">\n    <ion-title text-center>在线医生</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content class="color-content">\n  <ion-refresher #refresh (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content>\n    </ion-refresher-content>\n  </ion-refresher>\n\n  <ion-card *ngFor="let doctor of doctors">\n    <ion-item>\n      <ion-avatar item-start>\n        <img src="{{doctor.profile}}">\n      </ion-avatar>\n      <h2>{{doctor.doctor.name}}</h2>\n      <p>mail:{{doctor.doctor.mail}}</p>\n    </ion-item>\n    <ion-card-content>\n      <p>手机:{{doctor.doctor.phone}}</p>\n      <p>状态：值班</p>\n    </ion-card-content>\n    <div class="divider"></div>\n    <button ion-button clear full (click)="toDoctor(doctor)">预约</button>\n  </ion-card>\n  <button *ngIf="showLoadMore" ion-button color="primary" full clear (click)="loadMore()">加载更多...</button>\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/doctor-tab/doctor-tab.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */],
@@ -1152,18 +1284,18 @@ var DoctorTabPage = (function () {
 
 /***/ }),
 
-/***/ 220:
+/***/ 221:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__img_preview_img_preview__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__img_preview_img_preview__ = __webpack_require__(222);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_doctor_doctor__ = __webpack_require__(189);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_api_api__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_token_token__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_jquery__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_token_token__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_jquery__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_jquery__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1199,7 +1331,7 @@ var DoctorPage = (function () {
         this.toast = toast;
         this.doctor = this.doctorCtrl.getCurrentDoctor();
         console.log(this.doctor);
-        this.doctorName = this.doctor['name'];
+        this.doctorName = this.doctor['doctor']['name'];
         console.log(this.doctorName);
         this.branches = [];
         this.getBranches(null);
@@ -1252,7 +1384,7 @@ var DoctorPage = (function () {
     };
     DoctorPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-doctor',template:/*ion-inline-start:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/doctor/doctor.html"*/'<!--\n  Generated template for the DoctorPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar text-center color="primary">\n    <ion-title>医生介绍</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-refresher #refresh (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content>\n    </ion-refresher-content>\n  </ion-refresher>\n  <ion-card>\n    <div class="car-img-bg img-bg">\n      <img (click)="showImg($event)" src="http://www.xqhospital.com.cn/image/expertimages/21300601.jpg"/>\n    </div>\n    <ion-card-content>\n      <ion-card-title ([ngModel])="doctorNme">\n        {{doctorName}}\n      </ion-card-title>\n      <p>\n        <ion-chip>\n          <ion-icon name="flash" color="primary"></ion-icon>\n          <ion-label>职称:</ion-label>\n        </ion-chip>\n        科室主任，博士研究生导师，美国亚利桑那大学博士后\n      </p>\n      <div class="divider"></div>\n      <p>\n        <ion-chip>\n          <ion-icon name="analytics" color="primary"></ion-icon>\n          <ion-label>主要擅长：</ion-label>\n        </ion-chip>\n        糖尿病自体骨髓干细胞移植治疗，糖尿病及并发症诊治, 自身免疫性甲状腺疾病的诊治。\n      </p>\n      <div class="divider"></div>\n      <p>\n        <ion-chip>\n          <ion-icon name="clock" color="primary"></ion-icon>\n          <ion-label>门诊时间：</ion-label>\n        </ion-chip>\n        周二、周四上午\n      </p>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-list>\n    <ion-item>\n      <ion-label><span style="color: red">*</span>选择科室</ion-label>\n      <ion-select [(ngModel)]="branchId" submitText="确认" cancelText="取消">\n        <ion-option *ngFor="let branch of branches" value="branch.branch.branchId">{{branch.branch.name}}</ion-option>\n      </ion-select>\n    </ion-item>\n    <ion-item>\n      <ion-label>预约时间</ion-label>\n      <ion-datetime ([ngModel])="time" displayFormat="YYYY-MM-DD HH:mm:ss"\n                    pickerFormat="YYYY-MM-DD HH:mm:ss"\n                    [(ngModel)]="time"\n                    min="2018-03-14"\n                    cancelText="取消"\n                    doneText="确认"\n                    placeholder="点击选择预约时间"\n                    color="primary"></ion-datetime>\n    </ion-item>\n\n  </ion-list>\n\n  <button ion-button full color="primary" style="margin-top: 50px" (click)="submit()">预约</button>\n\n\n</ion-content>\n'/*ion-inline-end:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/doctor/doctor.html"*/,
+            selector: 'page-doctor',template:/*ion-inline-start:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/doctor/doctor.html"*/'<!--\n  Generated template for the DoctorPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar text-center color="primary">\n    <ion-title>医生介绍</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-refresher #refresh (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content>\n    </ion-refresher-content>\n  </ion-refresher>\n  <ion-card>\n    <div class="car-img-bg img-bg">\n      <img (click)="showImg($event)" src="{{doctor.profile}}"/>\n    </div>\n    <ion-card-content>\n      <ion-card-title>\n        {{doctorName}}\n      </ion-card-title>\n      <p>\n        <ion-chip>\n          <ion-icon name="body" color="primary"></ion-icon>\n          <ion-label>民族:</ion-label>\n        </ion-chip>\n        {{doctor.nation.nationDesc}}\n      </p>\n      <div class="divider"></div>\n      <p>\n        <ion-chip>\n          <ion-icon name="at" color="primary"></ion-icon>\n          <ion-label>邮箱：</ion-label>\n        </ion-chip>\n        {{doctor.doctor.mail}}\n      </p>\n      <div class="divider"></div>\n      <p>\n        <ion-chip>\n          <ion-icon name="call" color="primary"></ion-icon>\n          <ion-label>电话：</ion-label>\n        </ion-chip>\n        {{doctor.doctor.phone}}\n      </p>\n      <p>\n        <ion-chip>\n          <ion-icon name="locate" color="primary"></ion-icon>\n          <ion-label>地址：</ion-label>\n        </ion-chip>\n        {{doctor.doctorDetail.address}}\n      </p>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-list>\n    <ion-item>\n      <ion-label><span style="color: red">*</span>选择科室</ion-label>\n      <ion-select [(ngModel)]="branchId" submitText="确认" cancelText="取消">\n        <ion-option *ngFor="let branch of branches" value="branch.branch.branchId">{{branch.branch.name}}</ion-option>\n      </ion-select>\n    </ion-item>\n    <ion-item>\n      <ion-label>预约时间</ion-label>\n      <ion-datetime ([ngModel])="time" displayFormat="YYYY-MM-DD HH:mm:ss"\n                    pickerFormat="YYYY-MM-DD HH:mm:ss"\n                    [(ngModel)]="time"\n                    min="2018-03-14"\n                    cancelText="取消"\n                    doneText="确认"\n                    placeholder="点击选择预约时间"\n                    color="primary"></ion-datetime>\n    </ion-item>\n\n  </ion-list>\n\n  <button ion-button full color="primary" style="margin-top: 50px" (click)="submit()">预约</button>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/doctor/doctor.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */],
@@ -1270,7 +1402,7 @@ var DoctorPage = (function () {
 
 /***/ }),
 
-/***/ 221:
+/***/ 222:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1305,7 +1437,7 @@ var ImgPreviewPage = (function () {
     };
     ImgPreviewPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-img-preview',template:/*ion-inline-start:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/img-preview/img-preview.html"*/'<!--\n  Generated template for the ImgPreviewPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-content>\n  <img src="{{source}}">\n</ion-content>\n'/*ion-inline-end:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/img-preview/img-preview.html"*/,
+            selector: 'page-img-preview',template:/*ion-inline-start:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/img-preview/img-preview.html"*/'<!--\n  Generated template for the ImgPreviewPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-content>\n  <img src="{{source}}">\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/img-preview/img-preview.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */]])
@@ -1317,14 +1449,18 @@ var ImgPreviewPage = (function () {
 
 /***/ }),
 
-/***/ 222:
+/***/ 223:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditMedicalCardPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_token_token__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_token_token__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_api_api__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jquery__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_jquery__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1337,6 +1473,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
 /**
  * Generated class for the EditMedicalCardPage page.
  *
@@ -1344,12 +1483,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var EditMedicalCardPage = (function () {
-    function EditMedicalCardPage(navCtrl, navParams, token) {
+    function EditMedicalCardPage(navCtrl, navParams, token, load, toast, api, http) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.token = token;
+        this.load = load;
+        this.toast = toast;
+        this.api = api;
+        this.http = http;
         this.personalInfo = this.token.getUserDetail();
         console.log(this.personalInfo);
+        if (this.personalInfo['usersDetail']['sexId'] === null || this.personalInfo['usersDetail']['sexId'] === '') {
+            this.personalInfo['usersDetail']['sexId'] = '1';
+        }
         this.nations = [{
                 id: 1,
                 name: '汉族'
@@ -1579,15 +1725,40 @@ var EditMedicalCardPage = (function () {
         console.log('ionViewDidLoad EditMedicalCardPage');
     };
     EditMedicalCardPage.prototype.submit = function () {
-        console.log(this.personalInfo);
+        var headers = new __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["c" /* HttpHeaders */]().set('token', this.token.getToken())
+            .set('content-Type', 'application/x-www-form-urlencoded');
+        var body = {
+            idCard: this.personalInfo['usersDetail']['idCard'],
+            nationId: this.personalInfo['nation']['nationId'],
+            sexId: this.personalInfo['usersDetail']['sexId'],
+            address: this.personalInfo['usersDetail']['address'],
+            birthYMD: this.personalInfo['usersDetail']['birthYMD'],
+            token: this.token.getToken()
+        };
+        var loader = this.load.create({
+            content: '数据加载中,请稍候...'
+        });
+        loader.present();
+        var that = this;
+        __WEBPACK_IMPORTED_MODULE_5_jquery__["post"](this.api.putUserInfo(), body, function (data) {
+            loader.dismiss();
+            that.toast.create({
+                message: data['info'],
+                duration: 1000
+            }).present();
+        });
     };
     EditMedicalCardPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-edit-medical-card',template:/*ion-inline-start:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/edit-medical-card/edit-medical-card.html"*/'<!--\n  Generated template for the EditMedicalCardPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title text-center>修改个人信息</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="submit()">\n        <ion-icon name="checkmark"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-item>\n      <ion-label stacked="">地址</ion-label>\n      <ion-input type="text" [(ngModel)]="personalInfo.usersDetail.address"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label stacked="">姓名</ion-label>\n      <ion-input type="text" [(ngModel)]="personalInfo.users.realname"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label stacked="">手机号</ion-label>\n      <ion-input type="text" [(ngModel)]="personalInfo.users.phone"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label stacked="">生日</ion-label>\n      <ion-datetime displayFormat="YYYY-MM-DD" pickerFormat="YYYY-MM-DD"\n                    placeholder = "选择出生年月日"\n                    [(ngModel)]="personalInfo.usersDetail.birthYMD"></ion-datetime>\n    </ion-item>\n\n    <ion-item>\n      <ion-label stacked="">民族</ion-label>\n      <ion-select [(ngModel)]="personalInfo.nation.nationId" cancelText="取消" okText="确认!">\n        <ion-option *ngFor="let mz of nations" value="{{mz.id}}">{{mz.name}}</ion-option>\n      </ion-select>\n    </ion-item>\n\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/edit-medical-card/edit-medical-card.html"*/,
+            selector: 'page-edit-medical-card',template:/*ion-inline-start:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/edit-medical-card/edit-medical-card.html"*/'<!--\n  Generated template for the EditMedicalCardPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title text-center>修改个人信息</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="submit()">\n        <ion-icon name="checkmark"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-item>\n      <ion-label stacked="">地址</ion-label>\n      <ion-input type="text" [(ngModel)]="personalInfo.usersDetail.address"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label stacked="">姓名</ion-label>\n      <ion-input type="text" [(ngModel)]="personalInfo.users.realname"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label stacked="">手机号</ion-label>\n      <ion-input type="text" [(ngModel)]="personalInfo.users.phone"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label stacked="">生日</ion-label>\n      <ion-datetime displayFormat="YYYY-MM-DD" pickerFormat="YYYY-MM-DD"\n                    placeholder = "选择出生年月日"\n                    [(ngModel)]="personalInfo.usersDetail.birthYMD"></ion-datetime>\n    </ion-item>\n\n    <ion-item>\n      <ion-label stacked="">民族</ion-label>\n      <ion-select [(ngModel)]="personalInfo.nation.nationId" cancelText="取消" okText="确认!">\n        <ion-option *ngFor="let mz of nations" value="{{mz.id}}">{{mz.name}}</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <ion-item>\n      <ion-label stacked="">性别：</ion-label>\n      <ion-select [(ngModel)]="personalInfo.usersDetail.sexId" cancelText="取消" okText="确认!">\n        <ion-option value="1">男</ion-option>\n        <ion-option value="2">女</ion-option>\n      </ion-select>\n    </ion-item>\n\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/edit-medical-card/edit-medical-card.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_token_token__["a" /* TokenProvider */]])
+            __WEBPACK_IMPORTED_MODULE_2__providers_token_token__["a" /* TokenProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* ToastController */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_api_api__["a" /* ApiProvider */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */]])
     ], EditMedicalCardPage);
     return EditMedicalCardPage;
 }());
@@ -1596,22 +1767,13 @@ var EditMedicalCardPage = (function () {
 
 /***/ }),
 
-/***/ 223:
+/***/ 224:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeTabPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FeedbackPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hospital_hospital__ = __webpack_require__(224);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__personal_info_personal_info__ = __webpack_require__(225);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__private_doctor_private_doctor__ = __webpack_require__(226);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__body_mass_body_mass__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_token_token__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__home_home__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_hospital_hospital__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_api_api__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__case_book_case_book__ = __webpack_require__(217);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1621,6 +1783,65 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
+/**
+ * Generated class for the FeedbackPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var FeedbackPage = (function () {
+    function FeedbackPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    FeedbackPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad FeedbackPage');
+    };
+    FeedbackPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-feedback',template:/*ion-inline-start:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/feedback/feedback.html"*/'<!--\n  Generated template for the FeedbackPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>feedback</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/feedback/feedback.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */]])
+    ], FeedbackPage);
+    return FeedbackPage;
+}());
+
+//# sourceMappingURL=feedback.js.map
+
+/***/ }),
+
+/***/ 225:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeTabPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hospital_hospital__ = __webpack_require__(226);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__personal_info_personal_info__ = __webpack_require__(227);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__private_doctor_private_doctor__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__body_mass_body_mass__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_token_token__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__home_home__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_hospital_hospital__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_api_api__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__case_book_case_book__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_jquery__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__feedback_feedback__ = __webpack_require__(224);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
 
 
 
@@ -1702,6 +1923,15 @@ var HomeTabPage = (function () {
                 this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__body_mass_body_mass__["a" /* BodyMassPage */]);
                 break;
             }
+            case 4: {
+                //to feedback
+                this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_12__feedback_feedback__["a" /* FeedbackPage */]);
+                break;
+            }
+            case 6: {
+                this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__home_home__["a" /* HomePage */]);
+                break;
+            }
             case 5: {
                 var that_1 = this;
                 this.alert.create({
@@ -1726,7 +1956,7 @@ var HomeTabPage = (function () {
                                     loading_1.present();
                                     navigator.geolocation.getCurrentPosition(function (pos) {
                                         loading_1.dismiss();
-                                        $.post(that_1.api.postFirstAid(), {
+                                        __WEBPACK_IMPORTED_MODULE_11_jquery__["post"](that_1.api.postFirstAid(), {
                                             token: that_1.token.getToken(),
                                             latitude: pos.coords.latitude,
                                             longitude: pos.coords.longitude
@@ -1769,7 +1999,7 @@ var HomeTabPage = (function () {
     };
     HomeTabPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home-tab',template:/*ion-inline-start:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/home-tab/home-tab.html"*/'<!--\n  Generated template for the HomeTabPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <button ion-button menuToggle icon-only clear>\n      <ion-icon name=\'person\'></ion-icon>\n    </button>\n    <ion-title text-center>智慧医院</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-menu type="overlay" id="my-menu" [content]="content">\n  <ion-content class="card-background-page">\n    <ion-card>\n      <img src="{{profile}}"/>\n      <div class="card-title">{{name}}</div>\n      <div class="card-subtitle">{{describe}}</div>\n    </ion-card>\n    <ion-list>\n      <button ion-item (tap)="onItemClicked(0)">\n        个人信息\n      </button>\n      <button ion-item (tap)="onItemClicked(1)">\n        专属医生\n      </button>\n      <button ion-item (tap)="onItemClicked(2)">\n        电子病历\n      </button>\n      <button ion-item (tap)="onItemClicked(3)">\n        身体体征\n      </button>\n      <button ion-item (tap)="onItemClicked(4)">\n        医疗进度\n      </button>\n      <button ion-item (tap)="onItemClicked(5)">\n        一键急救\n      </button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n\n<ion-nav id="nav" #content [root]="rootPage"></ion-nav>\n\n<ion-content class="color-content">\n\n  <ion-slides pager>\n\n    <ion-slide>\n      <img src="https://ss0.bdstatic.com/6KYTfyqn1Ah3otqbppnN2DJv/comt/1498096950_32d8a37ca37e8b3fdace4c3257060e64_w800.jpeg">\n      <h2>高效</h2>\n    </ion-slide>\n\n    <ion-slide>\n      <img src="https://ss0.bdstatic.com/6KYTfyqn1Ah3otqbppnN2DJv/comt/1498097073_c1e10842f9b9b93f92e43ec8cc54f9cd_w800.jpeg">\n      <h2>便捷</h2>\n    </ion-slide>\n\n    <ion-slide>\n      <img src="https://ss0.bdstatic.com/6KYTfyqn1Ah3otqbppnN2DJv/comt/1498097087_4fb2839a0f84a11a8b1b0bdeb71f10cc_w800.jpeg">\n      <h2>智慧</h2>\n    </ion-slide>\n\n  </ion-slides>\n\n  <ion-list>\n    <ion-card>\n      <img class="hospital-img" src="https://ss0.bdstatic.com/6KYTfyqn1Ah3otqbppnN2DJv/comt/1498096950_32d8a37ca37e8b3fdace4c3257060e64_w800.jpeg">\n      <div class="hospital-name">{{hospitalData.hospitalName}}</div>\n      <div class="item">\n        <ion-icon name="navigate" item-start small></ion-icon>\n        <p>{{hospitalData.address}}</p>\n      </div>\n\n      <div class="item">\n        <ion-icon name="call" item-left small></ion-icon>\n        <p>{{hospitalData.longitude}},{{hospitalData.latitude}}</p>\n      </div>\n      <div class="divider"></div>\n      <button ion-button full clear (tap)="toHospital()">\n        查看详情\n      </button>\n    </ion-card>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/home-tab/home-tab.html"*/,
+            selector: 'page-home-tab',template:/*ion-inline-start:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/home-tab/home-tab.html"*/'<!--\n  Generated template for the HomeTabPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <button ion-button menuToggle icon-only clear>\n      <ion-icon name=\'person\'></ion-icon>\n    </button>\n    <ion-title text-center>智慧医院</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-menu type="overlay" id="my-menu" [content]="content">\n  <ion-content class="card-background-page">\n    <ion-card>\n      <img src="{{profile}}"/>\n      <div class="card-title">{{name}}</div>\n      <div class="card-subtitle">{{describe}}</div>\n    </ion-card>\n    <ion-list>\n      <button ion-item (tap)="onItemClicked(0)">\n        个人信息\n      </button>\n      <button ion-item (tap)="onItemClicked(1)">\n        专属医生\n      </button>\n      <button ion-item (tap)="onItemClicked(2)">\n        电子病历\n      </button>\n      <button ion-item (tap)="onItemClicked(3)">\n        身体体征\n      </button>\n      <button ion-item (tap)="onItemClicked(5)">\n        一键急救\n      </button>\n      <button ion-item (tap)="onItemClicked(4)">\n        提交反馈\n      </button>\n      <button ion-item (tap)="onItemClicked(6)">\n        退出登录\n      </button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n\n<ion-nav id="nav" #content [root]="rootPage"></ion-nav>\n\n<ion-content class="color-content">\n\n  <ion-slides pager>\n\n    <ion-slide>\n      <img src="https://ss0.bdstatic.com/6KYTfyqn1Ah3otqbppnN2DJv/comt/1498096950_32d8a37ca37e8b3fdace4c3257060e64_w800.jpeg">\n      <h2>高效</h2>\n    </ion-slide>\n\n    <ion-slide>\n      <img src="https://ss0.bdstatic.com/6KYTfyqn1Ah3otqbppnN2DJv/comt/1498097073_c1e10842f9b9b93f92e43ec8cc54f9cd_w800.jpeg">\n      <h2>便捷</h2>\n    </ion-slide>\n\n    <ion-slide>\n      <img src="https://ss0.bdstatic.com/6KYTfyqn1Ah3otqbppnN2DJv/comt/1498097087_4fb2839a0f84a11a8b1b0bdeb71f10cc_w800.jpeg">\n      <h2>智慧</h2>\n    </ion-slide>\n\n  </ion-slides>\n\n  <ion-list>\n    <ion-card>\n      <img class="hospital-img" src="https://ss0.bdstatic.com/6KYTfyqn1Ah3otqbppnN2DJv/comt/1498096950_32d8a37ca37e8b3fdace4c3257060e64_w800.jpeg">\n      <div class="hospital-name">{{hospitalData.hospitalName}}</div>\n      <div class="item">\n        <ion-icon name="navigate" item-start small></ion-icon>\n        <p>{{hospitalData.address}}</p>\n      </div>\n\n      <div class="item">\n        <ion-icon name="navigate" item-left small></ion-icon>\n        <p>{{hospitalData.longitude}},{{hospitalData.latitude}}</p>\n      </div>\n      <div class="divider"></div>\n      <button ion-button full clear (tap)="toHospital()">\n        查看详情\n      </button>\n    </ion-card>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/home-tab/home-tab.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */],
@@ -1789,7 +2019,7 @@ var HomeTabPage = (function () {
 
 /***/ }),
 
-/***/ 224:
+/***/ 226:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1828,7 +2058,7 @@ var HospitalPage = (function () {
     };
     HospitalPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-hospital',template:/*ion-inline-start:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/hospital/hospital.html"*/'<!--\n  Generated template for the HospitalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title>{{title}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="color-content">\n  <ion-slides pager>\n\n    <ion-slide>\n    <img src="https://ss0.bdstatic.com/6KYTfyqn1Ah3otqbppnN2DJv/comt/1498096950_32d8a37ca37e8b3fdace4c3257060e64_w800.jpeg">\n    <h2>高效</h2>\n    </ion-slide>\n\n    <ion-slide>\n      <img src="https://ss0.bdstatic.com/6KYTfyqn1Ah3otqbppnN2DJv/comt/1498097073_c1e10842f9b9b93f92e43ec8cc54f9cd_w800.jpeg">\n      <h2>便捷</h2>\n    </ion-slide>\n\n  </ion-slides>\n\n\n  <ion-card>\n    <ion-card-header>\n      医院简介\n    </ion-card-header>\n    <div class="divider"></div>\n    <ion-card-content>\n      <p>重庆交通大学校医院现已成为一所综合性现代化教学医院。</p>\n    </ion-card-content>\n  </ion-card>\n  <ion-card>\n    <ion-card-header>\n      历史沿革\n    </ion-card-header>\n    <div class="divider"></div>\n    <ion-card-content>\n      <p>新桥医院是第三军医大学第二附属医院，始建于1944年，前身是国民党军\n        政部陆军医院，1950年改编为西南军区总医院，1955年转隶第七军医大学，\n        为第二附属医院，对外称新桥医院。1975年改称第三军医大学第二附属医院，\n        现址由贺龙、邓小平等老一辈革命家亲自选定。</p>\n    </ion-card-content>\n  </ion-card>\n  <ion-card>\n    <ion-card-header>\n      特色科室\n    </ion-card-header>\n    <div class="divider"></div>\n    <ion-card-content>\n      <p>医院设有临床和医技科室45个，国家级重点学科10个（呼吸内科、心血管内科、\n        心血管外科、骨科、泌尿外科、神经外科、普通外科、肝胆外科、胸外科、整形外\n        科），国家中医药管理局重点建设专科1个（中西医结合肾脏病重点建设专科），\n        全军医学研究所4个（呼吸、心内、心外、肿瘤），全军医学专科（病）中心6个（\n        肾内、超声、骨科、神外、血液、口腔），优生优育中心学科3个（妇产、儿科、泌外）\n        。医院是临床医学博士后流动站，有博士学位授权点学科22个、硕士学位授权点学科2\n        8个。有6个重庆市质量控制中心（血液内科医疗质量控制中心、肾移植质控中心、\n        心脏大血管外科（含心脏移植）医疗质量控制中心、美容外科质量控制中心、\n        临床输血质量控制中心、护理质量控制中心）。</p>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/hospital/hospital.html"*/,
+            selector: 'page-hospital',template:/*ion-inline-start:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/hospital/hospital.html"*/'<!--\n  Generated template for the HospitalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title>{{title}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="color-content">\n  <ion-slides pager>\n\n    <ion-slide>\n    <img src="https://ss0.bdstatic.com/6KYTfyqn1Ah3otqbppnN2DJv/comt/1498096950_32d8a37ca37e8b3fdace4c3257060e64_w800.jpeg">\n    <h2>高效</h2>\n    </ion-slide>\n\n    <ion-slide>\n      <img src="https://ss0.bdstatic.com/6KYTfyqn1Ah3otqbppnN2DJv/comt/1498097073_c1e10842f9b9b93f92e43ec8cc54f9cd_w800.jpeg">\n      <h2>便捷</h2>\n    </ion-slide>\n\n  </ion-slides>\n\n\n  <ion-card>\n    <ion-card-header>\n      医院简介\n    </ion-card-header>\n    <div class="divider"></div>\n    <ion-card-content>\n      <p>重庆交通大学校医院现已成为一所综合性现代化教学医院。</p>\n    </ion-card-content>\n  </ion-card>\n  <ion-card>\n    <ion-card-header>\n      历史沿革\n    </ion-card-header>\n    <div class="divider"></div>\n    <ion-card-content>\n      <p>新桥医院是第三军医大学第二附属医院，始建于1944年，前身是国民党军\n        政部陆军医院，1950年改编为西南军区总医院，1955年转隶第七军医大学，\n        为第二附属医院，对外称新桥医院。1975年改称第三军医大学第二附属医院，\n        现址由贺龙、邓小平等老一辈革命家亲自选定。</p>\n    </ion-card-content>\n  </ion-card>\n  <ion-card>\n    <ion-card-header>\n      特色科室\n    </ion-card-header>\n    <div class="divider"></div>\n    <ion-card-content>\n      <p>医院设有临床和医技科室45个，国家级重点学科10个（呼吸内科、心血管内科、\n        心血管外科、骨科、泌尿外科、神经外科、普通外科、肝胆外科、胸外科、整形外\n        科），国家中医药管理局重点建设专科1个（中西医结合肾脏病重点建设专科），\n        全军医学研究所4个（呼吸、心内、心外、肿瘤），全军医学专科（病）中心6个（\n        肾内、超声、骨科、神外、血液、口腔），优生优育中心学科3个（妇产、儿科、泌外）\n        。医院是临床医学博士后流动站，有博士学位授权点学科22个、硕士学位授权点学科2\n        8个。有6个重庆市质量控制中心（血液内科医疗质量控制中心、肾移植质控中心、\n        心脏大血管外科（含心脏移植）医疗质量控制中心、美容外科质量控制中心、\n        临床输血质量控制中心、护理质量控制中心）。</p>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/hospital/hospital.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */],
@@ -1841,17 +2071,18 @@ var HospitalPage = (function () {
 
 /***/ }),
 
-/***/ 225:
+/***/ 227:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PersonalInfoPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_medical_card_edit_medical_card__ = __webpack_require__(222);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_token_token__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_jquery__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_medical_card_edit_medical_card__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_token_token__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__change_profile_change_profile__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jquery__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_jquery__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1866,6 +2097,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /**
  * Generated class for the PersonalInfoPage page.
  *
@@ -1873,10 +2105,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var PersonalInfoPage = (function () {
-    function PersonalInfoPage(navCtrl, navParams, token) {
+    function PersonalInfoPage(navCtrl, navParams, token, pop, load, toast) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.token = token;
+        this.pop = pop;
+        this.load = load;
+        this.toast = toast;
         this.user = JSON.parse(this.token.getUser());
         this.accessToken = this.token.getToken();
         this.userInfo = {
@@ -1919,32 +2154,70 @@ var PersonalInfoPage = (function () {
     }
     PersonalInfoPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad PersonalInfoPage');
-        var that = this;
-        __WEBPACK_IMPORTED_MODULE_4_jquery__["get"]('https://api.zjhfyq.cn/api-user/users/detail', {
-            token: this.accessToken
-        }, function (data) {
-            console.log(data);
-            that.userInfo = data['map']['userDetail'];
-            if (that.userInfo.nation === null ||
-                that.userInfo.nation == undefined) {
-                that.userInfo.nation = {
-                    nationId: 1,
-                    nationDesc: '汉族'
-                };
-            }
-            that.token.storeUserDetail(JSON.stringify(that.userInfo));
-        });
+        this.getUserDetail();
     };
     PersonalInfoPage.prototype.edit = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__edit_medical_card_edit_medical_card__["a" /* EditMedicalCardPage */]);
     };
+    PersonalInfoPage.prototype.changeProfile = function () {
+        this.pop.create(__WEBPACK_IMPORTED_MODULE_4__change_profile_change_profile__["a" /* ChangeProfilePage */], {
+            profilePath: this.userInfo['profile']
+        }).present();
+    };
+    PersonalInfoPage.prototype.doRefresh = function (refresher) {
+        refresher.cancel();
+        this.getUserDetail();
+    };
+    PersonalInfoPage.prototype.getUserDetail = function () {
+        var loader = this.load.create({
+            content: '数据加载中，请稍后'
+        });
+        loader.present();
+        var that = this;
+        __WEBPACK_IMPORTED_MODULE_5_jquery__["get"]('https://api.zjhfyq.cn/api-user/users/detail', {
+            token: this.accessToken
+        }, function (data) {
+            loader.dismiss();
+            if (data['code'] === 200) {
+                that.userInfo = data['map']['userDetail'];
+                if (that.userInfo.nation === null ||
+                    that.userInfo.nation == undefined) {
+                    that.userInfo.nation = {
+                        nationId: 1,
+                        nationDesc: '汉族'
+                    };
+                }
+                if (that.userInfo['profile'] === null ||
+                    that.userInfo['profile'] === '' ||
+                    that.userInfo['profile'] === undefined) {
+                    that.userInfo['profile'] = './assets/imgs/person_info.jpg';
+                }
+                else {
+                    that.userInfo['profile'] = 'https://api.zjhfyq.cn/api-file' +
+                        that.userInfo['profile']['profilePath'] + '?token=' + that.token.getToken();
+                }
+                that.userInfo['usersDetail']['birthYMD'] =
+                    that.userInfo['usersDetail']['birthYMD'].substring(0, 10);
+                that.token.storeUserDetail(JSON.stringify(that.userInfo));
+            }
+            else {
+                that.toast.create({
+                    message: '获取用户信息失败',
+                    duration: 1000
+                }).present();
+            }
+        });
+    };
     PersonalInfoPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-personal-info',template:/*ion-inline-start:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/personal-info/personal-info.html"*/'<!--\n  Generated template for the PersonalInfoPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title text-center>个人信息</ion-title>\n    <ion-buttons end>\n      <button ion-button (click)="edit()">\n        <ion-icon name="medical"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="color-content">\n  <div class="head">\n    <ion-item no-lines>\n      <ion-avatar>\n        <img src="./assets/imgs/person_info.jpg">\n      </ion-avatar>\n    </ion-item>\n  </div>\n\n  <ion-card>\n    <ion-card-content style="margin-top: 15px">\n      <ion-card-title>\n        唐玉\n        <ion-icon name="male" color="primary"></ion-icon>\n      </ion-card-title>\n      <p>\n        {{user.address}}\n      </p>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-content>\n      <ion-card-title text-center color="danger">\n        <ion-icon name="medical"></ion-icon>\n        用户信息卡\n      </ion-card-title>\n      <hr>\n      <p>\n        <ion-label>出生日期</ion-label>\n        {{userInfo.usersDetail.birthYMD}}\n      </p>\n      <p>\n        <ion-label>身份证号码</ion-label>\n        {{userInfo.users.idCard}}\n      </p>\n      <p>\n        <ion-label>住址</ion-label>\n        {{userInfo.usersDetail.address}}\n      </p>\n      <p>\n        <ion-label>电话号码</ion-label>\n        {{userInfo.users.phone}}\n      </p>\n      <p>\n        <ion-label>邮箱</ion-label>\n        {{userInfo.users.mail}}\n      </p>\n      <p>\n        <ion-label>民族</ion-label>\n        {{userInfo.nation.nationDesc}}\n      </p>\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/personal-info/personal-info.html"*/,
+            selector: 'page-personal-info',template:/*ion-inline-start:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/personal-info/personal-info.html"*/'<!--\n  Generated template for the PersonalInfoPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title text-center>个人信息</ion-title>\n    <ion-buttons end>\n      <button ion-button (click)="edit()">\n        <ion-icon name="medical"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="color-content">\n  <ion-refresher #refresh (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content>\n    </ion-refresher-content>\n  </ion-refresher>\n\n  <div class="head">\n    <ion-item no-lines>\n      <ion-avatar (click)="changeProfile()">\n        <img src="{{userInfo.profile}}">\n      </ion-avatar>\n    </ion-item>\n  </div>\n  <ion-card>\n    <ion-card-content style="margin-top: 15px">\n      <ion-card-title>\n        {{user.realname}}\n        <ion-icon name="male" color="primary"></ion-icon>\n      </ion-card-title>\n      <p>\n        {{user.address}}\n      </p>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-content>\n      <ion-card-title text-center color="danger">\n        <ion-icon name="medical"></ion-icon>\n        用户信息卡\n      </ion-card-title>\n      <hr>\n      <p>\n        <ion-label>出生日期</ion-label>\n        {{userInfo.usersDetail.birthYMD}}\n      </p>\n      <p>\n        <ion-label>身份证号码</ion-label>\n        {{userInfo.users.idCard}}\n      </p>\n      <p>\n        <ion-label>住址</ion-label>\n        {{userInfo.usersDetail.address}}\n      </p>\n      <p>\n        <ion-label>电话号码</ion-label>\n        {{userInfo.users.phone}}\n      </p>\n      <p>\n        <ion-label>邮箱</ion-label>\n        {{userInfo.users.mail}}\n      </p>\n      <p>\n        <ion-label>民族</ion-label>\n        {{userInfo.nation.nationDesc}}\n      </p>\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/personal-info/personal-info.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_token_token__["a" /* TokenProvider */]])
+            __WEBPACK_IMPORTED_MODULE_3__providers_token_token__["a" /* TokenProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* PopoverController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* ToastController */]])
     ], PersonalInfoPage);
     return PersonalInfoPage;
 }());
@@ -1953,7 +2226,7 @@ var PersonalInfoPage = (function () {
 
 /***/ }),
 
-/***/ 226:
+/***/ 228:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2041,7 +2314,7 @@ var PrivateDoctorPage = (function () {
     ], PrivateDoctorPage.prototype, "list", void 0);
     PrivateDoctorPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-private-doctor',template:/*ion-inline-start:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/private-doctor/private-doctor.html"*/'<!--\n  Generated template for the PrivateDoctorPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title text-center>专属医生</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content class="color-content" *ngIf="hasPrivateDoctor">\n  <header class="head-info">\n    <ion-card>\n      <ion-item>\n        <ion-avatar item-start>\n          <img src="./assets/imgs/person_info.jpg">\n        </ion-avatar>\n        <h2>Marty McFly</h2>\n        <p>November 5, 1955</p>\n        <p>\n          <ion-icon name="md-disc" style="color: deepskyblue"></ion-icon>\n          在线\n        </p>\n      </ion-item>\n    </ion-card>\n  </header>\n  <div class="message-wrap">\n\n    <div *ngFor="let msg of msgList"\n         class="message"\n         [class.left]=" msg.userId === toUserId "\n         [class.right]=" msg.userId === userId ">\n      <img class="user-img" [src]="msg.userAvatar" alt="" src="">\n      <ion-spinner name="dots" *ngIf="msg.status === \'pending\'"></ion-spinner>\n      <div class="msg-detail">\n        <div class="msg-info">\n          <p>\n            {{msg.userName}}&nbsp;&nbsp;&nbsp;{{convertTime(msg.time)}}</p>\n        </div>\n        <div class="msg-content">\n          <span class="triangle"></span>\n          <p class="line-breaker ">{{msg.message}}</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</ion-content>\n\n<ion-footer no-border>\n  <ion-item>\n    <button ion-button small clear icon-only item-left (click)="switchEmojiPicker()">\n      <ion-icon name="md-happy"></ion-icon>\n    </button>\n    <ion-textarea placeholder="输入文本信息" [(ngModel)]="msg">\n    </ion-textarea>\n    <button small ion-button outline item-right (click)="sendMsg()">\n      发送\n    </button>\n  </ion-item>\n\n</ion-footer>\n'/*ion-inline-end:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/private-doctor/private-doctor.html"*/,
+            selector: 'page-private-doctor',template:/*ion-inline-start:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/private-doctor/private-doctor.html"*/'<!--\n  Generated template for the PrivateDoctorPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title text-center>专属医生</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content class="color-content" *ngIf="hasPrivateDoctor">\n  <header class="head-info">\n    <ion-card>\n      <ion-item>\n        <ion-avatar item-start>\n          <img src="./assets/imgs/person_info.jpg">\n        </ion-avatar>\n        <h2>Marty McFly</h2>\n        <p>November 5, 1955</p>\n        <p>\n          <ion-icon name="md-disc" style="color: deepskyblue"></ion-icon>\n          在线\n        </p>\n      </ion-item>\n    </ion-card>\n  </header>\n  <div class="message-wrap">\n\n    <div *ngFor="let msg of msgList"\n         class="message"\n         [class.left]=" msg.userId === toUserId "\n         [class.right]=" msg.userId === userId ">\n      <img class="user-img" [src]="msg.userAvatar" alt="" src="">\n      <ion-spinner name="dots" *ngIf="msg.status === \'pending\'"></ion-spinner>\n      <div class="msg-detail">\n        <div class="msg-info">\n          <p>\n            {{msg.userName}}&nbsp;&nbsp;&nbsp;{{convertTime(msg.time)}}</p>\n        </div>\n        <div class="msg-content">\n          <span class="triangle"></span>\n          <p class="line-breaker ">{{msg.message}}</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</ion-content>\n\n<ion-footer no-border>\n  <ion-item>\n    <button ion-button small clear icon-only item-left (click)="switchEmojiPicker()">\n      <ion-icon name="md-happy"></ion-icon>\n    </button>\n    <ion-textarea placeholder="输入文本信息" [(ngModel)]="msg">\n    </ion-textarea>\n    <button small ion-button outline item-right (click)="sendMsg()">\n      发送\n    </button>\n  </ion-item>\n\n</ion-footer>\n'/*ion-inline-end:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/private-doctor/private-doctor.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */]])
     ], PrivateDoctorPage);
@@ -2052,15 +2325,15 @@ var PrivateDoctorPage = (function () {
 
 /***/ }),
 
-/***/ 227:
+/***/ 229:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_api_api__ = __webpack_require__(28);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -2142,7 +2415,7 @@ var RegisterPage = (function () {
     };
     RegisterPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-register',template:/*ion-inline-start:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/register/register.html"*/'<!--\n  Generated template for the RegisterPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar text-center color="primary">\n    <ion-title>注册</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content scroll="false" class="color-content" padding>\n\n  <ion-list>\n    <ion-item>\n      <ion-label floating>姓名</ion-label>\n      <ion-input type="text" [(ngModel)]="name"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>身份证号码</ion-label>\n      <ion-input type="text" [(ngModel)]="id_card"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>电话号码</ion-label>\n      <ion-input type="text" [(ngModel)]="phone"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>电子邮箱</ion-label>\n      <ion-input type="text" [(ngModel)]="email"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>输入密码</ion-label>\n      <ion-input type="password" [(ngModel)]="paw"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>确认密码</ion-label>\n      <ion-input type="password" [(ngModel)]="paw_confirm"></ion-input>\n    </ion-item>\n  </ion-list>\n\n  <button ion-button full (click)="register()">确认注册</button>\n\n</ion-content>\n'/*ion-inline-end:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/register/register.html"*/,
+            selector: 'page-register',template:/*ion-inline-start:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/register/register.html"*/'<!--\n  Generated template for the RegisterPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar text-center color="primary">\n    <ion-title>注册</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content scroll="false" class="color-content" padding>\n\n  <ion-list>\n    <ion-item>\n      <ion-label floating>姓名</ion-label>\n      <ion-input type="text" [(ngModel)]="name"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>身份证号码</ion-label>\n      <ion-input type="text" [(ngModel)]="id_card"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>电话号码</ion-label>\n      <ion-input type="text" [(ngModel)]="phone"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>电子邮箱</ion-label>\n      <ion-input type="text" [(ngModel)]="email"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>输入密码</ion-label>\n      <ion-input type="password" [(ngModel)]="paw"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>确认密码</ion-label>\n      <ion-input type="password" [(ngModel)]="paw_confirm"></ion-input>\n    </ion-item>\n  </ion-list>\n\n  <button ion-button full (click)="register()">确认注册</button>\n\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/register/register.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */],
@@ -2157,18 +2430,18 @@ var RegisterPage = (function () {
 
 /***/ }),
 
-/***/ 228:
+/***/ 230:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SelecthospitalPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_api_api__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_hospital_hospital__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__main_tab_main_tab__ = __webpack_require__(229);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__main_tab_main_tab__ = __webpack_require__(231);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2253,7 +2526,7 @@ var SelecthospitalPage = (function () {
     };
     SelecthospitalPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-selecthospital',template:/*ion-inline-start:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/selecthospital/selecthospital.html"*/'<!--\n  Generated template for the SelecthospitalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar [hideBackButton]="true" text-center color="primary">\n    <ion-title>\n      选择医院\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n  <ion-refresher #refresh (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content>\n    </ion-refresher-content>\n  </ion-refresher>\n  <ion-list radio-group>\n    <ion-item *ngFor="let hospital of hospitals">\n      <ion-label>{{hospital.hospitalName}}</ion-label>\n      <ion-radio (ionSelect)="select(hospital)" value="{{hospital.hospitalId}}"></ion-radio>\n    </ion-item>\n  </ion-list>\n  <button ion-button color="primary" full (click)="toMain()">确认</button>\n</ion-content>\n'/*ion-inline-end:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/selecthospital/selecthospital.html"*/,
+            selector: 'page-selecthospital',template:/*ion-inline-start:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/selecthospital/selecthospital.html"*/'<!--\n  Generated template for the SelecthospitalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar [hideBackButton]="true" text-center color="primary">\n    <ion-title>\n      选择医院\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n  <ion-refresher #refresh (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content>\n    </ion-refresher-content>\n  </ion-refresher>\n  <ion-list radio-group>\n    <ion-item *ngFor="let hospital of hospitals">\n      <ion-label>{{hospital.hospitalName}}</ion-label>\n      <ion-radio (ionSelect)="select(hospital)" value="{{hospital.hospitalId}}"></ion-radio>\n    </ion-item>\n  </ion-list>\n  <button ion-button color="primary" full (click)="toMain()">确认</button>\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/selecthospital/selecthospital.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */],
@@ -2269,17 +2542,17 @@ var SelecthospitalPage = (function () {
 
 /***/ }),
 
-/***/ 229:
+/***/ 231:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MainTabPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_tab_home_tab__ = __webpack_require__(223);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__doctor_tab_doctor_tab__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_tab_home_tab__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__doctor_tab_doctor_tab__ = __webpack_require__(220);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__appoinment_tab_appoinment_tab__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__message_tab_message_tab__ = __webpack_require__(230);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__message_tab_message_tab__ = __webpack_require__(232);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2312,7 +2585,7 @@ var MainTabPage = (function () {
     }
     MainTabPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-main-tab',template:/*ion-inline-start:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/main-tab/main-tab.html"*/'<ion-tabs>\n    <ion-tab [root]="homeTabRoot" tabTitle="首页" tabIcon="home"></ion-tab>\n    <ion-tab [root]="doctorTabRoot" tabTitle="在线医生" tabIcon="medical"></ion-tab>\n    <ion-tab [root]="appointmentTabPageRoot" tabTitle="预约挂号" tabIcon="pulse"></ion-tab>\n    <ion-tab [root]="messageTabRoot" tabBadge="{{msgCount}}" tabBadgeStyle="danger" tabTitle="消息中心" tabIcon="mail"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/main-tab/main-tab.html"*/
+            selector: 'page-main-tab',template:/*ion-inline-start:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/main-tab/main-tab.html"*/'<ion-tabs>\n    <ion-tab [root]="homeTabRoot" tabTitle="首页" tabIcon="home"></ion-tab>\n    <ion-tab [root]="doctorTabRoot" tabTitle="在线医生" tabIcon="medical"></ion-tab>\n    <ion-tab [root]="appointmentTabPageRoot" tabTitle="预约挂号" tabIcon="pulse"></ion-tab>\n    <ion-tab [root]="messageTabRoot" tabBadge="{{msgCount}}" tabBadgeStyle="danger" tabTitle="消息中心" tabIcon="mail"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/main-tab/main-tab.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */]])
     ], MainTabPage);
@@ -2323,16 +2596,16 @@ var MainTabPage = (function () {
 
 /***/ }),
 
-/***/ 230:
+/***/ 232:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MessageTabPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_token_token__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_token_token__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_api_api__ = __webpack_require__(28);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2397,7 +2670,7 @@ var MessageTabPage = (function () {
     };
     MessageTabPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-message-tab',template:/*ion-inline-start:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/message-tab/message-tab.html"*/'<!--\n  Generated template for the MessageTabPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="primary">\n    <ion-title text-center>消息中心</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n\n  <ion-refresher #refresh (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content>\n    </ion-refresher-content>\n  </ion-refresher>\n\n  <ion-list>\n    <button ion-item *ngFor="let record of records" (click)="showMsg(record)">\n      <ion-badge class="i-badge" color="danger" item-start> </ion-badge>\n      <h2>预约提示</h2>\n      <p>与{{record.doctor.name}}医生预约见面{{record.preorderStatus.description}}</p>\n      <ion-note item-end>{{record.preOrders.createTime}}</ion-note>\n    </button>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/message-tab/message-tab.html"*/,
+            selector: 'page-message-tab',template:/*ion-inline-start:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/message-tab/message-tab.html"*/'<!--\n  Generated template for the MessageTabPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="primary">\n    <ion-title text-center>消息中心</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n\n  <ion-refresher #refresh (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content>\n    </ion-refresher-content>\n  </ion-refresher>\n\n  <ion-list>\n    <button ion-item *ngFor="let record of records" (click)="showMsg(record)">\n      <ion-badge class="i-badge" color="danger" item-start> </ion-badge>\n      <h2>预约提示</h2>\n      <p>与{{record.doctor.name}}医生预约见面{{record.preorderStatus.description}}</p>\n      <ion-note item-end>{{record.preOrders.createTime}}</ion-note>\n    </button>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/message-tab/message-tab.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */],
@@ -2414,7 +2687,7 @@ var MessageTabPage = (function () {
 
 /***/ }),
 
-/***/ 231:
+/***/ 233:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2453,7 +2726,7 @@ var WelcomPage = (function () {
     };
     WelcomPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-welcom',template:/*ion-inline-start:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/welcom/welcom.html"*/'<!--\n  Generated template for the WelcomPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-content>\n  <ion-slides pager>\n\n    <ion-slide id="slide1">\n      <button class="skip-button" (click)="start()" ion-button clear>跳过</button>\n      <div class="container">\n        <div class="function">\n          <h1>专属医生</h1>\n        </div>\n        <p>美国的医疗产业高度发达，创新能力十分突出，不断涌现各种治疗新技术和新手段，\n          尤其是在药品研发和诊疗设备研发上。比如近几年推出的一种新型的外科微创手术设备，\n          达芬奇系统，这种设备与常规手术相比，损伤小，见效快，效果更好，美国已经普及好几年了。</p>\n      </div>\n    </ion-slide>\n\n    <ion-slide id="slide2">\n      <button class="skip-button" (click)="start()" ion-button clear>跳过</button>\n      <div class="container">\n        <div class="function">\n          <h1>治疗跟踪</h1>\n        </div>\n        <p>不断推陈出新的先进的医疗理念已经渗透到美国医疗的各个方面并发挥着极其重要的指导作用，\n          往往要比单纯的医疗技术创新和突破更为重要。</p>\n      </div>\n    </ion-slide>\n\n    <ion-slide id="slide3">\n      <button class="skip-button" (click)="start()" ion-button clear>跳过</button>\n      <div class="container">\n        <div class="function">\n          <h1>电子病历</h1>\n        </div>\n        <p>美国最新的技术利用免疫/化学方法切断癌组织血供，不用大型手术就可以控制癌症；\n          一些严重哮喘患者，任何药物都不能彻底缓解病情。美国最新的微创手术治疗通过切\n          除部分呼吸道平滑肌，可以彻底根治哮喘。</p>\n      </div>\n\n    </ion-slide>\n\n    <ion-slide id="slide4">\n      <h1>大智慧医疗服务</h1>\n      <h2>就在现在</h2>\n      <button ion-button class="start-button" (click)="start()"  full color="primary">开始</button>\n    </ion-slide>\n\n  </ion-slides>\n</ion-content>\n'/*ion-inline-end:"/home/mevur/Documents/dev/web/smart_hospital_front/src/pages/welcom/welcom.html"*/,
+            selector: 'page-welcom',template:/*ion-inline-start:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/welcom/welcom.html"*/'<!--\n  Generated template for the WelcomPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-content>\n  <ion-slides pager>\n\n    <ion-slide id="slide1">\n      <button class="skip-button" (click)="start()" ion-button clear>跳过</button>\n      <div class="container">\n        <div class="function">\n          <h1>专属医生</h1>\n        </div>\n        <p>美国的医疗产业高度发达，创新能力十分突出，不断涌现各种治疗新技术和新手段，\n          尤其是在药品研发和诊疗设备研发上。比如近几年推出的一种新型的外科微创手术设备，\n          达芬奇系统，这种设备与常规手术相比，损伤小，见效快，效果更好，美国已经普及好几年了。</p>\n      </div>\n    </ion-slide>\n\n    <ion-slide id="slide2">\n      <button class="skip-button" (click)="start()" ion-button clear>跳过</button>\n      <div class="container">\n        <div class="function">\n          <h1>治疗跟踪</h1>\n        </div>\n        <p>不断推陈出新的先进的医疗理念已经渗透到美国医疗的各个方面并发挥着极其重要的指导作用，\n          往往要比单纯的医疗技术创新和突破更为重要。</p>\n      </div>\n    </ion-slide>\n\n    <ion-slide id="slide3">\n      <button class="skip-button" (click)="start()" ion-button clear>跳过</button>\n      <div class="container">\n        <div class="function">\n          <h1>电子病历</h1>\n        </div>\n        <p>美国最新的技术利用免疫/化学方法切断癌组织血供，不用大型手术就可以控制癌症；\n          一些严重哮喘患者，任何药物都不能彻底缓解病情。美国最新的微创手术治疗通过切\n          除部分呼吸道平滑肌，可以彻底根治哮喘。</p>\n      </div>\n\n    </ion-slide>\n\n    <ion-slide id="slide4">\n      <h1>大智慧医疗服务</h1>\n      <h2>就在现在</h2>\n      <button ion-button class="start-button" (click)="start()"  full color="primary">开始</button>\n    </ion-slide>\n\n  </ion-slides>\n</ion-content>\n'/*ion-inline-end:"/Users/chengpiao/ionic/smart_hospital_front/src/pages/welcom/welcom.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */]])
@@ -2465,7 +2738,7 @@ var WelcomPage = (function () {
 
 /***/ }),
 
-/***/ 243:
+/***/ 245:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -2478,7 +2751,7 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 243;
+webpackEmptyAsyncContext.id = 245;
 
 /***/ }),
 
@@ -2487,7 +2760,7 @@ webpackEmptyAsyncContext.id = 243;
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ApiProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2557,6 +2830,12 @@ var ApiProvider = (function () {
     ApiProvider.prototype.postEmrRecord = function () {
         return this.server + "/api-emr/emr/record";
     };
+    ApiProvider.prototype.putUserInfo = function () {
+        return this.server + "/api-user/detail";
+    };
+    ApiProvider.prototype.postFile = function () {
+        return this.server + "/api-file/profile";
+    };
     ApiProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]])
@@ -2568,108 +2847,116 @@ var ApiProvider = (function () {
 
 /***/ }),
 
-/***/ 285:
+/***/ 287:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/about/about.module": [
-		788,
+		790,
 		5
 	],
 	"../pages/add-case-book/add-case-book.module": [
-		789,
+		791,
 		4
 	],
 	"../pages/add-case-history/add-case-history.module": [
-		790,
-		24
+		792,
+		26
 	],
 	"../pages/appoinment-tab/appoinment-tab.module": [
-		791,
-		23
+		793,
+		25
 	],
 	"../pages/appointment-list/appointment-list.module": [
-		793,
-		22
+		794,
+		24
 	],
 	"../pages/body-mass/body-mass.module": [
-		792,
-		21
+		795,
+		23
 	],
 	"../pages/case-book/case-book.module": [
-		794,
-		20
+		796,
+		22
 	],
 	"../pages/case-history/case-history.module": [
-		795,
-		19
+		797,
+		21
+	],
+	"../pages/change-profile/change-profile.module": [
+		798,
+		20
 	],
 	"../pages/cure-progress/cure-progress.module": [
-		796,
+		799,
 		3
 	],
 	"../pages/doctor-tab/doctor-tab.module": [
-		797,
-		18
+		800,
+		19
 	],
 	"../pages/doctor/doctor.module": [
-		798,
-		17
+		801,
+		18
 	],
 	"../pages/edit-medical-card/edit-medical-card.module": [
-		799,
-		16
+		802,
+		17
 	],
 	"../pages/edit-personal-info/edit-personal-info.module": [
-		800,
+		803,
 		2
 	],
+	"../pages/feedback/feedback.module": [
+		804,
+		16
+	],
 	"../pages/home-tab/home-tab.module": [
-		801,
+		805,
 		15
 	],
 	"../pages/hospital/hospital.module": [
-		802,
+		806,
 		14
 	],
 	"../pages/img-preview/img-preview.module": [
-		803,
+		807,
 		13
 	],
 	"../pages/main-tab/main-tab.module": [
-		804,
+		808,
 		12
 	],
 	"../pages/message-tab/message-tab.module": [
-		805,
+		809,
 		11
 	],
 	"../pages/pay-platform/pay-platform.module": [
-		806,
+		810,
 		1
 	],
 	"../pages/personal-info/personal-info.module": [
-		812,
+		811,
 		10
 	],
 	"../pages/private-doctor/private-doctor.module": [
-		808,
+		812,
 		9
 	],
 	"../pages/register/register.module": [
-		811,
+		813,
 		8
 	],
 	"../pages/selecthospital/selecthospital.module": [
-		807,
+		814,
 		7
 	],
 	"../pages/sos/sos.module": [
-		809,
+		815,
 		0
 	],
 	"../pages/welcom/welcom.module": [
-		810,
+		816,
 		6
 	]
 };
@@ -2684,19 +2971,19 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 285;
+webpackAsyncContext.id = 287;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 29:
+/***/ 30:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TokenProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2760,13 +3047,13 @@ var TokenProvider = (function () {
 
 /***/ }),
 
-/***/ 406:
+/***/ 408:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(407);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(428);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(409);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(430);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -2774,7 +3061,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 428:
+/***/ 430:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2782,44 +3069,48 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(402);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(405);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common_http__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(784);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(404);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(407);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common_http__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(786);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_home_home__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_register_register__ = __webpack_require__(227);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_main_tab_main_tab__ = __webpack_require__(229);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_doctor_tab_doctor_tab__ = __webpack_require__(219);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_home_tab_home_tab__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_register_register__ = __webpack_require__(229);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_main_tab_main_tab__ = __webpack_require__(231);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_doctor_tab_doctor_tab__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_home_tab_home_tab__ = __webpack_require__(225);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_appoinment_tab_appoinment_tab__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_welcom_welcom__ = __webpack_require__(231);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_message_tab_message_tab__ = __webpack_require__(230);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_hospital_hospital__ = __webpack_require__(224);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_doctor_doctor__ = __webpack_require__(220);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_img_preview_img_preview__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_welcom_welcom__ = __webpack_require__(233);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_message_tab_message_tab__ = __webpack_require__(232);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_hospital_hospital__ = __webpack_require__(226);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_doctor_doctor__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_img_preview_img_preview__ = __webpack_require__(222);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_appointment_list_appointment_list__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_personal_info_personal_info__ = __webpack_require__(225);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_edit_medical_card_edit_medical_card__ = __webpack_require__(222);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_private_doctor_private_doctor__ = __webpack_require__(226);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_emoji__ = __webpack_require__(785);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_personal_info_personal_info__ = __webpack_require__(227);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_edit_medical_card_edit_medical_card__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_private_doctor_private_doctor__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_emoji__ = __webpack_require__(787);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_case_history_case_history__ = __webpack_require__(218);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_add_case_history_add_case_history__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_body_mass_body_mass__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__providers_http_http__ = __webpack_require__(786);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__providers_http_http__ = __webpack_require__(788);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__providers_api_api__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__providers_token_token__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_selecthospital_selecthospital__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__providers_token_token__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_selecthospital_selecthospital__ = __webpack_require__(230);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__providers_hospital_hospital__ = __webpack_require__(76);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__providers_doctor_doctor__ = __webpack_require__(189);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__providers_ws_ws__ = __webpack_require__(787);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__providers_ws_ws__ = __webpack_require__(789);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__pages_case_book_case_book__ = __webpack_require__(217);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__providers_casebook_casebook__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__pages_feedback_feedback__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__pages_change_profile_change_profile__ = __webpack_require__(219);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -2881,7 +3172,9 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_24__pages_add_case_history_add_case_history__["a" /* AddCaseHistoryPage */],
                 __WEBPACK_IMPORTED_MODULE_25__pages_body_mass_body_mass__["a" /* BodyMassPage */],
                 __WEBPACK_IMPORTED_MODULE_29__pages_selecthospital_selecthospital__["a" /* SelecthospitalPage */],
-                __WEBPACK_IMPORTED_MODULE_33__pages_case_book_case_book__["a" /* CaseBookPage */]
+                __WEBPACK_IMPORTED_MODULE_33__pages_case_book_case_book__["a" /* CaseBookPage */],
+                __WEBPACK_IMPORTED_MODULE_35__pages_feedback_feedback__["a" /* FeedbackPage */],
+                __WEBPACK_IMPORTED_MODULE_36__pages_change_profile_change_profile__["a" /* ChangeProfilePage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -2895,27 +3188,29 @@ var AppModule = (function () {
                         { loadChildren: '../pages/add-case-book/add-case-book.module#AddCaseBookPageModule', name: 'AddCaseBookPage', segment: 'add-case-book', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/add-case-history/add-case-history.module#AddCaseHistoryPageModule', name: 'AddCaseHistoryPage', segment: 'add-case-history', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/appoinment-tab/appoinment-tab.module#AppoinmentTabPageModule', name: 'AppointmentTabPage', segment: 'appoinment-tab', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/body-mass/body-mass.module#BodyMassPageModule', name: 'BodyMassPage', segment: 'body-mass', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/appointment-list/appointment-list.module#AppointmentListPageModule', name: 'AppointmentListPage', segment: 'appointment-list', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/body-mass/body-mass.module#BodyMassPageModule', name: 'BodyMassPage', segment: 'body-mass', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/case-book/case-book.module#CaseBookPageModule', name: 'CaseBookPage', segment: 'case-book', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/case-history/case-history.module#CaseHistoryPageModule', name: 'CaseHistoryPage', segment: 'case-history', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/change-profile/change-profile.module#ChangeProfilePageModule', name: 'ChangeProfilePage', segment: 'change-profile', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cure-progress/cure-progress.module#CureProgressPageModule', name: 'CureProgressPage', segment: 'cure-progress', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/doctor-tab/doctor-tab.module#DoctorTabPageModule', name: 'DoctorTabPage', segment: 'doctor-tab', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/doctor/doctor.module#DoctorPageModule', name: 'DoctorPage', segment: 'doctor', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/edit-medical-card/edit-medical-card.module#EditMedicalCardPageModule', name: 'EditMedicalCardPage', segment: 'edit-medical-card', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/edit-personal-info/edit-personal-info.module#EditPersonalInfoPageModule', name: 'EditPersonalInfoPage', segment: 'edit-personal-info', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/feedback/feedback.module#FeedbackPageModule', name: 'FeedbackPage', segment: 'feedback', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/home-tab/home-tab.module#HomeTabPageModule', name: 'HomeTabPage', segment: 'home-tab', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/hospital/hospital.module#HospitalPageModule', name: 'HospitalPage', segment: 'hospital', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/img-preview/img-preview.module#ImgPreviewPageModule', name: 'ImgPreviewPage', segment: 'img-preview', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/main-tab/main-tab.module#MainTabPageModule', name: 'MainTabPage', segment: 'main-tab', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/message-tab/message-tab.module#MessageTabPageModule', name: 'MessageTabPage', segment: 'message-tab', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/pay-platform/pay-platform.module#PayPlatformPageModule', name: 'PayPlatformPage', segment: 'pay-platform', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/selecthospital/selecthospital.module#SelecthospitalPageModule', name: 'SelecthospitalPage', segment: 'selecthospital', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/personal-info/personal-info.module#PersonalInfoPageModule', name: 'PersonalInfoPage', segment: 'personal-info', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/private-doctor/private-doctor.module#PrivateDoctorPageModule', name: 'PrivateDoctorPage', segment: 'private-doctor', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/sos/sos.module#SosPageModule', name: 'SosPage', segment: 'sos', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/welcom/welcom.module#WelcomPageModule', name: 'WelcomPage', segment: 'welcom', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/personal-info/personal-info.module#PersonalInfoPageModule', name: 'PersonalInfoPage', segment: 'personal-info', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/selecthospital/selecthospital.module#SelecthospitalPageModule', name: 'SelecthospitalPage', segment: 'selecthospital', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/sos/sos.module#SosPageModule', name: 'SosPage', segment: 'sos', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/welcom/welcom.module#WelcomPageModule', name: 'WelcomPage', segment: 'welcom', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["b" /* HttpClientModule */]
@@ -2942,7 +3237,9 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_24__pages_add_case_history_add_case_history__["a" /* AddCaseHistoryPage */],
                 __WEBPACK_IMPORTED_MODULE_25__pages_body_mass_body_mass__["a" /* BodyMassPage */],
                 __WEBPACK_IMPORTED_MODULE_29__pages_selecthospital_selecthospital__["a" /* SelecthospitalPage */],
-                __WEBPACK_IMPORTED_MODULE_33__pages_case_book_case_book__["a" /* CaseBookPage */]
+                __WEBPACK_IMPORTED_MODULE_33__pages_case_book_case_book__["a" /* CaseBookPage */],
+                __WEBPACK_IMPORTED_MODULE_35__pages_feedback_feedback__["a" /* FeedbackPage */],
+                __WEBPACK_IMPORTED_MODULE_36__pages_change_profile_change_profile__["a" /* ChangeProfilePage */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
@@ -2971,7 +3268,7 @@ var AppModule = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HospitalProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3012,16 +3309,16 @@ var HospitalProvider = (function () {
 
 /***/ }),
 
-/***/ 784:
+/***/ 786:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(405);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(402);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_welcom_welcom__ = __webpack_require__(231);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(407);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(404);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_welcom_welcom__ = __webpack_require__(233);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3047,7 +3344,7 @@ var MyApp = (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/mevur/Documents/dev/web/smart_hospital_front/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/mevur/Documents/dev/web/smart_hospital_front/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/chengpiao/ionic/smart_hospital_front/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/chengpiao/ionic/smart_hospital_front/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
@@ -3058,7 +3355,7 @@ var MyApp = (function () {
 
 /***/ }),
 
-/***/ 785:
+/***/ 787:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3092,12 +3389,12 @@ var EmojiProvider = (function () {
 
 /***/ }),
 
-/***/ 786:
+/***/ 788:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HttpProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3139,12 +3436,12 @@ var HttpProvider = (function () {
 
 /***/ }),
 
-/***/ 787:
+/***/ 789:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WsProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3179,5 +3476,5 @@ var WsProvider = (function () {
 
 /***/ })
 
-},[406]);
+},[408]);
 //# sourceMappingURL=main.js.map
