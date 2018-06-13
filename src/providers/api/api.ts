@@ -76,7 +76,15 @@ export class ApiProvider {
   }
 
   putUserInfo() {
-    return this.server + "/api-user/users";
+    return this.server + "/api-user/detail";
+  }
+
+  postFile() {
+    return this.server + "/api-file/profile";
+  }
+
+  postFeedback() {
+    return this.server + "/api-feedbackplatform/feedback";
   }
 
 

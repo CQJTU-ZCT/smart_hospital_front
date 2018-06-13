@@ -19,14 +19,18 @@
 
 
 <ion-content class="color-content">
+  <ion-refresher #refresh (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content>
+    </ion-refresher-content>
+  </ion-refresher>
+
   <div class="head">
     <ion-item no-lines>
-      <ion-avatar>
-        <img src="./assets/imgs/person_info.jpg">
+      <ion-avatar (click)="changeProfile()">
+        <img src="{{userInfo.profile}}">
       </ion-avatar>
     </ion-item>
   </div>
-
   <ion-card>
     <ion-card-content style="margin-top: 15px">
       <ion-card-title>

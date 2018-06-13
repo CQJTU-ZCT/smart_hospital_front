@@ -35,6 +35,7 @@ import { WsProvider } from '../providers/ws/ws';
 import {CaseBookPage} from "../pages/case-book/case-book";
 import { CasebookProvider } from '../providers/casebook/casebook';
 import {FeedbackPage} from "../pages/feedback/feedback";
+import {ChangeProfilePage} from "../pages/change-profile/change-profile";
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import {FeedbackPage} from "../pages/feedback/feedback";
     BodyMassPage,
     SelecthospitalPage,
     CaseBookPage,
-    FeedbackPage
+    FeedbackPage,
+    ChangeProfilePage
   ],
   imports: [
     BrowserModule,
@@ -94,7 +96,8 @@ import {FeedbackPage} from "../pages/feedback/feedback";
     BodyMassPage,
     SelecthospitalPage,
     CaseBookPage,
-    FeedbackPage
+    FeedbackPage,
+    ChangeProfilePage
   ],
   providers: [
     StatusBar,

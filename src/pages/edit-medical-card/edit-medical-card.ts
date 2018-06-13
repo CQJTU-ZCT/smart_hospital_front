@@ -5,6 +5,8 @@ import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
 import {Loading} from "ionic-angular/umd";
 import {ApiProvider} from "../../providers/api/api";
 
+import * as $ from 'jquery';
+
 /**
  * Generated class for the EditMedicalCardPage page.
  *
@@ -267,7 +269,8 @@ export class EditMedicalCardPage {
   }
 
   submit() {
-    let headers = new HttpHeaders().set('token', this.token.getToken());
+    let headers = new HttpHeaders().set('token', this.token.getToken())
+      .set('content-Type', 'application/x-www-form-urlencoded');
     let body = {
       idCard: this.personalInfo['usersDetail']['idCard'],
       nationId: this.personalInfo['nation']['nationId'],
@@ -280,23 +283,15 @@ export class EditMedicalCardPage {
       content: '数据加载中,请稍候...'
     });
     loader.present();
-    this.http.put(this.api.putUserInfo(), body, {headers: headers})
-      .subscribe(
-      data => {
+    let that = this;
+    $.post(this.api.putUserInfo(), body,
+      function (data) {
         loader.dismiss();
-        this.toast.create({
+        that.toast.create({
           message: data['info'],
           duration: 1000
         }).present();
-      },
-      err => {
-        loader.dismiss();
-        this.toast.create({
-          message: err,
-          duration: 1000
-        }).present();
-      }
-    );
+      });
 
   }
 
